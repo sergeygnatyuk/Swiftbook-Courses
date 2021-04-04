@@ -25,6 +25,13 @@ Base UIKit - several applications in which we learned the basics of the UIKit fr
 
 ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 39 07](https://user-images.githubusercontent.com/76879483/113520127-abcff680-9599-11eb-9df1-ebd2af4473fe.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 40 59](https://user-images.githubusercontent.com/76879483/113520182-08331600-959a-11eb-95ee-394626c0dc83.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 42 21](https://user-images.githubusercontent.com/76879483/113520188-12551480-959a-11eb-8304-4f06a6b21258.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 47 41](https://user-images.githubusercontent.com/76879483/113520197-24cf4e00-959a-11eb-93c1-03f877544d8a.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 48 59](https://user-images.githubusercontent.com/76879483/113520204-2d278900-959a-11eb-83dc-8fdf8be1a9e5.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 50 11](https://user-images.githubusercontent.com/76879483/113520213-3d3f6880-959a-11eb-8e30-3223884a2552.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 51 08](https://user-images.githubusercontent.com/76879483/113520228-4d574800-959a-11eb-8a51-648de3d48ec9.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 52 38](https://user-images.githubusercontent.com/76879483/113520243-6102ae80-959a-11eb-9e65-efc7ce3c137b.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 57 10](https://user-images.githubusercontent.com/76879483/113520248-6d870700-959a-11eb-8a6d-604993bf8544.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 58 04](https://user-images.githubusercontent.com/76879483/113520268-7d9ee680-959a-11eb-8098-fa667f5057ea.png) ![Simulator Screen Shot - iPad Pro (9 7-inch) - 2021-04-04 at 22 54 10](https://user-images.githubusercontent.com/76879483/113520280-927b7a00-959a-11eb-9849-c932698ca7ce.png)
 
+My first app - a couple of small projects to learn the basics of swift, xcode, uikit.
+
+![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 23 12 32](https://user-images.githubusercontent.com/76879483/113520545-78429b80-959c-11eb-912a-08da82c9e465.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 23 17 51](https://user-images.githubusercontent.com/76879483/113520548-80024000-959c-11eb-8a6b-81b879622b19.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 23 17 57](https://user-images.githubusercontent.com/76879483/113520563-96100080-959c-11eb-8bdc-161f11a98747.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 23 18 51](https://user-images.githubusercontent.com/76879483/113520564-97d9c400-959c-11eb-8a1b-4452e35b916e.png)
+
+
+
+
 
 
 
