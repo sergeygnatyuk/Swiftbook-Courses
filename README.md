@@ -5,7 +5,7 @@ My projects from completed courses Swiftbook
 
 MyPlaces - An application that allows you to save, delete, update your favorite places, as well as add geolocation to them and build a route. The application uses the Realm database and the MapKit framework.
 
-![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 20 48](https://user-images.githubusercontent.com/76879483/113933620-7b889200-97fd-11eb-9a98-801f3a7d4770.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 22 17](https://user-images.githubusercontent.com/76879483/113933680-8e9b6200-97fd-11eb-95a7-bef4f4c3b898.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 23 03](https://user-images.githubusercontent.com/76879483/113933692-922ee900-97fd-11eb-9661-5648f6bbff1b.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 27 13](https://user-images.githubusercontent.com/76879483/113933702-9529d980-97fd-11eb-9ed0-87652a2fe114.png) ![Снимок экрана 2021-04-07 в 23 48 51](https://user-images.githubusercontent.com/76879483/113933766-a672e600-97fd-11eb-9cf4-292f041a48d8.png)
+![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 20 48](https://user-images.githubusercontent.com/76879483/113933620-7b889200-97fd-11eb-9a98-801f3a7d4770.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 22 17](https://user-images.githubusercontent.com/76879483/113933680-8e9b6200-97fd-11eb-95a7-bef4f4c3b898.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 23 03](https://user-images.githubusercontent.com/76879483/113933692-922ee900-97fd-11eb-9661-5648f6bbff1b.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-07 at 23 27 13](https://user-images.githubusercontent.com/76879483/113933702-9529d980-97fd-11eb-9ed0-87652a2fe114.png) 
 
 
 
