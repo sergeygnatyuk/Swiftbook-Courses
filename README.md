@@ -15,7 +15,8 @@ MyPlaces - An application that allows you to save, delete, update your favorite 
 
 Weather - An application for displaying the weather using the open API-OpenWeatherMap.(test iPhone 11 ios >14)
 
-![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 22 00 09](https://user-images.githubusercontent.com/76879483/113518854-850dc200-9591-11eb-9903-98591464ce33.png) ![Simulator Screen Shot - iPhone 11 - 2021-04-04 at 21 59 55](https://user-images.githubusercontent.com/76879483/113518856-86d78580-9591-11eb-88f4-6c7c2e5475d6.png)
+![Simulator Screen Shot - iPhone 12 - 2021-04-08 at 23 41 01](https://user-images.githubusercontent.com/76879483/114093963-688cc500-98c4-11eb-86bc-ef695e00b60f.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-08 at 23 41 28](https://user-images.githubusercontent.com/76879483/114093965-69bdf200-98c4-11eb-8dd1-589343c70d8d.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-08 at 23 42 13](https://user-images.githubusercontent.com/76879483/114093967-6a568880-98c4-11eb-8ad4-94c09b0e5fce.png) ![Simulator Screen Shot - iPhone 12 - 2021-04-08 at 23 42 49](https://user-images.githubusercontent.com/76879483/114093972-6aef1f00-98c4-11eb-9be7-61481594e248.png)
+
 
 
 Apps based  UICollectionView - Two UICollectionView-based apps:
