@@ -11,13 +11,13 @@ extension ViewController {
     func presentSearchAlertController(withTitle title: String?, message: String?,
                                       style: UIAlertController.Style,
                                       completionHandler: @escaping (String) -> Void ) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
-        alertController.addTextField { textFieldFirst in
+        let ac = UIAlertController(title: title, message: message, preferredStyle: style)
+        ac.addTextField { tf in
             let cities = ["San Francisco", "Moscow", "New York", "Stambul", "Viena"]
-            textFieldFirst.placeholder = cities.randomElement()
+            tf.placeholder = cities.randomElement()
         }
         let search = UIAlertAction(title: "Search", style: .default) { action in
-            let textField = alertController.textFields?.first
+            let textField = ac.textFields?.first
             guard let cityName = textField?.text else { return }
             if cityName != "" {
 //                self.networkWeatherManager.fetchCurrentWeather(fortCity: cityName)
@@ -27,9 +27,9 @@ extension ViewController {
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        alertController.addAction(search)
-        alertController.addAction(cancel)
-        present(alertController, animated: true, completion: nil)
+        ac.addAction(search)
+        ac.addAction(cancel)
+        present(ac, animated: true, completion: nil)
     }
 }
 
