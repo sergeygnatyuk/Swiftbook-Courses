@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EiX-sY-wZy">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Dawnload an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ey-YA-lok">
+                                <rect key="frame" x="16" y="319" width="358" height="206"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="4" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Le-7g-FQQ">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <connections>
+                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0n-eQ-Sx8"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="SBW-vi-nNU">
+                                <rect key="frame" x="175" y="402" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ey-YA-lok" secondAttribute="trailing" constant="16" id="9on-JB-xMi"/>
+                            <constraint firstItem="6Le-7g-FQQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bv8-Eu-7OH"/>
+                            <constraint firstAttribute="bottom" secondItem="6Le-7g-FQQ" secondAttribute="bottom" id="De7-0P-7HP"/>
+                            <constraint firstItem="EiX-sY-wZy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PgO-O9-xBQ"/>
+                            <constraint firstItem="6Le-7g-FQQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="adS-AT-AvF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ey-YA-lok" secondAttribute="bottom" constant="285" id="eN7-fi-faA"/>
+                            <constraint firstAttribute="bottom" secondItem="EiX-sY-wZy" secondAttribute="bottom" id="eig-3o-Njd"/>
+                            <constraint firstItem="EiX-sY-wZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g99-YD-GrS"/>
+                            <constraint firstItem="8ey-YA-lok" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="275" id="gCP-4R-agn"/>
+                            <constraint firstItem="6Le-7g-FQQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n2Q-M6-F9M"/>
+                            <constraint firstItem="EiX-sY-wZy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oFg-0x-UWL"/>
+                            <constraint firstItem="8ey-YA-lok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vaH-jW-GNm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="SBW-vi-nNU" id="g4b-Pk-UyF"/>
+                        <outlet property="getImageButton" destination="6Le-7g-FQQ" id="tP4-9G-qsO"/>
+                        <outlet property="imageView" destination="EiX-sY-wZy" id="RS7-SR-ton"/>
+                        <outlet property="label" destination="8ey-YA-lok" id="9oy-Ie-a6D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.076923076923077" y="76.777251184834114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
