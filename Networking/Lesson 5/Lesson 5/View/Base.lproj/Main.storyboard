@@ -216,7 +216,7 @@
                                     <constraint firstItem="amJ-W7-iKe" firstAttribute="leading" secondItem="iH6-UV-uOe" secondAttribute="leading" id="zki-oP-dDA"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="label" destination="amJ-W7-iKe" id="trB-MY-4Hn"/>
+                                    <outlet property="label" destination="amJ-W7-iKe" id="lXu-7h-3eF"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
