@@ -22,6 +22,7 @@
 		4A426AB22621C74F00619BBC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426AB12621C74F00619BBC /* TableViewCell.swift */; };
 		4AD307D92623853C00DD149D /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD307D82623853C00DD149D /* ImageProperties.swift */; };
 		4AE14A122621D05E00BCFA93 /* WebsiteDiscription .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE14A112621D05E00BCFA93 /* WebsiteDiscription .swift */; };
+		4AE42EB82624C92400DCE5EB /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE42EB72624C92400DCE5EB /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4A426AB12621C74F00619BBC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4AD307D82623853C00DD149D /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		4AE14A112621D05E00BCFA93 /* WebsiteDiscription .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebsiteDiscription .swift"; sourceTree = "<group>"; };
+		4AE42EB72624C92400DCE5EB /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				4A426A9D2621BB5400619BBC /* CoursesViewController.swift */,
 				4A19E6BB2623343200D591F9 /* MainViewController.swift */,
 				4A19E6BE2623344F00D591F9 /* CollectionViewCell.swift */,
+				4AE42EB72624C92400DCE5EB /* DataProvider.swift */,
 				4A19E6C2262341C800D591F9 /* NetworkManager.swift */,
 			);
 			path = Controllers;
@@ -208,6 +211,7 @@
 				4A426A9E2621BB5400619BBC /* CoursesViewController.swift in Sources */,
 				4A19E6BC2623343200D591F9 /* MainViewController.swift in Sources */,
 				4A19E6BF2623344F00D591F9 /* CollectionViewCell.swift in Sources */,
+				4AE42EB82624C92400DCE5EB /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
