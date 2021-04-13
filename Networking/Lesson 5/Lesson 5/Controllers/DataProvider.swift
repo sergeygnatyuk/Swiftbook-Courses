@@ -15,7 +15,9 @@ class DataProvider: NSObject {
     
     private lazy var bgSession: URLSession = {
         let config = URLSessionConfiguration.background(withIdentifier: "ru.swiftbook.Networking")
-        config.isDiscretionary = true
+        config.isDiscretionary = true // starting the task at the optimal time
+        config.timeoutIntervalForResource = 300 // network timeout
+        config.waitsForConnectivity = true //waiting for networking connection
         config.sessionSendsLaunchEvents = true
         return URLSession(configuration: config, delegate: self, delegateQueue: nil)
     }()
@@ -81,3 +83,9 @@ extension DataProvider: URLSessionDownloadDelegate {
     }
 }
 
+extension DataProvider: URLSessionTaskDelegate {
+    //restoring the connection 
+    func urlSession(_ session: URLSession, taskIsWaitingForConnectivity: URLSessionTask) {
+        
+    }
+}
