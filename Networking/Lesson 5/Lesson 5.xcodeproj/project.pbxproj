@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A00BA46262628F600B05FF4 /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */; };
 		4A18AEDA2620E2D900F75CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AED92620E2D900F75CB9 /* AppDelegate.swift */; };
 		4A18AEDC2620E2D900F75CB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */; };
 		4A18AEE12620E2D900F75CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A18AEDF2620E2D900F75CB9 /* Main.storyboard */; };
@@ -23,9 +24,12 @@
 		4AD307D92623853C00DD149D /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD307D82623853C00DD149D /* ImageProperties.swift */; };
 		4AE14A122621D05E00BCFA93 /* WebsiteDiscription .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE14A112621D05E00BCFA93 /* WebsiteDiscription .swift */; };
 		4AE42EB82624C92400DCE5EB /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE42EB72624C92400DCE5EB /* DataProvider.swift */; };
+		89B7EE25F71C66437F223B10 /* Pods_Lesson_5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A072B37BDD14C090A0559992 /* Pods_Lesson_5.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010346E0665CBEE638EA7A00 /* Pods-Lesson 5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson 5.release.xcconfig"; path = "Target Support Files/Pods-Lesson 5/Pods-Lesson 5.release.xcconfig"; sourceTree = "<group>"; };
+		4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		4A18AED62620E2D900F75CB9 /* Lesson 5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A18AED92620E2D900F75CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		4AD307D82623853C00DD149D /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		4AE14A112621D05E00BCFA93 /* WebsiteDiscription .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebsiteDiscription .swift"; sourceTree = "<group>"; };
 		4AE42EB72624C92400DCE5EB /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		A072B37BDD14C090A0559992 /* Pods_Lesson_5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lesson_5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F6F8AE413CB90A30911F32 /* Pods-Lesson 5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson 5.debug.xcconfig"; path = "Target Support Files/Pods-Lesson 5/Pods-Lesson 5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +57,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B7EE25F71C66437F223B10 /* Pods_Lesson_5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32146561422C57354DFBB555 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8F6F8AE413CB90A30911F32 /* Pods-Lesson 5.debug.xcconfig */,
+				010346E0665CBEE638EA7A00 /* Pods-Lesson 5.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4A18AECD2620E2D800F75CB9 = {
 			isa = PBXGroup;
 			children = (
 				4A18AED82620E2D900F75CB9 /* Lesson 5 */,
 				4A18AED72620E2D900F75CB9 /* Products */,
+				32146561422C57354DFBB555 /* Pods */,
+				BF1B58AFA64530EFE053FA4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +111,7 @@
 				4A426AA02621BC0E00619BBC /* WebViewController.swift */,
 				4A426A9D2621BB5400619BBC /* CoursesViewController.swift */,
 				4A19E6BB2623343200D591F9 /* MainViewController.swift */,
+				4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */,
 				4A19E6BE2623344F00D591F9 /* CollectionViewCell.swift */,
 				4AE42EB72624C92400DCE5EB /* DataProvider.swift */,
 				4A19E6C2262341C800D591F9 /* NetworkManager.swift */,
@@ -129,6 +149,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BF1B58AFA64530EFE053FA4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A072B37BDD14C090A0559992 /* Pods_Lesson_5.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A18AEEA2620E2DB00F75CB9 /* Build configuration list for PBXNativeTarget "Lesson 5" */;
 			buildPhases = (
+				84A30114306E2208016E844C /* [CP] Check Pods Manifest.lock */,
 				4A18AED22620E2D900F75CB9 /* Sources */,
 				4A18AED32620E2D900F75CB9 /* Frameworks */,
 				4A18AED42620E2D900F75CB9 /* Resources */,
+				FC8B40E9D51AA4D7BBD1BE5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +224,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84A30114306E2208016E844C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lesson 5-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC8B40E9D51AA4D7BBD1BE5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lesson 5/Pods-Lesson 5-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lesson 5/Pods-Lesson 5-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lesson 5/Pods-Lesson 5-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A18AED22620E2D900F75CB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -210,6 +282,7 @@
 				4AD307D92623853C00DD149D /* ImageProperties.swift in Sources */,
 				4A426A9E2621BB5400619BBC /* CoursesViewController.swift in Sources */,
 				4A19E6BC2623343200D591F9 /* MainViewController.swift in Sources */,
+				4A00BA46262628F600B05FF4 /* AlamofireNetworkRequest.swift in Sources */,
 				4A19E6BF2623344F00D591F9 /* CollectionViewCell.swift in Sources */,
 				4AE42EB82624C92400DCE5EB /* DataProvider.swift in Sources */,
 			);
@@ -355,6 +428,7 @@
 		};
 		4A18AEEB2620E2DB00F75CB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8F6F8AE413CB90A30911F32 /* Pods-Lesson 5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,6 +448,7 @@
 		};
 		4A18AEEC2620E2DB00F75CB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 010346E0665CBEE638EA7A00 /* Pods-Lesson 5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

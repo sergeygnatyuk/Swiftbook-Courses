@@ -229,6 +229,7 @@
                     <connections>
                         <segue destination="ouA-MO-dLc" kind="show" identifier="ShowImage" id="32v-3I-zZY"/>
                         <segue destination="vCZ-zW-SPl" kind="show" identifier="OurCourses" id="tyn-VU-DCg"/>
+                        <segue destination="vCZ-zW-SPl" kind="show" identifier="OurCoursesAlamofire" id="VvM-rs-xTV"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fug-bD-u4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,6 +255,9 @@
             <point key="canvasLocation" x="1847.6923076923076" y="74.644549763033169"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VvM-rs-xTV"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
