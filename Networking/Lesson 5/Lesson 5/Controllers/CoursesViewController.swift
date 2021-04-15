@@ -103,11 +103,12 @@ extension CoursesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let course = courses[indexPath.row]
+        let identifierSegue = "Description"
         
         courseURL = course.link
         courseName = course.name
         
-        performSegue(withIdentifier: "Description", sender: self)
+        performSegue(withIdentifier: identifierSegue, sender: self)
     }
 }
 

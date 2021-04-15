@@ -16,11 +16,19 @@ enum Actions: String, CaseIterable {
     case uploadImage = "Upload Image"
     case downloadFile = "Download File"
     case ourCoursesAlamofire = "Our Courses (Alamofire)"
+    case responseData = "responseData"
+    case responseString = "responseString"
+    case response = "response"
 }
 
-private let reuseIdentifier = "Cell"
+private let cellIdentifier = "Cell"
+private let downloadImageSegue = "ShowImage"
+private let responseDataSegue = "ResponseData"
+private let ourCoursesAlamofireSegue = "OurCoursesAlamofire"
+private let ourCoursesSegue = "OurCourses"
 private let url = "https://jsonplaceholder.typicode.com/posts"
 private let uploadImage = "https://api.imgur.com/3/image"
+private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
 
 class MainViewController: UICollectionViewController {
     
@@ -101,7 +109,7 @@ class MainViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CollectionViewCell
         cell.label.text = actions[indexPath.row].rawValue
         
         return cell
@@ -114,32 +122,44 @@ class MainViewController: UICollectionViewController {
         
         switch action {
         case .downloadImage:
-            performSegue(withIdentifier: "ShowImage", sender: self)
+            performSegue(withIdentifier: downloadImageSegue, sender: self)
         case .get:
             NetworkManager.getRequest(url: url)
         case .post:
             NetworkManager.postRequest(url: url)
         case .ourCourses:
-            performSegue(withIdentifier: "OurCourses", sender: self)
+            performSegue(withIdentifier: ourCoursesSegue, sender: self)
         case .uploadImage:
             NetworkManager.uploadImage(url: uploadImage)
         case .downloadFile:
             dataProvider.startDownload()
             showAlert()
         case .ourCoursesAlamofire:
-            performSegue(withIdentifier: "OurCoursesAlamofire", sender: self)
+            performSegue(withIdentifier: ourCoursesAlamofireSegue, sender: self)
+        case .responseData:
+            performSegue(withIdentifier: responseDataSegue, sender: self)
+        case .responseString:
+            AlamofireNetworkRequest.responseString(url: swiftbookApi)
+        case .response:
+            AlamofireNetworkRequest.response(url: swiftbookApi)
         }
     }
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let coursesVC = segue.destination as? CoursesViewController
+        let imageVC = segue.destination as? ImageViewController
         
         switch segue.identifier {
-        case "OurCourses":
+        case ourCoursesSegue:
             coursesVC?.fetchData()
-        case "OurCoursesAlamofire":
+        case ourCoursesAlamofireSegue:
             coursesVC?.fetchDataWithAlamofire()
+        case downloadImageSegue:
+            imageVC?.fetchImage()
+        case responseDataSegue:
+            imageVC?.fetchDataWithAlamofire()
+            AlamofireNetworkRequest.responseData(url: swiftbookApi)
         default:
             break
         }
