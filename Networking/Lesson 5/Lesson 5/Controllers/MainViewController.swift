@@ -19,6 +19,7 @@ enum Actions: String, CaseIterable {
     case responseData = "responseData"
     case responseString = "responseString"
     case response = "response"
+    case downloadLargeImage = "Download Large Image"
 }
 
 private let cellIdentifier = "Cell"
@@ -26,6 +27,7 @@ private let downloadImageSegue = "ShowImage"
 private let responseDataSegue = "ResponseData"
 private let ourCoursesAlamofireSegue = "OurCoursesAlamofire"
 private let ourCoursesSegue = "OurCourses"
+private let downloadLargeImageSegue = "LargeImage"
 private let url = "https://jsonplaceholder.typicode.com/posts"
 private let uploadImage = "https://api.imgur.com/3/image"
 private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
@@ -142,6 +144,8 @@ class MainViewController: UICollectionViewController {
             AlamofireNetworkRequest.responseString(url: swiftbookApi)
         case .response:
             AlamofireNetworkRequest.response(url: swiftbookApi)
+        case .downloadLargeImage:
+            performSegue(withIdentifier: downloadLargeImageSegue, sender: self)
         }
     }
     
@@ -160,6 +164,8 @@ class MainViewController: UICollectionViewController {
         case responseDataSegue:
             imageVC?.fetchDataWithAlamofire()
             AlamofireNetworkRequest.responseData(url: swiftbookApi)
+        case downloadLargeImageSegue:
+            imageVC?.downloadImageWithProgress()
         default:
             break
         }
