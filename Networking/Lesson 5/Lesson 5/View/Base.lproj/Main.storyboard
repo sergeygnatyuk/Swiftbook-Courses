@@ -216,7 +216,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amJ-W7-iKe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amJ-W7-iKe">
                                             <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
                                             <fontDescription key="fontDescription" name="KohinoorTelugu-Light" family="Kohinoor Telugu" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -250,6 +250,8 @@
                         <segue destination="vCZ-zW-SPl" kind="show" identifier="OurCoursesAlamofire" id="VvM-rs-xTV"/>
                         <segue destination="ouA-MO-dLc" kind="show" identifier="ResponseData" id="ZXI-Jz-cMe"/>
                         <segue destination="ouA-MO-dLc" kind="show" identifier="LargeImage" id="rdY-Jf-Jja"/>
+                        <segue destination="vCZ-zW-SPl" kind="show" identifier="PostRequest" id="asF-XS-0Md"/>
+                        <segue destination="vCZ-zW-SPl" kind="show" identifier="PutRequest" id="mL8-00-gxl"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fug-bD-u4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -276,7 +278,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VvM-rs-xTV"/>
+        <segue reference="mL8-00-gxl"/>
         <segue reference="rdY-Jf-Jja"/>
     </inferredMetricsTieBreakers>
     <resources>

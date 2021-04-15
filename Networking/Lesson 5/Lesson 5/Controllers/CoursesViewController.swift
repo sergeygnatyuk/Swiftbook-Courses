@@ -10,6 +10,8 @@ import UIKit
 class CoursesViewController: UIViewController {
     
     private let url = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
+    private let postRequestUrl = "https://jsonplaceholder.typicode.com/posts"
+    private let putRequestUrl = "https://jsonplaceholder.typicode.com/posts/1"
     private var courses = [Course]()
     private var courseName: String?
     private var courseURL: String?
@@ -35,6 +37,26 @@ class CoursesViewController: UIViewController {
             }
         }
     }
+    
+    func postRequest() {
+        
+        AlamofireNetworkRequest.postRequest(url: postRequestUrl) { (courses) in
+            self.courses = courses
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func putRequest() {
+        AlamofireNetworkRequest.putRequest(url: putRequestUrl) { (courses) in
+            self.courses = courses
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
         

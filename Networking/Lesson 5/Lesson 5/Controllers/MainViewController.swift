@@ -20,6 +20,8 @@ enum Actions: String, CaseIterable {
     case responseString = "responseString"
     case response = "response"
     case downloadLargeImage = "Download Large Image"
+    case postAlamofire = "POST with Alamofire"
+    case putRequest = "PUT Request with Alamofire"
 }
 
 private let cellIdentifier = "Cell"
@@ -28,9 +30,12 @@ private let responseDataSegue = "ResponseData"
 private let ourCoursesAlamofireSegue = "OurCoursesAlamofire"
 private let ourCoursesSegue = "OurCourses"
 private let downloadLargeImageSegue = "LargeImage"
+private let postRequestSegue = "PostRequest"
+private let putRequestSegue = "PutRequest"
 private let url = "https://jsonplaceholder.typicode.com/posts"
 private let uploadImage = "https://api.imgur.com/3/image"
 private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
+
 
 class MainViewController: UICollectionViewController {
     
@@ -146,6 +151,10 @@ class MainViewController: UICollectionViewController {
             AlamofireNetworkRequest.response(url: swiftbookApi)
         case .downloadLargeImage:
             performSegue(withIdentifier: downloadLargeImageSegue, sender: self)
+        case .postAlamofire:
+            performSegue(withIdentifier: postRequestSegue, sender: self)
+        case .putRequest:
+            performSegue(withIdentifier: putRequestSegue, sender: self)
         }
     }
     
@@ -166,6 +175,10 @@ class MainViewController: UICollectionViewController {
             AlamofireNetworkRequest.responseData(url: swiftbookApi)
         case downloadLargeImageSegue:
             imageVC?.downloadImageWithProgress()
+        case postRequestSegue:
+            coursesVC?.postRequest()
+        case putRequestSegue:
+            coursesVC?.putRequest()
         default:
             break
         }
