@@ -8,5 +8,8 @@ target 'Lesson 5' do
   # Pods for Lesson 5
 
 
+
      pod 'Alamofire', '~> 4.7'
+pod 'FBSDKCoreKit'  
+pod 'FBSDKLoginKit'
 end

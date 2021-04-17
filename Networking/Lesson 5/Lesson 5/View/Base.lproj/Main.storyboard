@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="st7-ph-vpO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZV8-mj-MvC">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="177.66666666666666" y="404.66666666666669" width="37" height="37"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwe-oI-xun">
-                                <rect key="frame" x="150" y="507" width="91" height="27"/>
+                                <rect key="frame" x="149.66666666666666" y="507" width="91" height="27"/>
                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Light" family="Kohinoor Telugu" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -258,6 +258,64 @@
             </objects>
             <point key="canvasLocation" x="2776.9230769230767" y="74.644549763033169"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="wRt-TU-YLy">
+            <objects>
+                <viewController id="ZV8-mj-MvC" customClass="LoginViewController" customModule="Lesson_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FmP-qQ-Ptw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H0D-67-1IK">
+                                <rect key="frame" x="73" y="44" width="244" height="383.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firebase logo" translatesAutoresizingMaskIntoConstraints="NO" id="qiU-TX-Ms9">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="244"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="244" id="ehR-4d-hh5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TTL-YB-Jxs">
+                                        <rect key="frame" x="0.0" y="252" width="244" height="131.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Networking Demo App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDm-nE-232">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="189.66666666666669" height="98"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="122" id="CoD-Ik-LNZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Light" family="Kohinoor Telugu" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Swiftbook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n05-lf-OK7">
+                                                <rect key="frame" x="68" y="106" width="108" height="25.333333333333343"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25.333333333333258" id="MEy-Ff-dBL"/>
+                                                    <constraint firstAttribute="width" constant="108" id="V57-b7-ZuK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9UE-Hq-k04"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="9UE-Hq-k04" firstAttribute="bottom" secondItem="H0D-67-1IK" secondAttribute="bottom" constant="358.67000000000002" id="MNN-ea-1P2"/>
+                            <constraint firstItem="H0D-67-1IK" firstAttribute="top" secondItem="9UE-Hq-k04" secondAttribute="top" id="fmm-82-AvV"/>
+                            <constraint firstItem="H0D-67-1IK" firstAttribute="leading" secondItem="9UE-Hq-k04" secondAttribute="leading" constant="73" id="jgW-od-rJi"/>
+                            <constraint firstItem="9UE-Hq-k04" firstAttribute="trailing" secondItem="H0D-67-1IK" secondAttribute="trailing" constant="73" id="zES-n3-LnE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfw-nt-sae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916.92307692307691" y="74.644549763033169"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pWg-dN-1QX">
             <objects>
@@ -282,6 +340,10 @@
         <segue reference="rdY-Jf-Jja"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="firebase logo" width="1000" height="1000"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
