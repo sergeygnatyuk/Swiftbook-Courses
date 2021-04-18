@@ -89,7 +89,7 @@ class AlamofireNetworkRequest {
             print("totalUnitCount: \(progress.totalUnitCount)\n")
             print("completedUnitCount: \(progress.completedUnitCount)\n")
             print("fractionCompleted: \(progress.fractionCompleted)\n")
-            print("localizedDescription: \(progress.localizedDescription)\n")
+            print("localizedDescription: \(String(describing: progress.localizedDescription))\n")
             print("--------------------------------------------------------")
             
             self.onProgress?(progress.fractionCompleted)

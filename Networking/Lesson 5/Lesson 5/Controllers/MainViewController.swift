@@ -8,6 +8,7 @@
 import UIKit
 import UserNotifications
 import FBSDKLoginKit
+import FirebaseAuth
 
 enum Actions: String, CaseIterable {
     case downloadImage = "Download Image"
@@ -75,7 +76,7 @@ class MainViewController: UICollectionViewController {
                    self.dataProvider.stopDownload()
                }
         
-        let height = NSLayoutConstraint(item: alert.view,
+        let height = NSLayoutConstraint(item: alert.view as Any,
                                        attribute: .height,
                                        relatedBy: .equal,
                                        toItem: nil,
@@ -204,7 +205,7 @@ extension MainViewController {
         
         let content = UNMutableNotificationContent()
         content.title = "Download complete!"
-        content.body = "Your background transfer has completed. File path: \(filePath)"
+        content.body = "Your background transfer has completed. File path: \(String(describing: filePath))"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         
@@ -218,7 +219,7 @@ extension MainViewController {
 
 extension MainViewController {
     private func checkLoggedIn() {
-        if !(AccessToken.isCurrentAccessTokenActive) {
+        if Auth.auth().currentUser == nil {
             
             DispatchQueue.main.async {
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)

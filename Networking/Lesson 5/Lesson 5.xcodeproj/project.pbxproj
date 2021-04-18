@@ -18,6 +18,7 @@
 		4A19E6BF2623344F00D591F9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19E6BE2623344F00D591F9 /* CollectionViewCell.swift */; };
 		4A19E6C3262341C800D591F9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19E6C2262341C800D591F9 /* NetworkManager.swift */; };
 		4A1B4B3A262CA1BF00522FF3 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B4B39262CA1BF00522FF3 /* UserProfileVC.swift */; };
+		4A1B4B3D262CBB0B00522FF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B4B3C262CBB0B00522FF3 /* GoogleService-Info.plist */; };
 		4A426A9E2621BB5400619BBC /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426A9D2621BB5400619BBC /* CoursesViewController.swift */; };
 		4A426AA12621BC0E00619BBC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426AA02621BC0E00619BBC /* WebViewController.swift */; };
 		4A426AAD2621BF3700619BBC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426AAC2621BF3700619BBC /* Course.swift */; };
@@ -45,6 +46,7 @@
 		4A19E6BE2623344F00D591F9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4A19E6C2262341C800D591F9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4A1B4B39262CA1BF00522FF3 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		4A1B4B3C262CBB0B00522FF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A426A9D2621BB5400619BBC /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		4A426AA02621BC0E00619BBC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4A426AAC2621BF3700619BBC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				4A18AED92620E2D900F75CB9 /* AppDelegate.swift */,
 				4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */,
 				4A18AEE22620E2DB00F75CB9 /* Assets.xcassets */,
+				4A1B4B3C262CBB0B00522FF3 /* GoogleService-Info.plist */,
 				4A18AEE72620E2DB00F75CB9 /* Info.plist */,
 				4ADB47AB262AF68C00B3363C /* Extansions.swift */,
 			);
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A18AEE62620E2DB00F75CB9 /* LaunchScreen.storyboard in Resources */,
+				4A1B4B3D262CBB0B00522FF3 /* GoogleService-Info.plist in Resources */,
 				4A18AEE32620E2DB00F75CB9 /* Assets.xcassets in Resources */,
 				4A18AEE12620E2D900F75CB9 /* Main.storyboard in Resources */,
 			);

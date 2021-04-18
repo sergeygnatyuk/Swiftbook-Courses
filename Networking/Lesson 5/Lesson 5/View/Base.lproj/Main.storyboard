@@ -334,7 +334,7 @@
             </objects>
             <point key="canvasLocation" x="3706.1538461538462" y="74.644549763033169"/>
         </scene>
-        <!--Item-->
+        <!--User ProfileVC-->
         <scene sceneID="6rS-0c-NPY">
             <objects>
                 <viewController id="WWr-7u-wc8" customClass="UserProfileVC" customModule="Lesson_5" customModuleProvider="target" sceneMemberID="viewController">
@@ -360,7 +360,7 @@
                             <constraint firstItem="dzj-LV-9aN" firstAttribute="centerX" secondItem="a6g-gF-I2w" secondAttribute="centerX" id="bzJ-1r-Ors"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="HeL-pW-s5y"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="HeL-pW-s5y"/>
                     <navigationItem key="navigationItem" id="ojs-mc-Eh7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDs-Wg-3gg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -373,6 +373,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5ez-P5-WEG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ynq-2M-JZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
