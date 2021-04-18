@@ -68,8 +68,5 @@ extension UserProfileVC: LoginButtonDelegate {
         } catch let error {
             print("Failed to sign out with error: ", error.localizedDescription)
         }
-     
     }
-    
-    
 }
