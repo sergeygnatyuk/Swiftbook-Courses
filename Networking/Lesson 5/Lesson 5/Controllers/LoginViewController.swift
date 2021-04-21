@@ -8,10 +8,13 @@
 import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
+import FirebaseDatabase
 
 
 
 class LoginViewController: UIViewController {
+    
+    var userProfile: UserProfile?
     
     var fbLoginButton: UIButton {
        let loginButton = FBLoginButton()
@@ -66,8 +69,7 @@ extension LoginViewController: LoginButtonDelegate {
         }
         
         guard AccessToken.isCurrentAccessTokenActive else { return }
-        fetchFacebookFields()
-        openMainViewController()
+        singIntoFirebase()
         
         print("Successfully logged in with facebook")
     }
@@ -90,8 +92,6 @@ extension LoginViewController: LoginButtonDelegate {
             if result.isCancelled { return }
             else {
                 self.singIntoFirebase()
-                self.fetchFacebookFields()
-                self.openMainViewController()
             }
         }
     }
@@ -108,7 +108,8 @@ extension LoginViewController: LoginButtonDelegate {
                 return
             }
             
-            print("Successfully logged in with our FB user: ", user!)
+            print("Successfully logged in with our FB user")
+            self.fetchFacebookFields()
         }
     }
     
@@ -119,9 +120,31 @@ extension LoginViewController: LoginButtonDelegate {
                 return
             }
             if let userData = result as? [String: Any] {
+                self.userProfile = UserProfile(data: userData)
                 print(userData)
+                print(self.userProfile?.name ?? "nil")
+                self.saveInfoFirebase()
             }
         }
+    }
+    
+    private func saveInfoFirebase() {
+        
+       guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let userData = ["name": userProfile?.name, "email": userProfile?.email]
+        
+        let values = ["uid": userData]
+        Database.database().reference().child("users").updateChildValues(values) { (error, _) in
+            if let error = error {
+                print(error)
+                return
+            }
+            print("Successfully saved user into firebase")
+            self.openMainViewController()
+            
+        }
+        
     }
     
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A00BA46262628F600B05FF4 /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */; };
+		4A0362182630AF5400CC8652 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0362172630AF5400CC8652 /* UserProfile.swift */; };
 		4A18AEDA2620E2D900F75CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AED92620E2D900F75CB9 /* AppDelegate.swift */; };
 		4A18AEDC2620E2D900F75CB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */; };
 		4A18AEE12620E2D900F75CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A18AEDF2620E2D900F75CB9 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		010346E0665CBEE638EA7A00 /* Pods-Lesson 5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson 5.release.xcconfig"; path = "Target Support Files/Pods-Lesson 5/Pods-Lesson 5.release.xcconfig"; sourceTree = "<group>"; };
 		4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
+		4A0362172630AF5400CC8652 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		4A18AED62620E2D900F75CB9 /* Lesson 5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A18AED92620E2D900F75CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				4A426AAC2621BF3700619BBC /* Course.swift */,
 				4AE14A112621D05E00BCFA93 /* WebsiteDiscription .swift */,
 				4AD307D82623853C00DD149D /* ImageProperties.swift */,
+				4A0362172630AF5400CC8652 /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				4A18AEDA2620E2D900F75CB9 /* AppDelegate.swift in Sources */,
 				4A18AEEF2620E71600F75CB9 /* ImageViewController.swift in Sources */,
 				4ADB47AC262AF68C00B3363C /* Extansions.swift in Sources */,
+				4A0362182630AF5400CC8652 /* UserProfile.swift in Sources */,
 				4A18AEDC2620E2D900F75CB9 /* SceneDelegate.swift in Sources */,
 				4AE14A122621D05E00BCFA93 /* WebsiteDiscription .swift in Sources */,
 				4AD307D92623853C00DD149D /* ImageProperties.swift in Sources */,
