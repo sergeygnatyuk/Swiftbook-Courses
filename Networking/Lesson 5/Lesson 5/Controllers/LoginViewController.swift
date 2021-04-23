@@ -134,7 +134,7 @@ extension LoginViewController: LoginButtonDelegate {
         
         let userData = ["name": userProfile?.name, "email": userProfile?.email]
         
-        let values = ["uid": userData]
+        let values = [uid: userData]
         Database.database().reference().child("users").updateChildValues(values) { (error, _) in
             if let error = error {
                 print(error)

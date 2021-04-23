@@ -1,5 +1,5 @@
 //
-//  Extansions.swift
+//  Extensions.swift
 //  Lesson 5
 //
 //  Created by Гнатюк Сергей on 17.04.2021.
