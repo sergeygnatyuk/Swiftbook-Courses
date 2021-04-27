@@ -9,6 +9,7 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 import FirebaseDatabase
+import GoogleSignIn
 
 
 
@@ -40,12 +41,24 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(handCustomFBLogin), for: .touchUpInside)
         return loginButton
     }()
+    
+     var googleLoginButton: GIDSignInButton {
+        
+        let loginButton = GIDSignInButton()
+        loginButton.frame = CGRect(x: 32, y: 560 + 60 + 60, width: view.frame.width - 64, height: 70)
+//        loginButton.layer.cornerRadius = loginButton.frame.height / 10
+//        loginButton.layer.masksToBounds = true
+        return loginButton
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         setupViews()
+        
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -57,6 +70,7 @@ class LoginViewController: UIViewController {
     private func setupViews() {
         view.addSubview(fbLoginButton)
         view.addSubview(customLoginButton)
+        view.addSubview(googleLoginButton)
     }
 
 }
@@ -146,6 +160,35 @@ extension LoginViewController: LoginButtonDelegate {
         }
         
     }
+    
+}
+
+//MARK: - Google SDK
+
+extension LoginViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("Failed to log into Google: ", error)
+            return
+        }
+        
+        print("Successfully logged into Google")
+        
+        guard let authentication = user.authentication else { return }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                            accessToken: authentication.accessToken)
+          
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error {
+                print("Something went wrong with our Google user: ", error)
+                return
+            }
+            print("Successfully logged into Firebase with Google")
+            self.openMainViewController()
+        }
+    }
+    
     
 }
     

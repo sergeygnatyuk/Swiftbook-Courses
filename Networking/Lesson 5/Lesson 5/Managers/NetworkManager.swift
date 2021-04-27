@@ -57,7 +57,8 @@ class NetworkManager {
             }
         }.resume()
     }
-    static func downloadImage(url: String, completion: @escaping  (_ image: UIImage)->()) {
+    
+     func downloadImage(url: String, completion: @escaping  (_ image: UIImage)->()) {
         
         guard let url = URL(string: url) else { return }
         

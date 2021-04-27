@@ -107,8 +107,10 @@
 		4A18AED82620E2D900F75CB9 /* Lesson 5 */ = {
 			isa = PBXGroup;
 			children = (
+				4AE569E926389F0D00D2E097 /* Request */,
+				4AE569E826389EA500D2E097 /* Managers */,
+				4AE569E62638959A00D2E097 /* Resources */,
 				4AF9BE222632118C00E1D119 /* Extensions */,
-				4ADB479C262AE6F600B3363C /* Lesson 5.entitlements */,
 				4A426AA62621BF0D00619BBC /* Models */,
 				4A426AA42621BEDE00619BBC /* View */,
 				4A426AA32621BEC900619BBC /* Controllers */,
@@ -125,10 +127,7 @@
 				4A426AA02621BC0E00619BBC /* WebViewController.swift */,
 				4A426A9D2621BB5400619BBC /* CoursesViewController.swift */,
 				4A19E6BB2623343200D591F9 /* MainViewController.swift */,
-				4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */,
 				4A19E6BE2623344F00D591F9 /* CollectionViewCell.swift */,
-				4AE42EB72624C92400DCE5EB /* DataProvider.swift */,
-				4A19E6C2262341C800D591F9 /* NetworkManager.swift */,
 				4ADB47A8262AF50E00B3363C /* LoginViewController.swift */,
 				4A1B4B39262CA1BF00522FF3 /* UserProfileVC.swift */,
 			);
@@ -147,9 +146,9 @@
 		4A426AA52621BEE900619BBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4ADB479C262AE6F600B3363C /* Lesson 5.entitlements */,
 				4A18AED92620E2D900F75CB9 /* AppDelegate.swift */,
 				4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */,
-				4A18AEE22620E2DB00F75CB9 /* Assets.xcassets */,
 				4A1B4B3C262CBB0B00522FF3 /* GoogleService-Info.plist */,
 				4A18AEE72620E2DB00F75CB9 /* Info.plist */,
 			);
@@ -166,6 +165,31 @@
 				4AF9BE242632146000E1D119 /* CurrentUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4AE569E62638959A00D2E097 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A18AEE22620E2DB00F75CB9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4AE569E826389EA500D2E097 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4A19E6C2262341C800D591F9 /* NetworkManager.swift */,
+				4AE42EB72624C92400DCE5EB /* DataProvider.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4AE569E926389F0D00D2E097 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		4AF9BE222632118C00E1D119 /* Extensions */ = {
@@ -196,6 +220,7 @@
 				4A18AED32620E2D900F75CB9 /* Frameworks */,
 				4A18AED42620E2D900F75CB9 /* Resources */,
 				FC8B40E9D51AA4D7BBD1BE5C /* [CP] Embed Pods Frameworks */,
+				F255AF9EB142325FDC11BE42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +298,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F255AF9EB142325FDC11BE42 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lesson 5/Pods-Lesson 5-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lesson 5/Pods-Lesson 5-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lesson 5/Pods-Lesson 5-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC8B40E9D51AA4D7BBD1BE5C /* [CP] Embed Pods Frameworks */ = {
