@@ -9,17 +9,20 @@ import UIKit
 
 class CoursesViewController: UIViewController {
     
+    // Properties
     private let url = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
     private let postRequestUrl = "https://jsonplaceholder.typicode.com/posts"
     private let putRequestUrl = "https://jsonplaceholder.typicode.com/posts/1"
-    private var courses = [Course]()
-    private var courseName: String?
-    private var courseURL: String?
+    public var courses = [Course]()
+    public var courseName: String?
+    public var courseURL: String?
     
+    // UI
     @IBOutlet var tableView: UITableView!
     
-    func fetchData() {
-        
+    //MARK: - Public
+    
+   public func fetchData() {
         NetworkManager.fetchData(url: url) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
@@ -28,8 +31,7 @@ class CoursesViewController: UIViewController {
         }
     }
     
-    func fetchDataWithAlamofire() {
-        
+    public func fetchDataWithAlamofire() {
         AlamofireNetworkRequest.sendRequest(url: url) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
@@ -38,8 +40,7 @@ class CoursesViewController: UIViewController {
         }
     }
     
-    func postRequest() {
-        
+    public func postRequest() {
         AlamofireNetworkRequest.postRequest(url: postRequestUrl) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
@@ -48,7 +49,7 @@ class CoursesViewController: UIViewController {
         }
     }
     
-    func putRequest() {
+    public func putRequest() {
         AlamofireNetworkRequest.putRequest(url: putRequestUrl) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
@@ -57,9 +58,7 @@ class CoursesViewController: UIViewController {
         }
     }
     
-    
-    private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
-        
+    public func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
         let course = courses[indexPath.row]
         cell.courseNameLabel.text = course.name
         
@@ -74,12 +73,11 @@ class CoursesViewController: UIViewController {
         DispatchQueue.global().async {
             guard let imageUrl = URL(string: course.imageUrl!) else { return }
             guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-            
+    
             DispatchQueue.main.async {
                 cell.courseImage.image = UIImage(data: imageData)
             }
         }
-        
     }
     
     // MARK: - Navigation
@@ -94,41 +92,5 @@ class CoursesViewController: UIViewController {
     }
 }
 
-// MARK: Table View Data Source
 
-extension CoursesViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courses.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! TableViewCell
-        
-        configureCell(cell: cell, for: indexPath)
-        
-        return cell
-    }
-}
-
-// MARK: Table View Delegate
-
-extension CoursesViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let course = courses[indexPath.row]
-        let identifierSegue = "Description"
-        
-        courseURL = course.link
-        courseName = course.name
-        
-        performSegue(withIdentifier: identifierSegue, sender: self)
-    }
-}
 

@@ -8,7 +8,8 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    
+// UI
     @IBOutlet var courseImage: UIImageView!
     @IBOutlet var courseNameLabel: UILabel!
     @IBOutlet var numberOfLessons: UILabel!

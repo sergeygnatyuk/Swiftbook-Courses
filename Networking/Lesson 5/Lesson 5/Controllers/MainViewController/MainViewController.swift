@@ -10,24 +10,8 @@ import UserNotifications
 import FBSDKLoginKit
 import FirebaseAuth
 
-enum Actions: String, CaseIterable {
-    case downloadImage = "Download Image"
-    case get = "GET"
-    case post = "POST"
-    case ourCourses = "Our Courses"
-    case uploadImage = "Upload Image"
-    case downloadFile = "Download File"
-    case ourCoursesAlamofire = "Our Courses (Alamofire)"
-    case responseData = "responseData"
-    case responseString = "responseString"
-    case response = "response"
-    case downloadLargeImage = "Download Large Image"
-    case postAlamofire = "POST with Alamofire"
-    case putRequest = "PUT Request with Alamofire"
-    case uploadImageAlamofire = "Upload Image (Alamofire)"
-}
-
-let loginVCIdentifier = "LoginViewController"
+//Properties
+public let loginVCIdentifier = "LoginViewController"
 private let cellIdentifier = "Cell"
 private let downloadImageSegue = "ShowImage"
 private let responseDataSegue = "ResponseData"
@@ -40,31 +24,31 @@ private let url = "https://jsonplaceholder.typicode.com/posts"
 private let uploadImage = "https://api.imgur.com/3/image"
 private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
 
-
 class MainViewController: UICollectionViewController {
     
+    //Properties
     private let actions = Actions.allCases
     private var alert: UIAlertController!
     private let dataProvider = DataProvider()
-    private var filePath: String?
+    public var filePath: String?
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         registerForNotification()
         
         dataProvider.fileLocation = { (location) in
-            
             //save file for use
             print("Download finished: \(location.absoluteString)")
             self.filePath = location.absoluteString
             self.postNotification()
             self.alert.dismiss(animated: false, completion: nil)
-            
         }
-        
         checkLoggedIn()
     }
+    
+    //MARK: - Private
     
     private func showAlert() {
         alert = UIAlertController(title: "Downloading...",
@@ -72,34 +56,27 @@ class MainViewController: UICollectionViewController {
                                   preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
-                   
-                   self.dataProvider.stopDownload()
-               }
+            self.dataProvider.stopDownload()
+        }
         
         let height = NSLayoutConstraint(item: alert.view as Any,
-                                       attribute: .height,
-                                       relatedBy: .equal,
-                                       toItem: nil,
-                                       attribute: .notAnAttribute,
-                                       multiplier: 0,
-                                       constant: 170)
-        
+                                        attribute: .height,
+                                        relatedBy: .equal,
+                                        toItem: nil,
+                                        attribute: .notAnAttribute,
+                                        multiplier: 0,
+                                        constant: 170)
         alert.view.addConstraint(height)
-        
-       
-        
         alert.addAction(cancelAction)
         present(alert, animated: true) {
-            
             let size = CGSize(width: 40, height: 40)
             let point = CGPoint(x: self.alert.view.frame.width / 2 - size.width / 2,
                                 y: self.alert.view.frame.height / 2 - size.height / 2)
-            
             let activityIndicator = UIActivityIndicatorView(frame: CGRect(origin: point,
                                                                           size: size))
             activityIndicator.color = .gray
             activityIndicator.startAnimating()
-            
+
             let progressView = UIProgressView(frame: CGRect(x: 0,
                                                             y: self.alert.view.frame.height - 44,
                                                             width: self.alert.view.frame.width,
@@ -115,22 +92,20 @@ class MainViewController: UICollectionViewController {
             self.alert.view.addSubview(progressView)
         }
     }
-
+    
+    // MARK: - UICollectionViewDelegate
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       
         return actions.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CollectionViewCell
         cell.label.text = actions[indexPath.row].rawValue
-        
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let action = actions[indexPath.row]
         
         switch action {
@@ -166,7 +141,8 @@ class MainViewController: UICollectionViewController {
         }
     }
     
-    //MARK: Navigation
+    //MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let coursesVC = segue.destination as? CoursesViewController
         let imageVC = segue.destination as? ImageViewController
@@ -189,44 +165,6 @@ class MainViewController: UICollectionViewController {
             coursesVC?.putRequest()
         default:
             break
-        }
-    }
-}
-
-extension MainViewController {
-    
-    private func registerForNotification() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (_, _) in
-        
-        }
-    }
-    
-    private func postNotification() {
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Download complete!"
-        content.body = "Your background transfer has completed. File path: \(String(describing: filePath))"
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "TransferComplete", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        
-    }
-}
-
-//MARK: Facebook SDK
-
-extension MainViewController {
-    private func checkLoggedIn() {
-        if Auth.auth().currentUser == nil {
-            
-            DispatchQueue.main.async {
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let loginViewController = storyBoard.instantiateViewController(identifier: loginVCIdentifier) as! LoginViewController
-                self.present(loginViewController, animated: true)
-                return
-            }
         }
     }
 }
