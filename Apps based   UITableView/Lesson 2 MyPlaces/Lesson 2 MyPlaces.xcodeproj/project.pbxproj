@@ -14,7 +14,6 @@
 		4A5B709E2601116C005B1008 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B709D2601116C005B1008 /* NewPlaceViewController.swift */; };
 		4A669B0E2608B81100979B7D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A669B0D2608B81100979B7D /* MapViewController.swift */; };
 		4A79DD0E260243750045437C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79DD0D260243750045437C /* StorageManager.swift */; };
-		4A8E82F8261E20A200B96EAD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A8E82F7261E20A200B96EAD /* .gitignore */; };
 		4AD8CA92260B6398004283D0 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD8CA91260B6398004283D0 /* MapManager.swift */; };
 		4AEB16B125FE250200B7EFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB16B025FE250200B7EFBE /* AppDelegate.swift */; };
 		4AEB16B325FE250200B7EFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB16B225FE250200B7EFBE /* SceneDelegate.swift */; };
@@ -32,9 +31,8 @@
 		4A5B709D2601116C005B1008 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		4A669B0D2608B81100979B7D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4A79DD0D260243750045437C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		4A8E82F7261E20A200B96EAD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4AD8CA91260B6398004283D0 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
-		4AEB16AD25FE250200B7EFBE /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AEB16AD25FE250200B7EFBE /* Lesson 2 MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 2 MyPlaces.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB16B025FE250200B7EFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AEB16B225FE250200B7EFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4AEB16B725FE250200B7EFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 		4AEB16A425FE250200B7EFBE = {
 			isa = PBXGroup;
 			children = (
-				4A8E82F7261E20A200B96EAD /* .gitignore */,
 				4AEB16AF25FE250200B7EFBE /* Lesson 2 MyPlaces */,
 				4AEB16AE25FE250200B7EFBE /* Products */,
 				013A8DE824B891A96628D5C6 /* Pods */,
@@ -99,7 +96,7 @@
 		4AEB16AE25FE250200B7EFBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4AEB16AD25FE250200B7EFBE /* MyPlaces.app */,
+				4AEB16AD25FE250200B7EFBE /* Lesson 2 MyPlaces.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,9 +155,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4AEB16AC25FE250200B7EFBE /* MyPlaces */ = {
+		4AEB16AC25FE250200B7EFBE /* Lesson 2 MyPlaces */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4AEB16C125FE250300B7EFBE /* Build configuration list for PBXNativeTarget "MyPlaces" */;
+			buildConfigurationList = 4AEB16C125FE250300B7EFBE /* Build configuration list for PBXNativeTarget "Lesson 2 MyPlaces" */;
 			buildPhases = (
 				A6B566BAFC23FC9BC81F0E38 /* [CP] Check Pods Manifest.lock */,
 				4AEB16A925FE250200B7EFBE /* Sources */,
@@ -172,9 +169,9 @@
 			);
 			dependencies = (
 			);
-			name = MyPlaces;
+			name = "Lesson 2 MyPlaces";
 			productName = "Lesson 2 MyPlaces";
-			productReference = 4AEB16AD25FE250200B7EFBE /* MyPlaces.app */;
+			productReference = 4AEB16AD25FE250200B7EFBE /* Lesson 2 MyPlaces.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4AEB16A825FE250200B7EFBE /* Build configuration list for PBXProject "MyPlaces" */;
+			buildConfigurationList = 4AEB16A825FE250200B7EFBE /* Build configuration list for PBXProject "Lesson 2 MyPlaces" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -204,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4AEB16AC25FE250200B7EFBE /* MyPlaces */,
+				4AEB16AC25FE250200B7EFBE /* Lesson 2 MyPlaces */,
 			);
 		};
 /* End PBXProject section */
@@ -214,7 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A8E82F8261E20A200B96EAD /* .gitignore in Resources */,
 				4AEB16BD25FE250300B7EFBE /* LaunchScreen.storyboard in Resources */,
 				4AEB16BA25FE250300B7EFBE /* Assets.xcassets in Resources */,
 				4AEB16B825FE250200B7EFBE /* Main.storyboard in Resources */,
@@ -468,7 +464,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4AEB16A825FE250200B7EFBE /* Build configuration list for PBXProject "MyPlaces" */ = {
+		4AEB16A825FE250200B7EFBE /* Build configuration list for PBXProject "Lesson 2 MyPlaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4AEB16BF25FE250300B7EFBE /* Debug */,
@@ -477,7 +473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4AEB16C125FE250300B7EFBE /* Build configuration list for PBXNativeTarget "MyPlaces" */ = {
+		4AEB16C125FE250300B7EFBE /* Build configuration list for PBXNativeTarget "Lesson 2 MyPlaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4AEB16C225FE250300B7EFBE /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4AEB16AC25FE250200B7EFBE"
-               BuildableName = "MyPlaces.app"
-               BlueprintName = "MyPlaces"
-               ReferencedContainer = "container:MyPlaces.xcodeproj">
+               BuildableName = "Lesson 2 MyPlaces.app"
+               BlueprintName = "Lesson 2 MyPlaces"
+               ReferencedContainer = "container:Lesson 2 MyPlaces.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4AEB16AC25FE250200B7EFBE"
-            BuildableName = "MyPlaces.app"
-            BlueprintName = "MyPlaces"
-            ReferencedContainer = "container:MyPlaces.xcodeproj">
+            BuildableName = "Lesson 2 MyPlaces.app"
+            BlueprintName = "Lesson 2 MyPlaces"
+            ReferencedContainer = "container:Lesson 2 MyPlaces.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -73,9 +73,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4AEB16AC25FE250200B7EFBE"
-            BuildableName = "MyPlaces.app"
-            BlueprintName = "MyPlaces"
-            ReferencedContainer = "container:MyPlaces.xcodeproj">
+            BuildableName = "Lesson 2 MyPlaces.app"
+            BlueprintName = "Lesson 2 MyPlaces"
+            ReferencedContainer = "container:Lesson 2 MyPlaces.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
