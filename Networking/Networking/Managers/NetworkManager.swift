@@ -6,14 +6,16 @@
 //
 
 import UIKit
+
 class NetworkManager {
+    
+    //MARK: - POST
     
     static func postRequest(url: String) {
         
         guard let url = URL(string: url) else { return }
         
         let userData = ["Course": "Networking", "Lesson": "GET and POST"]
-        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -25,7 +27,6 @@ class NetworkManager {
         session.dataTask(with: request) { (data, response, error) in
             
             guard let response = response, let data = data else { return }
-            
             print(response)
             
             do {
@@ -37,18 +38,17 @@ class NetworkManager {
         } .resume()
     }
     
+    //MARK: - GET
+    
     static func getRequest(url: String) {
         
         guard let url = URL(string: url) else { return }
         
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
-            
             guard let response = response, let data = data else { return }
-            
             print(response)
             print(data)
-            
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
@@ -58,7 +58,9 @@ class NetworkManager {
         }.resume()
     }
     
-     func downloadImage(url: String, completion: @escaping  (_ image: UIImage)->()) {
+    //MARK: - DownloadImage
+    
+    func downloadImage(url: String, completion: @escaping  (_ image: UIImage)->()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -66,11 +68,13 @@ class NetworkManager {
         session.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
-                 completion(image)
+                    completion(image)
                 }
             }
         } .resume()
     }
+    
+    //MARK: - FetchData
     
     static func fetchData(url: String, completion: @escaping (_ courses: [Course])->()) {
         guard let url = URL(string: url) else { return }
@@ -92,6 +96,8 @@ class NetworkManager {
         }.resume()
     }
     
+    //MARK: - UploadImage
+    
     static func uploadImage(url: String) {
         
         let image = UIImage(named: "Notification")!
@@ -109,7 +115,6 @@ class NetworkManager {
             if let response = response {
                 print(response)
             }
-            
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
@@ -119,6 +124,5 @@ class NetworkManager {
                 }
             }
         }.resume()
-        
     }
 }

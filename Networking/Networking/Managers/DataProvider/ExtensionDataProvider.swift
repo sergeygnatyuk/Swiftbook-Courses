@@ -1,44 +1,11 @@
 //
-//  DataProvider.swift
-//  Lesson 5
+//  ExtensionDataProvider.swift
+//  Networking
 //
-//  Created by Гнатюк Сергей on 12.04.2021.
+//  Created by Гнатюк Сергей on 03.05.2021.
 //
 
-import UIKit
-
-class DataProvider: NSObject {
-    
-    private var downloadTask: URLSessionTask!
-    var fileLocation: ((URL) -> ())?
-    var onProgress: ((Double) -> ())?
-    
-    private lazy var bgSession: URLSession = {
-        let config = URLSessionConfiguration.background(withIdentifier: "ru.swiftbook.Networking")
-        config.isDiscretionary = true // starting the task at the optimal time
-        config.timeoutIntervalForResource = 300 // network timeout
-        config.waitsForConnectivity = true //waiting for networking connection
-        config.sessionSendsLaunchEvents = true
-        return URLSession(configuration: config, delegate: self, delegateQueue: nil)
-    }()
-    
-    
-    
-    func startDownload() {
-        if let url = URL(string: "https://speed.hetzner.de/100MB.bin") {
-            downloadTask = bgSession.downloadTask(with: url)
-            downloadTask.earliestBeginDate = Date().addingTimeInterval(3)
-            downloadTask.countOfBytesClientExpectsToSend = 512
-            downloadTask.countOfBytesClientExpectsToReceive = 100 * 1024 * 1024
-            downloadTask.resume()
-        }
-    }
-    func stopDownload() {
-        downloadTask.cancel()
-    }
-
-}
-
+import UIKit 
 
 extension DataProvider: URLSessionDelegate {
     
@@ -53,9 +20,6 @@ extension DataProvider: URLSessionDelegate {
         }
     }
 }
-
-
-
 
 extension DataProvider: URLSessionDownloadDelegate {
     
@@ -84,8 +48,7 @@ extension DataProvider: URLSessionDownloadDelegate {
 }
 
 extension DataProvider: URLSessionTaskDelegate {
-    //restoring the connection 
+    //restoring the connection
     func urlSession(_ session: URLSession, taskIsWaitingForConnectivity: URLSessionTask) {
-        
     }
 }

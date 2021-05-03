@@ -9,6 +9,7 @@ import UIKit
 
 
 struct ImageProperties {
+    
     let key: String
     let data: Data
     

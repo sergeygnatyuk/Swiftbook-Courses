@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct UserProfile {
     let id: Int?
     let name: String?

@@ -8,19 +8,6 @@
 import Foundation
 
 //URLSession
-
-//struct Course: Decodable {
-//
-//    let id: Int?
-//    let name: String?
-//    let link: String?
-//    let imageUrl: String?
-//    let numberOfLessons: Int?
-//    let numberOfTests: Int?
-//}
-
-
-
 struct Course: Decodable {
     
     let id: Int?
@@ -52,5 +39,4 @@ struct Course: Decodable {
         guard let jsonArray = jsonArray as? Array<[String: Any]> else { return nil }
         return jsonArray.compactMap { (Course(json: $0)) }
     }
-    
 }

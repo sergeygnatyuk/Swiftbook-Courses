@@ -8,6 +8,7 @@
 import Foundation
 
 enum Actions: String, CaseIterable {
+    
     case downloadImage = "Download Image"
     case get = "GET"
     case post = "POST"

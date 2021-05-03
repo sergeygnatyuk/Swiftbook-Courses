@@ -10,10 +10,11 @@ import Alamofire
 
 class AlamofireNetworkRequest {
     
-    //Properties
+    // Properties
     static var onProgress: ((Double) -> ())?
     static var completed: ((String) -> ())?
     
+    // SEND
     static func sendRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         
         guard let url = URL(string: url) else { return }
@@ -24,15 +25,14 @@ class AlamofireNetworkRequest {
                 
                 var courses = [Course]()
                 courses = Course.getArray(from: value)!
-                
                 completion(courses)
-                
             case .failure(let error):
                 print(error)
             }
         }
     }
     
+    // DownloadImage
     static func downloadImage(url: String, completion: @escaping (_ image: UIImage)->()) {
         
         guard let url = URL(string: url) else { return }
@@ -47,6 +47,7 @@ class AlamofireNetworkRequest {
         }
         
     }
+    //MARK: - Response
     
     static func responseData(url: String) {
         request(url).responseData { (responseData) in
@@ -72,9 +73,7 @@ class AlamofireNetworkRequest {
     }
     
     static func response(url: String) {
-        
         request(url).response { (response) in
-            
             guard
                 let data = response.data,
                 let string = String(data: data, encoding: .utf8)
@@ -82,6 +81,8 @@ class AlamofireNetworkRequest {
             print(string)
         }
     }
+    
+    //MARK: - DownloadImageWithProgress
     
     static func downloadImageWithProgress(url: String, completion: @escaping (_ image: UIImage)->()) {
         
@@ -105,7 +106,10 @@ class AlamofireNetworkRequest {
         }
     }
     
+    //MARK: - POST
+    
     static func postRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
+        
         guard let url = URL(string: url) else { return }
         
         let userData: [String: Any] = ["name": "Network Request",
@@ -135,6 +139,8 @@ class AlamofireNetworkRequest {
         }
         
     }
+    
+    //MARK: - PUT
     
     static func putRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         
@@ -167,6 +173,8 @@ class AlamofireNetworkRequest {
         }
     }
     
+    //MARK: - UploadImage
+    
     static func uploadImage(url: String) {
         guard let url = URL(string: url) else { return }
         
@@ -196,16 +204,11 @@ class AlamofireNetworkRequest {
                         print(error)
                     }
                 }
-                
             case .failure(let error):
                 print(error)
             }
         }
-        
-        
-        
     }
-    
 }
 
 
