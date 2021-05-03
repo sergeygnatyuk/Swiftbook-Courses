@@ -41,6 +41,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A24B8762640474300263FAD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4A8FB5C825FCC21900ADEEA3 /* AppDelegate.swift */,
+				4A8FB5CA25FCC21900ADEEA3 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		4A24B8772640475600263FAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A8FB5CE25FCC21900ADEEA3 /* Main.storyboard */,
+				4A8FB5D325FCC21C00ADEEA3 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A24B8782640476600263FAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A8FB5D125FCC21C00ADEEA3 /* Assets.xcassets */,
+				4A8FB5D625FCC21C00ADEEA3 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4A8FB5BC25FCC21900ADEEA3 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +87,12 @@
 		4A8FB5C725FCC21900ADEEA3 /* PhotoTapps */ = {
 			isa = PBXGroup;
 			children = (
-				4A8FB5C825FCC21900ADEEA3 /* AppDelegate.swift */,
-				4A8FB5CA25FCC21900ADEEA3 /* SceneDelegate.swift */,
-				4A8FB5CE25FCC21900ADEEA3 /* Main.storyboard */,
+				4A24B8762640474300263FAD /* SupportingFiles */,
+				4A24B8772640475600263FAD /* View */,
 				4A8FB5E425FD440400ADEEA3 /* PhotoViewController.swift */,
 				4A8FB5E125FCCC0C00ADEEA3 /* PhotoCell.swift */,
 				4A8FB5DD25FCC29700ADEEA3 /* PhotosCollectionViewController.swift */,
-				4A8FB5D125FCC21C00ADEEA3 /* Assets.xcassets */,
-				4A8FB5D325FCC21C00ADEEA3 /* LaunchScreen.storyboard */,
-				4A8FB5D625FCC21C00ADEEA3 /* Info.plist */,
+				4A24B8782640476600263FAD /* Resources */,
 			);
 			path = PhotoTapps;
 			sourceTree = "<group>";
@@ -296,7 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5DQ465SS7;
-				INFOPLIST_FILE = PhotoTapps/Info.plist;
+				INFOPLIST_FILE = PhotoTapps/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5DQ465SS7;
-				INFOPLIST_FILE = PhotoTapps/Info.plist;
+				INFOPLIST_FILE = PhotoTapps/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
