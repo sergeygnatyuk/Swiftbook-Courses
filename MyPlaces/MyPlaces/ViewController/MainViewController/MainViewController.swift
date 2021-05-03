@@ -10,9 +10,15 @@ import RealmSwift
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // Dependencies
     private let searchController = UISearchController(searchResultsController: nil)
-    private var places: Results<Place>!
-    private var filteredPlaces: Results<Place>!
+    public var places: Results<Place>!
+    public var filteredPlaces: Results<Place>!
+    
+    // Properties
+    private let cellIdentifier = "Cell"
+    private let titleDelete = "Delete"
+    private let showDetailIdentifierSegue = "showDetail"
     private var ascendingSorting = true
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
@@ -23,16 +29,18 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return searchController.isActive && !searchBarIsEmpty
     }
     
+    // UI
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var reversedSortingButton: UIBarButtonItem!
     
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         places = realm.objects(Place.self)
-        
         //Setup the search controller
         let search = "Search"
         searchController.searchResultsUpdater = self
@@ -42,8 +50,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         definesPresentationContext = true
     }
     
-    // MARK: - Table view data source
-    
+    // MARK: - TableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
@@ -52,44 +59,35 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return places.count
     }
     
-    let cellIdentifier = "Cell"
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomTableViewCell
-        
         let place = isFiltering ? filteredPlaces[indexPath.row] : places[indexPath.row]
-       
-        
         cell.nameLabel?.text = place.name
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
         cell.cosmosView.rating = place.rating
-    
         return cell
     }
     
-    //MARK: Table View Delegate
+    //MARK: - TableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    let titleDelete = "Delete"
-    
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let place = places[indexPath.row]
-        let deleteAction = UITableViewRowAction(style: .default, title: titleDelete) { (_, _) in
+        let deleteAction = UIContextualAction(style: .destructive, title: titleDelete) { (contextualAction, view, boolValue) in
             StorageManager.deletObject(place)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        
-        return [deleteAction]
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction])
+        return swipeActions
     }
     
     // MARK: - Navigation
     
-    let showDetailIdentifierSegue = "showDetail"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showDetailIdentifierSegue {
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
@@ -101,7 +99,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
+    // Actions
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue){
         guard let newPlaceViewController = segue.source as? NewPlaceViewController else { return }
         newPlaceViewController.savePlace()
@@ -109,23 +107,20 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func sortSelection(_ sender: UISegmentedControl) {
-        
         sorting()
     }
     
     @IBAction func reversedSorting(_ sender: Any) {
-        
         ascendingSorting.toggle()
-        
         if ascendingSorting {
             reversedSortingButton.image = #imageLiteral(resourceName: "icons8-стрелки-сортировки-64")
         }else{
             reversedSortingButton.image = #imageLiteral(resourceName: "icons8-стрелки-сортировки-64")
         }
-        
         sorting()
-        
     }
+    
+    //MARK: - Private
     
     private func sorting() {
         let keyPathDate = "date"
@@ -135,26 +130,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }else{
             places = places.sorted(byKeyPath: keyPathName, ascending: ascendingSorting)
         }
-        
         tableView.reloadData()
     }
 }
 
-extension MainViewController: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-    
-    private func filterContentForSearchText(_ searchText: String) {
-        
-        filteredPlaces = places.filter("name CONTAINS[c] %@ OR location CONTAINS[c] %@", searchText,searchText)
-        
-        tableView.reloadData()
-        
-    }
-    
-}
+
 
 
 

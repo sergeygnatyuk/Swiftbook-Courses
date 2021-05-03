@@ -7,8 +7,8 @@
 
 import RealmSwift
 
-
 class Place: Object {
+    
     @objc dynamic var name = ""
     @objc dynamic var location: String?
     @objc dynamic var type: String?
@@ -24,5 +24,4 @@ class Place: Object {
         self.imageData = imageData
         self.rating = rating
     }
-    
 }
