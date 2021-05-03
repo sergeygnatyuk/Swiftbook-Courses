@@ -9,13 +9,11 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var weatherIconImageView: UIImageView!
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
     
+    // Dependencies
     var networkWeatherManager = NetworkWeatherManager()
+    
+    // Properties
     lazy var locationManager: CLLocationManager = {
         let lm = CLLocationManager()
         lm.delegate = self
@@ -24,11 +22,19 @@ class ViewController: UIViewController {
         return lm
     }()
     
+    // UI
+    @IBOutlet weak var weatherIconImageView: UIImageView!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
+    
     @IBAction func searchPressed(_ sender: UIButton) {
         self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert) { [unowned self ] city in
             self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
         }
     }
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +48,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateInterfaceWith(weather: CurrentWeather) {
+    //MARK: - Private
+    
+    private func updateInterfaceWith(weather: CurrentWeather) {
         DispatchQueue.main.async {
             self.cityLabel.text = weather.cityName
             self.temperatureLabel.text = weather.temperatureString
@@ -61,7 +69,6 @@ extension ViewController: CLLocationManagerDelegate {
         let longitude = location.coordinate.longitude
         
         networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: latitude, longitude: longitude))
-        
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
