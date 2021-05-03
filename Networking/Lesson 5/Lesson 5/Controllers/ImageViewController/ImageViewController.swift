@@ -35,21 +35,21 @@ final class ImageViewController: UIViewController {
     
     //MARK: - Public
     
-    func fetchImage() {
+    public func fetchImage() {
         networkManager.downloadImage(url: url) { image in
             self.activityIndicator.stopAnimating()
             self.imageView.image = image
         }
     }
     
-    func fetchDataWithAlamofire() {
+    public func fetchDataWithAlamofire() {
         AlamofireNetworkRequest.downloadImage(url: url) { image in
                 self.activityIndicator.stopAnimating()
                 self.imageView.image = image
             }
         }
     
-    func downloadImageWithProgress() {
+    public func downloadImageWithProgress() {
         AlamofireNetworkRequest.onProgress = { progress in
         self.progressView.isHidden = false
         self.progressView.progress = Float(progress)

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4A00BA46262628F600B05FF4 /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */; };
 		4A0362182630AF5400CC8652 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0362172630AF5400CC8652 /* UserProfile.swift */; };
+		4A067997263F6F6F004FB94A /* ExtensionLoginViewControllerFBSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A067996263F6F6F004FB94A /* ExtensionLoginViewControllerFBSDK.swift */; };
+		4A06799D263F7255004FB94A /* ExtensionLoginViewControllerGoogleSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06799C263F7255004FB94A /* ExtensionLoginViewControllerGoogleSDK.swift */; };
+		4A0679A4263F747A004FB94A /* ExtensionUserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0679A3263F747A004FB94A /* ExtensionUserProfileVC.swift */; };
 		4A18AEDA2620E2D900F75CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AED92620E2D900F75CB9 /* AppDelegate.swift */; };
 		4A18AEDC2620E2D900F75CB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */; };
 		4A18AEE12620E2D900F75CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A18AEDF2620E2D900F75CB9 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		010346E0665CBEE638EA7A00 /* Pods-Lesson 5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson 5.release.xcconfig"; path = "Target Support Files/Pods-Lesson 5/Pods-Lesson 5.release.xcconfig"; sourceTree = "<group>"; };
 		4A00BA45262628F600B05FF4 /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		4A0362172630AF5400CC8652 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		4A067996263F6F6F004FB94A /* ExtensionLoginViewControllerFBSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLoginViewControllerFBSDK.swift; sourceTree = "<group>"; };
+		4A06799C263F7255004FB94A /* ExtensionLoginViewControllerGoogleSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLoginViewControllerGoogleSDK.swift; sourceTree = "<group>"; };
+		4A0679A3263F747A004FB94A /* ExtensionUserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUserProfileVC.swift; sourceTree = "<group>"; };
 		4A18AED62620E2D900F75CB9 /* Lesson 5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A18AED92620E2D900F75CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4A067999263F71F2004FB94A /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ADB47A8262AF50E00B3363C /* LoginViewController.swift */,
+				4A06799C263F7255004FB94A /* ExtensionLoginViewControllerGoogleSDK.swift */,
+				4A067996263F6F6F004FB94A /* ExtensionLoginViewControllerFBSDK.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		4A0679A0263F7316004FB94A /* ImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A18AEEE2620E71600F75CB9 /* ImageViewController.swift */,
+			);
+			path = ImageViewController;
+			sourceTree = "<group>";
+		};
+		4A0679A2263F7443004FB94A /* UserProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B4B39262CA1BF00522FF3 /* UserProfileVC.swift */,
+				4A0679A3263F747A004FB94A /* ExtensionUserProfileVC.swift */,
+			);
+			path = UserProfileViewController;
+			sourceTree = "<group>";
+		};
 		4A18AECD2620E2D800F75CB9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,10 +166,9 @@
 				4A9F08F3263D80B600E2EAA4 /* WebViewController */,
 				4A9F08FD263D88DB00E2EAA4 /* MainViewController */,
 				4A9F08F5263D853100E2EAA4 /* CourcesViewConroller */,
-				4A18AEEE2620E71600F75CB9 /* ImageViewController.swift */,
-				4A19E6BE2623344F00D591F9 /* CollectionViewCell.swift */,
-				4ADB47A8262AF50E00B3363C /* LoginViewController.swift */,
-				4A1B4B39262CA1BF00522FF3 /* UserProfileVC.swift */,
+				4A067999263F71F2004FB94A /* LoginViewController */,
+				4A0679A0263F7316004FB94A /* ImageViewController */,
+				4A0679A2263F7443004FB94A /* UserProfileViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +229,7 @@
 		4A9F08FD263D88DB00E2EAA4 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4A19E6BE2623344F00D591F9 /* CollectionViewCell.swift */,
 				4A19E6BB2623343200D591F9 /* MainViewController.swift */,
 				4A9F08FF263D890700E2EAA4 /* ExtensionMainViewController.swift */,
 			);
@@ -378,6 +411,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A19E6C3262341C800D591F9 /* NetworkManager.swift in Sources */,
+				4A0679A4263F747A004FB94A /* ExtensionUserProfileVC.swift in Sources */,
+				4A067997263F6F6F004FB94A /* ExtensionLoginViewControllerFBSDK.swift in Sources */,
 				4A426AB22621C74F00619BBC /* TableViewCell.swift in Sources */,
 				4A9F08F8263D858700E2EAA4 /* ExtensionCourcesViewController.swift in Sources */,
 				4A426AAD2621BF3700619BBC /* Course.swift in Sources */,
@@ -399,6 +434,7 @@
 				4A19E6BF2623344F00D591F9 /* CollectionViewCell.swift in Sources */,
 				4A1B4B3A262CA1BF00522FF3 /* UserProfileVC.swift in Sources */,
 				4A9F0900263D890700E2EAA4 /* ExtensionMainViewController.swift in Sources */,
+				4A06799D263F7255004FB94A /* ExtensionLoginViewControllerGoogleSDK.swift in Sources */,
 				4AE42EB82624C92400DCE5EB /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

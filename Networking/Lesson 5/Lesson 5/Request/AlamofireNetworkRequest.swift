@@ -9,6 +9,8 @@ import Foundation
 import Alamofire
 
 class AlamofireNetworkRequest {
+    
+    //Properties
     static var onProgress: ((Double) -> ())?
     static var completed: ((String) -> ())?
     
@@ -22,7 +24,7 @@ class AlamofireNetworkRequest {
                 
                 var courses = [Course]()
                 courses = Course.getArray(from: value)!
-    
+                
                 completion(courses)
                 
             case .failure(let error):
@@ -181,9 +183,9 @@ class AlamofireNetworkRequest {
             case .success(request: let uploadRequest,
                           streamingFromDisk: let streamingFromDisk,
                           streamFileURL: let streamFileURL):
-            
-            print(uploadRequest)
-            print(streamingFromDisk)
+                
+                print(uploadRequest)
+                print(streamingFromDisk)
                 print(streamFileURL ?? "streamFileURL is NIL")
                 
                 uploadRequest.validate().responseJSON { (responseJSON) in
@@ -194,7 +196,7 @@ class AlamofireNetworkRequest {
                         print(error)
                     }
                 }
-            
+                
             case .failure(let error):
                 print(error)
             }

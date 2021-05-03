@@ -16,16 +16,13 @@ extension CoursesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! TableViewCell
-        
         configureCell(cell: cell, for: indexPath)
-        
         return cell
     }
 }
 
-// MARK: TableViewDelegate
+// MARK: - TableViewDelegate
 
 extension CoursesViewController: UITableViewDelegate {
     
@@ -34,13 +31,10 @@ extension CoursesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let course = courses[indexPath.row]
         let identifierSegue = "Description"
-        
         courseURL = course.link
         courseName = course.name
-        
         performSegue(withIdentifier: identifierSegue, sender: self)
     }
 }
