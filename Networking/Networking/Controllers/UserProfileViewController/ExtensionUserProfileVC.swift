@@ -9,26 +9,11 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 import FirebaseDatabase
+import GoogleSignIn
 
-// MARK: - Facebook SDK
-
-extension UserProfileVC: LoginButtonDelegate {
+extension UserProfileVC {
     
     //MARK: - Public
-    
-    public func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        if error != nil {
-            print(error ?? "error")
-            return
-        }
-        print("Successfully logged in with facebook...")
-    }
-    
-    public func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        
-        print("Did log out of facebook")
-        openLoginViewController()
-    }
     
     public func fetchingUserData() {
         
@@ -40,11 +25,11 @@ extension UserProfileVC: LoginButtonDelegate {
                 
                 guard let userData = snapshot.value as? [String: Any] else { return }
                 
-                let currentUser = CurrentUser(uid: uid, data: userData)
+                self.currentUser = CurrentUser(uid: uid, data: userData)
                 
                 self.activityIndicator.stopAnimating()
                 self.userNameLabel.isHidden = false
-                self.userNameLabel.text = "\(currentUser?.name ?? "Noname") Logged in with Facebook"
+                self.userNameLabel.text = self.getProviderData()
                 
             }) { (error) in
                 print(error)
@@ -68,6 +53,48 @@ extension UserProfileVC: LoginButtonDelegate {
             
         } catch let error {
             print("Failed to sign out with error: ", error.localizedDescription)
+        }
+    }
+    
+    private func getProviderData() -> String {
+        var greetings = ""
+        
+        if let providerData = Auth.auth().currentUser?.providerData {
+            
+            for userInfo in providerData {
+                
+                switch userInfo.providerID {
+                case "facebook.com":
+                    provider = "Facebook"
+                case "google.com":
+                    provider = "Google"
+                default:
+                    break
+                }
+            }
+            greetings = "\(currentUser?.name ?? "Noname") Logged in with \(provider!)"
+        }
+        return greetings
+    }
+    
+    //MARK: - @objc methods
+    
+    @objc public func signOut() {
+        if let providerData = Auth.auth().currentUser?.providerData {
+            for userInfo in providerData {
+                switch userInfo.providerID {
+                case "facebook.com":
+                    LoginManager().logOut()
+                    print("User did log out of Facebook")
+                    openLoginViewController()
+                case "google.com":
+                    GIDSignIn.sharedInstance()?.signOut()
+                    print("Used did log out of Google")
+                    openLoginViewController()
+                default:
+                    print("User is signed in with \(userInfo.providerID)")
+                }
+            }
         }
     }
 }

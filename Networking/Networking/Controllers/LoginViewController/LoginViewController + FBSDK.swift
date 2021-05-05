@@ -33,6 +33,22 @@ extension LoginViewController: LoginButtonDelegate {
         dismiss(animated: true)
     }
     
+    public func saveInfoFirebase() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let userData = ["name": userProfile?.name, "email": userProfile?.email]
+        
+        let values = [uid: userData]
+        Database.database().reference().child("users").updateChildValues(values) { (error, _) in
+            if let error = error {
+                print(error)
+                return
+            }
+            print("Successfully saved user into firebase")
+            self.openMainViewController()
+        }
+    }
+    
     //MARK: - @objc methods
     
     @objc public func handCustomFBLogin() {
@@ -79,22 +95,6 @@ extension LoginViewController: LoginButtonDelegate {
                 print(self.userProfile?.name ?? "nil")
                 self.saveInfoFirebase()
             }
-        }
-    }
-    
-    private func saveInfoFirebase() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        let userData = ["name": userProfile?.name, "email": userProfile?.email]
-        
-        let values = [uid: userData]
-        Database.database().reference().child("users").updateChildValues(values) { (error, _) in
-            if let error = error {
-                print(error)
-                return
-            }
-            print("Successfully saved user into firebase")
-            self.openMainViewController()
         }
     }
 }

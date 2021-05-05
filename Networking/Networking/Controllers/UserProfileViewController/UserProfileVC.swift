@@ -9,18 +9,28 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 import FirebaseDatabase
+import GoogleSignIn
 
 class UserProfileVC: UIViewController {
     
+    // Dependencies
+    public var provider: String?
+    public var currentUser: CurrentUser?
+    
     // Properties
-    private lazy var fbLoginButton: UIButton = {
-        let loginButton = FBLoginButton()
-        loginButton.frame = CGRect(x: 32,
+    private lazy var logoutButton: UIButton = {
+        let button = UIButton()
+        button.frame = CGRect(x: 32,
                                    y: view.frame.height - 172,
                                    width: view.frame.width - 64,
                                    height: 50)
-        loginButton.delegate = self
-        return loginButton
+        button.backgroundColor = UIColor(hexValue: "#3B5999", alpha: 1)
+        button.setTitle("Log Out", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(signOut), for: .touchDragInside)
+        return button
     }()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,6 +62,6 @@ class UserProfileVC: UIViewController {
     //MARK: - Private
     
     private func setupViews() {
-        view.addSubview(fbLoginButton)
+        view.addSubview(logoutButton)
     }
 }
