@@ -28,6 +28,8 @@
 		4A426AA12621BC0E00619BBC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426AA02621BC0E00619BBC /* WebViewController.swift */; };
 		4A426AAD2621BF3700619BBC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426AAC2621BF3700619BBC /* Course.swift */; };
 		4A426AB22621C74F00619BBC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426AB12621C74F00619BBC /* TableViewCell.swift */; };
+		4A50471F2644841D0008FCED /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50471E2644841D0008FCED /* SignInViewController.swift */; };
+		4A5047222644956F0008FCED /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5047212644956F0008FCED /* SignUpViewController.swift */; };
 		4A9F08F1263D7FEE00E2EAA4 /* ExtensionWebViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F08F0263D7FEE00E2EAA4 /* ExtensionWebViewConroller.swift */; };
 		4A9F08F8263D858700E2EAA4 /* ExtensionCourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F08F7263D858700E2EAA4 /* ExtensionCourcesViewController.swift */; };
 		4A9F08FB263D86C100E2EAA4 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F08FA263D86C100E2EAA4 /* Actions.swift */; };
@@ -66,6 +68,8 @@
 		4A426AA02621BC0E00619BBC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4A426AAC2621BF3700619BBC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		4A426AB12621C74F00619BBC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4A50471E2644841D0008FCED /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4A5047212644956F0008FCED /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4A9F08F0263D7FEE00E2EAA4 /* ExtensionWebViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWebViewConroller.swift; sourceTree = "<group>"; };
 		4A9F08F7263D858700E2EAA4 /* ExtensionCourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCourcesViewController.swift; sourceTree = "<group>"; };
 		4A9F08FA263D86C100E2EAA4 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				4A067999263F71F2004FB94A /* LoginViewController */,
 				4A0679A0263F7316004FB94A /* ImageViewController */,
 				4A0679A2263F7443004FB94A /* UserProfileViewController */,
+				4A50471E2644841D0008FCED /* SignInViewController.swift */,
+				4A5047212644956F0008FCED /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A50471F2644841D0008FCED /* SignInViewController.swift in Sources */,
 				4A19E6C3262341C800D591F9 /* NetworkManager.swift in Sources */,
 				4A0679A4263F747A004FB94A /* ExtensionUserProfileVC.swift in Sources */,
 				4A067997263F6F6F004FB94A /* LoginViewController + FBSDK.swift in Sources */,
@@ -436,6 +443,7 @@
 				4A18AEEF2620E71600F75CB9 /* ImageViewController.swift in Sources */,
 				4ADB47AC262AF68C00B3363C /* Extensions.swift in Sources */,
 				4A0362182630AF5400CC8652 /* UserProfile.swift in Sources */,
+				4A5047222644956F0008FCED /* SignUpViewController.swift in Sources */,
 				4A18AEDC2620E2D900F75CB9 /* SceneDelegate.swift in Sources */,
 				4AE14A122621D05E00BCFA93 /* WebsiteDiscription .swift in Sources */,
 				4AD307D92623853C00DD149D /* ImageProperties.swift in Sources */,

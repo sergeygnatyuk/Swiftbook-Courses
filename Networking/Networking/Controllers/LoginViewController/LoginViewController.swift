@@ -12,11 +12,12 @@ import FirebaseDatabase
 import GoogleSignIn
 
 class LoginViewController: UIViewController {
-
+    
     // Dependencies
     public var userProfile: UserProfile?
     
-    // Properties
+    //MARK: - Buttons
+    
     private var fbLoginButton: UIButton {
         let loginButton = FBLoginButton()
         loginButton.frame = CGRect(x: 32, y: 480, width: view.frame.width - 64, height: 50)
@@ -57,6 +58,14 @@ class LoginViewController: UIViewController {
         return loginButton
     }()
     
+    private lazy var signInWithEmail: UIButton = {
+        let loginButton = UIButton()
+        loginButton.frame = CGRect(x: 32, y: 480 + 60 + 60 + 60, width: view.frame.width - 64, height: 45)
+        loginButton.setTitle("Login with Email", for: .normal)
+        loginButton.addTarget(self, action: #selector(openSignVC), for: .touchUpInside)
+        return loginButton
+    }()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         get {
             return .lightContent
@@ -89,6 +98,12 @@ class LoginViewController: UIViewController {
     @objc private func handleCustomGoogleLogin() {
         GIDSignIn.sharedInstance()?.signIn()
     }
+    
+    @objc private func openSignVC() {
+        performSegue(withIdentifier: "SignIn", sender: self)
+    }
+    
+    
 }
 
 
