@@ -2,6 +2,18 @@
 
 My projects from completed courses Swiftbook
 
+Networking - This app works with GET and POST requests, as well as with user authorization via the Facebook and Google SDK, storing data in the Firebase service.
+
+![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 20 15](https://user-images.githubusercontent.com/76879483/117511008-bd8c2b80-af95-11eb-935a-3d6785a8df98.png) ![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 21 44](https://user-images.githubusercontent.com/76879483/117511015-bebd5880-af95-11eb-80c5-19565c012e49.png)
+![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 21 59](https://user-images.githubusercontent.com/76879483/117511017-bf55ef00-af95-11eb-9f84-ed988225fdf7.png)
+![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 22 21](https://user-images.githubusercontent.com/76879483/117511018-bfee8580-af95-11eb-92a7-dbf6d0d49406.png)
+
+![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 22 35](https://user-images.githubusercontent.com/76879483/117511019-bfee8580-af95-11eb-8282-7d93116e20bb.png)
+![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 22 51](https://user-images.githubusercontent.com/76879483/117511023-c11fb280-af95-11eb-93f7-22705b8573cf.png)
+![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 23 04](https://user-images.githubusercontent.com/76879483/117511026-c11fb280-af95-11eb-8fea-47abe3a0d416.png)
+![Simulator Screen Shot - iPhone 12 - 2021-05-08 at 00 23 13](https://user-images.githubusercontent.com/76879483/117511029-c1b84900-af95-11eb-82d5-8e3434ff261f.png)
+
+
 
 MyPlaces - An application that allows you to save, delete, update your favorite places, as well as add geolocation to them and build a route. The application uses the Realm database and the MapKit framework.
 
