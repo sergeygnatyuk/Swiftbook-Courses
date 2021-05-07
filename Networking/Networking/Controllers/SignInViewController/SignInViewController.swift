@@ -1,19 +1,20 @@
 //
-//  SignUpViewController.swift
+//  SignInViewController.swift
 //  Networking
 //
-//  Created by Гнатюк Сергей on 07.05.2021.
+//  Created by Гнатюк Сергей on 06.05.2021.
 //
 
 import UIKit
 
-class SignUpViewController: UIViewController {
-
+class SignInViewController: UIViewController {
+    
+    // Dependencies
+    private var activityIndicator: UIActivityIndicatorView!
+    
     // UI
-    @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var confirmPasswordTextField: UITextField!
     
     //MARK: - Buttons
     
@@ -39,10 +40,15 @@ class SignUpViewController: UIViewController {
         view.addSubview(continueButton)
         setContinueButton(enabled: false)
         
-        userNameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        activityIndicator = UIActivityIndicatorView(style: .medium)
+        activityIndicator.color = secondaryColor
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        activityIndicator.center = continueButton.center
+        
+        view.addSubview(activityIndicator)
+        
         emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-        confirmPasswordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,22 +72,24 @@ class SignUpViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func goBackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     //MARK: - @objc methods
     
     @objc private func handleSignIn() {
+        setContinueButton(enabled: false)
+        continueButton.setTitle("", for: .normal)
+        activityIndicator.startAnimating()
     }
     
     @objc private func textFieldChanged() {
         guard
-            let userName = userNameTextField.text,
             let email = emailTextField.text,
-        let password = passwordTextField.text,
-            let confirmPassword = confirmPasswordTextField.text
+            let password = passwordTextField.text
             else { return }
         
-        let formField = !(email.isEmpty) && !(password.isEmpty) && !(userName.isEmpty) && confirmPassword == password
+        let formField = !(email.isEmpty) && !(password.isEmpty)
         setContinueButton(enabled: formField)
     }
     
@@ -90,6 +98,7 @@ class SignUpViewController: UIViewController {
         let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
         continueButton.center = CGPoint(x: view.center.x, y: view.frame.height - keyboardFrame.height - 16.0 - continueButton.frame.height / 2)
+        
+        activityIndicator.center = continueButton.center
     }
-    
 }

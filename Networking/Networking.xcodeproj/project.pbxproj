@@ -175,6 +175,22 @@
 			path = DataProvider;
 			sourceTree = "<group>";
 		};
+		4A2769662645A4F900C52077 /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A50471E2644841D0008FCED /* SignInViewController.swift */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
+		4A2769692645A51900C52077 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A5047212644956F0008FCED /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
 		4A426AA32621BEC900619BBC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,8 +200,8 @@
 				4A067999263F71F2004FB94A /* LoginViewController */,
 				4A0679A0263F7316004FB94A /* ImageViewController */,
 				4A0679A2263F7443004FB94A /* UserProfileViewController */,
-				4A50471E2644841D0008FCED /* SignInViewController.swift */,
-				4A5047212644956F0008FCED /* SignUpViewController.swift */,
+				4A2769662645A4F900C52077 /* SignInViewController */,
+				4A2769692645A51900C52077 /* SignUpViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
