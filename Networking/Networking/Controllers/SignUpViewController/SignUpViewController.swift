@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
-    
+   
     // Dependencies
     private var activityIndicator: UIActivityIndicatorView!
 
@@ -23,7 +24,7 @@ class SignUpViewController: UIViewController {
     private lazy var continueButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-        button.center = CGPoint(x: view.center.x, y: view.frame.height - 100)
+        button.center = CGPoint(x: view.center.x, y: view.frame.height - 120)
         button.backgroundColor = .white
         button.setTitle("Continue", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -85,6 +86,39 @@ class SignUpViewController: UIViewController {
         setContinueButton(enabled: false)
         continueButton.setTitle("", for: .normal)
         activityIndicator.startAnimating()
+        
+        guard
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let userName = userNameTextField.text
+        else { return }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                self.setContinueButton(enabled: true)
+                self.continueButton.setTitle("Continue", for: .normal)
+                self.activityIndicator.stopAnimating()
+                
+                return
+            }
+            print("Successfully logged into Firebase with User Email")
+            
+            if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest() {
+                changeRequest.displayName = userName
+                changeRequest.commitChanges { (error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        
+                        self.setContinueButton(enabled: true)
+                        self.continueButton.setTitle("Continue", for: .normal)
+                        self.activityIndicator.stopAnimating()
+                    }
+                    print("User display changed!")
+                    self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     @objc private func textFieldChanged() {

@@ -21,7 +21,7 @@ class SignInViewController: UIViewController {
     private lazy var continueButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-        button.center = CGPoint(x: view.center.x, y: view.frame.height - 100)
+        button.center = CGPoint(x: view.center.x, y: view.frame.height - 130)
         button.backgroundColor = .white
         button.setTitle("Continue", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)

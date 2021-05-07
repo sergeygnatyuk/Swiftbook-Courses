@@ -60,8 +60,8 @@ class LoginViewController: UIViewController {
     
     private lazy var signInWithEmail: UIButton = {
         let loginButton = UIButton()
-        loginButton.frame = CGRect(x: 32, y: 480 + 60 + 60 + 60, width: view.frame.width - 64, height: 45)
-        loginButton.setTitle("Login with Email", for: .normal)
+        loginButton.frame = CGRect(x: 32, y: 480 + 60 + 60 + 120, width: view.frame.width - 64, height: 45)
+        loginButton.setTitle("Sign In With Email", for: .normal)
         loginButton.addTarget(self, action: #selector(openSignVC), for: .touchUpInside)
         return loginButton
     }()
@@ -91,6 +91,7 @@ class LoginViewController: UIViewController {
         view.addSubview(customLoginButton)
         view.addSubview(customGoogleLoginButton)
         view.addSubview(googleLoginButton)
+        view.addSubview(signInWithEmail)
     }
     
     //MARK: - @objc methods
