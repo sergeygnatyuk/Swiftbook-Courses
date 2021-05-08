@@ -9,5 +9,6 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
+    // UI
     @IBOutlet weak var spiderManImageView: UIImageView!
 }
