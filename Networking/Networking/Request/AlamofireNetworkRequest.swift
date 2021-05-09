@@ -8,14 +8,14 @@
 import Foundation
 import Alamofire
 
-class AlamofireNetworkRequest {
+final class AlamofireNetworkRequest {
     
     // Properties
-    static var onProgress: ((Double) -> ())?
-    static var completed: ((String) -> ())?
+    public var onProgress: ((Double) -> ())?
+    public var completed: ((String) -> ())?
     
     // SEND
-    static func sendRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
+     func sendRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -33,7 +33,7 @@ class AlamofireNetworkRequest {
     }
     
     // DownloadImage
-    static func downloadImage(url: String, completion: @escaping (_ image: UIImage)->()) {
+     func downloadImage(url: String, completion: @escaping (_ image: UIImage)->()) {
         
         guard let url = URL(string: url) else { return }
         request(url).responseData { (responseData) in
@@ -49,7 +49,7 @@ class AlamofireNetworkRequest {
     }
     //MARK: - Response
     
-    static func responseData(url: String) {
+     func responseData(url: String) {
         request(url).responseData { (responseData) in
             switch responseData.result {
             case .success(let data):
@@ -61,7 +61,7 @@ class AlamofireNetworkRequest {
         }
     }
     
-    static func responseString(url: String) {
+     func responseString(url: String) {
         request(url).responseString { (responseString) in
             switch responseString.result {
             case .success(let string):
@@ -72,7 +72,7 @@ class AlamofireNetworkRequest {
         }
     }
     
-    static func response(url: String) {
+     func response(url: String) {
         request(url).response { (response) in
             guard
                 let data = response.data,
@@ -84,7 +84,7 @@ class AlamofireNetworkRequest {
     
     //MARK: - DownloadImageWithProgress
     
-    static func downloadImageWithProgress(url: String, completion: @escaping (_ image: UIImage)->()) {
+     func downloadImageWithProgress(url: String, completion: @escaping (_ image: UIImage)->()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -108,7 +108,7 @@ class AlamofireNetworkRequest {
     
     //MARK: - POST
     
-    static func postRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
+     func postRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -142,7 +142,7 @@ class AlamofireNetworkRequest {
     
     //MARK: - PUT
     
-    static func putRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
+     func putRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -175,7 +175,7 @@ class AlamofireNetworkRequest {
     
     //MARK: - UploadImage
     
-    static func uploadImage(url: String) {
+     func uploadImage(url: String) {
         guard let url = URL(string: url) else { return }
         
         let image = UIImage(named: "Notification")!

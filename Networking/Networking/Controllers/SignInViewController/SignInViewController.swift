@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class SignInViewController: UIViewController {
+final class SignInViewController: UIViewController {
     
     // Dependencies
     private var activityIndicator: UIActivityIndicatorView!

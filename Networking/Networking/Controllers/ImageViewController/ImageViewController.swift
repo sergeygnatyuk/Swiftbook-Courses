@@ -12,6 +12,7 @@ final class ImageViewController: UIViewController {
     
     // Dependencies
     private lazy var networkManager = NetworkManager()
+    var alamofireNetworkRequestImage = AlamofireNetworkRequest()
     
     // Properties
     private let url = "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"
@@ -43,24 +44,24 @@ final class ImageViewController: UIViewController {
     }
     
     public func fetchDataWithAlamofire() {
-        AlamofireNetworkRequest.downloadImage(url: url) { image in
+        alamofireNetworkRequestImage.downloadImage(url: url) { image in
                 self.activityIndicator.stopAnimating()
                 self.imageView.image = image
             }
         }
     
     public func downloadImageWithProgress() {
-        AlamofireNetworkRequest.onProgress = { progress in
+        alamofireNetworkRequestImage.onProgress = { progress in
         self.progressView.isHidden = false
         self.progressView.progress = Float(progress)
         }
     
-        AlamofireNetworkRequest.completed = { completed in
+        alamofireNetworkRequestImage.completed = { completed in
             self.completedLabel.isHidden = false
             self.completedLabel.text = completed
         }
         
-        AlamofireNetworkRequest.downloadImageWithProgress(url: largeImageUrl) { image in
+        alamofireNetworkRequestImage.downloadImageWithProgress(url: largeImageUrl) { image in
             self.activityIndicator.stopAnimating()
             self.completedLabel.isHidden = true
             self.progressView.isHidden = true

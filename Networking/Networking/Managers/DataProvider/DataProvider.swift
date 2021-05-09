@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DataProvider: NSObject {
+final class DataProvider: NSObject {
     
     // Properties
     private var downloadTask: URLSessionTask!

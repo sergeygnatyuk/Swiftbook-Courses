@@ -24,13 +24,14 @@ private let url = "https://jsonplaceholder.typicode.com/posts"
 private let uploadImage = "https://api.imgur.com/3/image"
 private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
 
-class MainViewController: UICollectionViewController {
+final class MainViewController: UICollectionViewController {
     
-    //Properties
+    // Dependencies
     private let actions = Actions.allCases
     private var alert: UIAlertController!
     private let dataProvider = DataProvider()
     public var filePath: String?
+    var alamofireNetworkRequestMain = AlamofireNetworkRequest()
     
     //MARK: - Lifecycle
     
@@ -127,9 +128,9 @@ class MainViewController: UICollectionViewController {
         case .responseData:
             performSegue(withIdentifier: responseDataSegue, sender: self)
         case .responseString:
-            AlamofireNetworkRequest.responseString(url: swiftbookApi)
+            alamofireNetworkRequestMain.responseString(url: swiftbookApi)
         case .response:
-            AlamofireNetworkRequest.response(url: swiftbookApi)
+            alamofireNetworkRequestMain.response(url: swiftbookApi)
         case .downloadLargeImage:
             performSegue(withIdentifier: downloadLargeImageSegue, sender: self)
         case .postAlamofire:
@@ -137,7 +138,7 @@ class MainViewController: UICollectionViewController {
         case .putRequest:
             performSegue(withIdentifier: putRequestSegue, sender: self)
         case .uploadImageAlamofire:
-            AlamofireNetworkRequest.uploadImage(url: uploadImage)
+            alamofireNetworkRequestMain.uploadImage(url: uploadImage)
         }
     }
     
@@ -156,7 +157,7 @@ class MainViewController: UICollectionViewController {
             imageVC?.fetchImage()
         case responseDataSegue:
             imageVC?.fetchDataWithAlamofire()
-            AlamofireNetworkRequest.responseData(url: swiftbookApi)
+            alamofireNetworkRequestMain.responseData(url: swiftbookApi)
         case downloadLargeImageSegue:
             imageVC?.downloadImageWithProgress()
         case postRequestSegue:

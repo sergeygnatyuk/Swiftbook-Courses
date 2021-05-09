@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import GoogleSignIn
 
-class UserProfileVC: UIViewController {
+final class UserProfileVC: UIViewController {
     
     // Dependencies
     public var provider: String?

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CoursesViewController: UIViewController {
+final class CoursesViewController: UIViewController {
     
     // Properties
     private let url = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
@@ -16,6 +16,7 @@ class CoursesViewController: UIViewController {
     public var courses = [Course]()
     public var courseName: String?
     public var courseURL: String?
+    var alamofireNetworkRequest = AlamofireNetworkRequest()
     
     // UI
     @IBOutlet var tableView: UITableView!
@@ -32,7 +33,7 @@ class CoursesViewController: UIViewController {
     }
     
     public func fetchDataWithAlamofire() {
-        AlamofireNetworkRequest.sendRequest(url: url) { (courses) in
+        alamofireNetworkRequest.sendRequest(url: url) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -41,7 +42,7 @@ class CoursesViewController: UIViewController {
     }
     
     public func postRequest() {
-        AlamofireNetworkRequest.postRequest(url: postRequestUrl) { (courses) in
+        alamofireNetworkRequest.postRequest(url: postRequestUrl) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -50,7 +51,7 @@ class CoursesViewController: UIViewController {
     }
     
     public func putRequest() {
-        AlamofireNetworkRequest.putRequest(url: putRequestUrl) { (courses) in
+        alamofireNetworkRequest.putRequest(url: putRequestUrl) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
                 self.tableView.reloadData()
