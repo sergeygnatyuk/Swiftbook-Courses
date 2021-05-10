@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     // Dependencies
     var networkWeatherManager = NetworkWeatherManager()
