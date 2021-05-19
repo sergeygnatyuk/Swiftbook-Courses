@@ -19,7 +19,6 @@ class NetworkWeatherManager {
     }
     
     //MARK: - Public
-    
     public func fetchCurrentWeather(forRequestType requestType: RequestType) {
         var urlString = ""
         switch requestType {
@@ -32,7 +31,6 @@ class NetworkWeatherManager {
     }
     
     //MARK: - FilePrivate
-    
     fileprivate func performRequest(withURLString urlString: String) {
         guard let url = URL(string: urlString) else { return }
         let session = URLSession(configuration: .default)

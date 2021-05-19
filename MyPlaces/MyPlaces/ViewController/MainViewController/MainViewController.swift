@@ -19,6 +19,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private let cellIdentifier = "Cell"
     private let titleDelete = "Delete"
     private let showDetailIdentifierSegue = "showDetail"
+    private let keyPathDate = "date"
+    private let keyPathName = "name"
+    private let search = "Search"
     private var ascendingSorting = true
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
@@ -30,19 +33,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // UI
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var reversedSortingButton: UIBarButtonItem!
     
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         places = realm.objects(Place.self)
-        //Setup the search controller
-        let search = "Search"
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = search
@@ -51,7 +49,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // MARK: - TableViewDataSource
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return filteredPlaces.count
@@ -71,7 +68,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     //MARK: - TableViewDelegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -87,7 +83,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showDetailIdentifierSegue {
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
@@ -99,7 +94,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    // Actions
+    // MARK: - Actions
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue){
         guard let newPlaceViewController = segue.source as? NewPlaceViewController else { return }
         newPlaceViewController.savePlace()
@@ -121,10 +116,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     //MARK: - Private
-    
     private func sorting() {
-        let keyPathDate = "date"
-        let keyPathName = "name"
         if segmentedControl.selectedSegmentIndex == 0 {
             places = places.sorted(byKeyPath: keyPathDate, ascending: ascendingSorting)
         }else{

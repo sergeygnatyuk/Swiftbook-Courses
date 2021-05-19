@@ -17,13 +17,17 @@ final class UserProfileVC: UIViewController {
     public var provider: String?
     public var currentUser: CurrentUser?
     
+    // UI
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     // Properties
     private lazy var logoutButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 32,
-                                   y: view.frame.height - 172,
-                                   width: view.frame.width - 64,
-                                   height: 50)
+                              y: view.frame.height - 172,
+                              width: view.frame.width - 64,
+                              height: 50)
         button.backgroundColor = UIColor(hexValue: "#3B5999", alpha: 1)
         button.setTitle("Log Out", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -38,16 +42,10 @@ final class UserProfileVC: UIViewController {
             return .lightContent
         }
     }
-    
-    // UI
-    @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    
+
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         userNameLabel.isHidden = true
         setupViews()
@@ -55,12 +53,10 @@ final class UserProfileVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         fetchingUserData()
     }
     
     //MARK: - Private
-    
     private func setupViews() {
         view.addSubview(logoutButton)
     }

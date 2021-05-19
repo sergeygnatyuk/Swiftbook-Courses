@@ -7,9 +7,9 @@
 
 import UIKit
 
-class NewPlaceViewController: UITableViewController {
+final class NewPlaceViewController: UITableViewController {
     
-    
+    // UI
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeName: UITextField!
@@ -17,6 +17,12 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet weak var placeType: UITextField!
     @IBOutlet weak var ratingControl: RatingControl!
     
+    let indexCell = 0
+    let titleCamera = "Camera"
+    let titlePhoto = "Photo"
+    let titleCancel = "Cancel"
+    let forKeyTitleTextAlignment = "titleTextAlignment"
+    let forKeyImage = "image"
     var currentPlace: Place!
     var imageIsChanged = false
     let incSegueIdentifier = "showPlace"
@@ -37,12 +43,7 @@ class NewPlaceViewController: UITableViewController {
     
     
 //MARK: Table View Delegate
-    let indexCell = 0
-    let titleCamera = "Camera"
-    let titlePhoto = "Photo"
-    let titleCancel = "Cancel"
-    let forKeyTitleTextAlignment = "titleTextAlignment"
-    let forKeyImage = "image"
+   
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == indexCell {
             let cameraIcon = #imageLiteral(resourceName: "Gallery")

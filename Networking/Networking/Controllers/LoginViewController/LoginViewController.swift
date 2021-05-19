@@ -13,6 +13,9 @@ import GoogleSignIn
 
 final class LoginViewController: UIViewController {
     
+    // Properties
+    private let signInIdentifier = "SignIn"
+    
     // Dependencies
     public var userProfile: UserProfile?
     
@@ -101,10 +104,8 @@ final class LoginViewController: UIViewController {
     }
     
     @objc private func openSignVC() {
-        performSegue(withIdentifier: "SignIn", sender: self)
+        performSegue(withIdentifier: signInIdentifier, sender: self)
     }
-    
-    
 }
 
 

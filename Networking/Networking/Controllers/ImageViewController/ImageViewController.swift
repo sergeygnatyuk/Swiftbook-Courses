@@ -24,8 +24,7 @@ final class ImageViewController: UIViewController {
     @IBOutlet var completedLabel: UILabel!
     @IBOutlet var progressView: UIProgressView!
     
-//MARK: - Lifecycle
-    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.startAnimating()
@@ -34,8 +33,7 @@ final class ImageViewController: UIViewController {
         progressView.isHidden = true
     }
     
-    //MARK: - Public
-    
+    // MARK: - Public
     public func fetchImage() {
         networkManager.downloadImage(url: url) { image in
             self.activityIndicator.stopAnimating()
@@ -45,17 +43,17 @@ final class ImageViewController: UIViewController {
     
     public func fetchDataWithAlamofire() {
         alamofireNetworkRequestImage.downloadImage(url: url) { image in
-                self.activityIndicator.stopAnimating()
-                self.imageView.image = image
-            }
+            self.activityIndicator.stopAnimating()
+            self.imageView.image = image
         }
+    }
     
     public func downloadImageWithProgress() {
         alamofireNetworkRequestImage.onProgress = { progress in
-        self.progressView.isHidden = false
-        self.progressView.progress = Float(progress)
+            self.progressView.isHidden = false
+            self.progressView.progress = Float(progress)
         }
-    
+        
         alamofireNetworkRequestImage.completed = { completed in
             self.completedLabel.isHidden = false
             self.completedLabel.text = completed
