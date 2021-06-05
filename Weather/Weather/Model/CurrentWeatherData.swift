@@ -15,6 +15,7 @@ struct CurrentWeatherData: Codable {
 }
 
 struct Main: Codable {
+    
     let temp: Double
     let feelsLike: Double
     
@@ -25,5 +26,6 @@ struct Main: Codable {
 }
 
 struct Weather: Codable {
+
     let id: Int
 }

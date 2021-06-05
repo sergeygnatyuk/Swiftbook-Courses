@@ -8,15 +8,10 @@
 import Foundation
 import CoreLocation
 
-class NetworkWeatherManager {
+ final class NetworkWeatherManager {
     
     // Properties
     public var onCompletion: ((CurrentWeather) -> Void)?
-    
-    enum RequestType {
-        case cityName(city: String)
-        case coordinate(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
-    }
     
     //MARK: - Public
     public func fetchCurrentWeather(forRequestType requestType: RequestType) {
@@ -58,7 +53,3 @@ class NetworkWeatherManager {
         return nil
     }
 }
-
-
-
-

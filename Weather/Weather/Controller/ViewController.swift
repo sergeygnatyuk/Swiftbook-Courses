@@ -28,11 +28,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
     
-    @IBAction func searchPressed(_ sender: UIButton) {
-        self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert) { [unowned self ] city in
-            self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
-        }
-    }
+    
     
     //MARK: - Lifecycle
     
@@ -40,8 +36,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         networkWeatherManager.onCompletion = { [ weak self ] currentWeather in
-            guard let self = self else { return }
-            self.updateInterfaceWith(weather: currentWeather)
+            self?.updateInterfaceWith(weather: currentWeather)
         }
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestLocation()
@@ -50,27 +45,27 @@ final class ViewController: UIViewController {
     
     //MARK: - Private
     
+    private func extractedFunc(weather: CurrentWeather) {
+        self.cityLabel.text = weather.cityName
+        self.temperatureLabel.text = weather.temperatureString
+        self.feelsLikeTemperatureLabel.text = weather.feelsLikeTemperatureString
+        self.weatherIconImageView.image = UIImage(systemName: weather.systemIconNameString)
+    }
+    
     private func updateInterfaceWith(weather: CurrentWeather) {
         DispatchQueue.main.async {
-            self.cityLabel.text = weather.cityName
-            self.temperatureLabel.text = weather.temperatureString
-            self.feelsLikeTemperatureLabel.text = weather.feelsLikeTemperatureString
-            self.weatherIconImageView.image = UIImage(systemName: weather.systemIconNameString)
+            self.extractedFunc(weather: weather)
+        }
+    }
+    
+    // MARK: - Actions
+    @IBAction func searchPressed(_ sender: UIButton) {
+        self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert) { [unowned self ] city in
+            self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
         }
     }
 }
 
-//MARK: - CLLocationManagerDelegate
 
-extension ViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        let latitude = location.coordinate.latitude
-        let longitude = location.coordinate.longitude
-        
-        networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: latitude, longitude: longitude))
-    }
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
-}
+
+

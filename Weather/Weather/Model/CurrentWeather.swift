@@ -15,11 +15,18 @@ struct CurrentWeather {
         return String(format: "%.0f", temperature)
     }
     
+    init?(currentWeatherData: CurrentWeatherData) {
+        cityName = currentWeatherData.name
+        temperature = currentWeatherData.main.temp
+        feelsLikeTemperature = currentWeatherData.main.feelsLike
+        conditionCode = currentWeatherData.weather.first!.id
+    }
+    
     let feelsLikeTemperature: Double
     var feelsLikeTemperatureString: String {
         return String(format: "%.0f", feelsLikeTemperature)
     }
-        
+    
     let conditionCode: Int
     var systemIconNameString: String {
         switch conditionCode {
@@ -30,15 +37,7 @@ struct CurrentWeather {
         case 701...781: return "smoke.fill"
         case 800: return "sun.min.fill"
         case 801...804: return "cloud.fill"
-        default:
-            return "nosign"
+        default: return "nosign"
         }
-    }
-    
-    init?(currentWeatherData: CurrentWeatherData) {
-        cityName = currentWeatherData.name
-        temperature = currentWeatherData.main.temp
-        feelsLikeTemperature = currentWeatherData.main.feelsLike
-        conditionCode = currentWeatherData.weather.first!.id
     }
 }
