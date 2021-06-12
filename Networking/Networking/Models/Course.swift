@@ -35,7 +35,6 @@ struct Course: Decodable {
     }
     
     static func getArray(from jsonArray: Any) -> [Course]? {
-        
         guard let jsonArray = jsonArray as? Array<[String: Any]> else { return nil }
         return jsonArray.compactMap { (Course(json: $0)) }
     }

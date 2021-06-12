@@ -12,6 +12,7 @@
 		4A067997263F6F6F004FB94A /* LoginViewController + FBSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A067996263F6F6F004FB94A /* LoginViewController + FBSDK.swift */; };
 		4A06799D263F7255004FB94A /* LoginViewController + GoogleSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06799C263F7255004FB94A /* LoginViewController + GoogleSDK.swift */; };
 		4A0679A4263F747A004FB94A /* UserProfileVC + Autorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0679A3263F747A004FB94A /* UserProfileVC + Autorization.swift */; };
+		4A0E5A1126733EA0009E6EAE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E5A1026733EA0009E6EAE /* UIColor.swift */; };
 		4A18AEDA2620E2D900F75CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AED92620E2D900F75CB9 /* AppDelegate.swift */; };
 		4A18AEDC2620E2D900F75CB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */; };
 		4A18AEE12620E2D900F75CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A18AEDF2620E2D900F75CB9 /* Main.storyboard */; };
@@ -36,7 +37,7 @@
 		4A9F0900263D890700E2EAA4 /* MainViewController + FacebookSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F08FF263D890700E2EAA4 /* MainViewController + FacebookSDK.swift */; };
 		4AD307D92623853C00DD149D /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD307D82623853C00DD149D /* ImageProperties.swift */; };
 		4ADB47A9262AF50E00B3363C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB47A8262AF50E00B3363C /* LoginViewController.swift */; };
-		4ADB47AC262AF68C00B3363C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB47AB262AF68C00B3363C /* Extensions.swift */; };
+		4ADB47AC262AF68C00B3363C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB47AB262AF68C00B3363C /* UIView.swift */; };
 		4AE14A122621D05E00BCFA93 /* WebsiteDiscription .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE14A112621D05E00BCFA93 /* WebsiteDiscription .swift */; };
 		4AE42EB82624C92400DCE5EB /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE42EB72624C92400DCE5EB /* DataProvider.swift */; };
 		4AF9BE252632146000E1D119 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9BE242632146000E1D119 /* CurrentUser.swift */; };
@@ -50,6 +51,7 @@
 		4A067996263F6F6F004FB94A /* LoginViewController + FBSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController + FBSDK.swift"; sourceTree = "<group>"; };
 		4A06799C263F7255004FB94A /* LoginViewController + GoogleSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController + GoogleSDK.swift"; sourceTree = "<group>"; };
 		4A0679A3263F747A004FB94A /* UserProfileVC + Autorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfileVC + Autorization.swift"; sourceTree = "<group>"; };
+		4A0E5A1026733EA0009E6EAE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4A18AED62620E2D900F75CB9 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A18AED92620E2D900F75CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A18AEDB2620E2D900F75CB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 		4AD307D82623853C00DD149D /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		4ADB479C262AE6F600B3363C /* Lesson 5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lesson 5.entitlements"; sourceTree = "<group>"; };
 		4ADB47A8262AF50E00B3363C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4ADB47AB262AF68C00B3363C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4ADB47AB262AF68C00B3363C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4AE14A112621D05E00BCFA93 /* WebsiteDiscription .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebsiteDiscription .swift"; sourceTree = "<group>"; };
 		4AE42EB72624C92400DCE5EB /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		4AF9BE242632146000E1D119 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 				4AE569E62638959A00D2E097 /* Resources */,
 				4AF9BE222632118C00E1D119 /* Extensions */,
 				4A426AA62621BF0D00619BBC /* Models */,
-				4A426AA42621BEDE00619BBC /* View */,
+				4A426AA42621BEDE00619BBC /* Storyboards */,
 				4A426AA32621BEC900619BBC /* Controllers */,
 				4A426AA52621BEE900619BBC /* Supporting Files */,
 			);
@@ -206,13 +208,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		4A426AA42621BEDE00619BBC /* View */ = {
+		4A426AA42621BEDE00619BBC /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				4A18AEDF2620E2D900F75CB9 /* Main.storyboard */,
 				4A18AEE42620E2DB00F75CB9 /* LaunchScreen.storyboard */,
 			);
-			path = View;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		4A426AA52621BEE900619BBC /* Supporting Files */ = {
@@ -297,7 +299,8 @@
 		4AF9BE222632118C00E1D119 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4ADB47AB262AF68C00B3363C /* Extensions.swift */,
+				4ADB47AB262AF68C00B3363C /* UIView.swift */,
+				4A0E5A1026733EA0009E6EAE /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -457,11 +460,12 @@
 				4A426AA12621BC0E00619BBC /* WebViewController.swift in Sources */,
 				4A18AEDA2620E2D900F75CB9 /* AppDelegate.swift in Sources */,
 				4A18AEEF2620E71600F75CB9 /* ImageViewController.swift in Sources */,
-				4ADB47AC262AF68C00B3363C /* Extensions.swift in Sources */,
+				4ADB47AC262AF68C00B3363C /* UIView.swift in Sources */,
 				4A0362182630AF5400CC8652 /* UserProfile.swift in Sources */,
 				4A5047222644956F0008FCED /* SignUpViewController.swift in Sources */,
 				4A18AEDC2620E2D900F75CB9 /* SceneDelegate.swift in Sources */,
 				4AE14A122621D05E00BCFA93 /* WebsiteDiscription .swift in Sources */,
+				4A0E5A1126733EA0009E6EAE /* UIColor.swift in Sources */,
 				4AD307D92623853C00DD149D /* ImageProperties.swift in Sources */,
 				4A426A9E2621BB5400619BBC /* CoursesViewController.swift in Sources */,
 				4A19E6BC2623343200D591F9 /* MainViewController.swift in Sources */,

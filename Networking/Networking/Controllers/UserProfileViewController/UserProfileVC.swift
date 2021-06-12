@@ -42,7 +42,7 @@ final class UserProfileVC: UIViewController {
             return .lightContent
         }
     }
-
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

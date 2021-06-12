@@ -22,8 +22,7 @@ final class CoursesViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     //MARK: - Public
-    
-   public func fetchData() {
+    public func fetchData() {
         NetworkManager.fetchData(url: url) { (courses) in
             self.courses = courses
             DispatchQueue.main.async {
@@ -62,19 +61,15 @@ final class CoursesViewController: UIViewController {
     public func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
         let course = courses[indexPath.row]
         cell.courseNameLabel.text = course.name
-        
         if let numberOfLessons = course.numberOfLessons{
             cell.numberOfLessons.text = "Number of lessons: \(numberOfLessons)"
         }
-        
         if let numberOfTests = course.numberOfTests {
             cell.numberOfTests.text = "Number of tests: \(numberOfTests)"
         }
-        
         DispatchQueue.global().async {
             guard let imageUrl = URL(string: course.imageUrl!) else { return }
             guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-    
             DispatchQueue.main.async {
                 cell.courseImage.image = UIImage(data: imageData)
             }
@@ -82,11 +77,9 @@ final class CoursesViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let webViewController = segue.destination as! WebViewController
         webViewController.selectedCourse = courseName
-        
         if let url = courseURL {
             webViewController.courseURL = url
         }

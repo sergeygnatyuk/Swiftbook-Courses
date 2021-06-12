@@ -9,11 +9,9 @@ import UIKit
 
 final class TableViewCell: UITableViewCell {
     
-// UI
+    // UI
     @IBOutlet var courseImage: UIImageView!
     @IBOutlet var courseNameLabel: UILabel!
     @IBOutlet var numberOfLessons: UILabel!
     @IBOutlet var numberOfTests: UILabel!
-
-
 }

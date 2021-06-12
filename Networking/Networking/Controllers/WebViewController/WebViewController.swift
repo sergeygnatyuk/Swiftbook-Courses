@@ -23,12 +23,9 @@ final class WebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = selectedCourse
-        
         guard let url = URL(string: courseURL) else { return }
         let request = URLRequest(url: url)
-        
         webView.load(request)
         webView.allowsBackForwardNavigationGestures = true
         webView.navigationDelegate = self
@@ -48,7 +45,6 @@ final class WebViewController: UIViewController {
     }
     
     //MARK: - Public
-    
     public func showProgressView() {
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
             self.progressView.alpha = 1

@@ -20,7 +20,6 @@ final class LoginViewController: UIViewController {
     public var userProfile: UserProfile?
     
     //MARK: - Buttons
-    
     private var fbLoginButton: UIButton {
         let loginButton = FBLoginButton()
         loginButton.frame = CGRect(x: 32, y: 480, width: view.frame.width - 64, height: 50)
@@ -76,19 +75,15 @@ final class LoginViewController: UIViewController {
     }
     
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         setupViews()
-        
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     //MARK: - Private
-    
     private func setupViews() {
         view.addSubview(fbLoginButton)
         view.addSubview(customLoginButton)
@@ -98,7 +93,6 @@ final class LoginViewController: UIViewController {
     }
     
     //MARK: - @objc methods
-    
     @objc private func handleCustomGoogleLogin() {
         GIDSignIn.sharedInstance()?.signIn()
     }

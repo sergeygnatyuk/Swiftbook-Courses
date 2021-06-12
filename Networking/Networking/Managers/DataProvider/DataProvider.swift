@@ -13,7 +13,6 @@ final class DataProvider: NSObject {
     private var downloadTask: URLSessionTask!
     public var fileLocation: ((URL) -> ())?
     public var onProgress: ((Double) -> ())?
-    
     private lazy var bgSession: URLSession = {
         let config = URLSessionConfiguration.background(withIdentifier: "ru.swiftbook.Networking")
         config.isDiscretionary = true // starting the task at the optimal time
@@ -24,8 +23,7 @@ final class DataProvider: NSObject {
     }()
     
     //MARK: - Public
-    
-     public func startDownload() {
+    public func startDownload() {
         if let url = URL(string: "https://speed.hetzner.de/100MB.bin") {
             downloadTask = bgSession.downloadTask(with: url)
             downloadTask.earliestBeginDate = Date().addingTimeInterval(3)
@@ -34,7 +32,6 @@ final class DataProvider: NSObject {
             downloadTask.resume()
         }
     }
-    
     public func stopDownload() {
         downloadTask.cancel()
     }

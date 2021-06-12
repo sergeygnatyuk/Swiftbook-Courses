@@ -10,13 +10,11 @@ import UserNotifications
 import FirebaseAuth
 
 //MARK: - Notifications
-
 extension MainViewController {
     public func registerForNotification() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (_, _) in
         }
     }
-    
     public func postNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Download complete!"
@@ -28,7 +26,6 @@ extension MainViewController {
 }
 
 //MARK: - Facebook SDK
-
 extension MainViewController {
     public func checkLoggedIn() {
         if Auth.auth().currentUser == nil {

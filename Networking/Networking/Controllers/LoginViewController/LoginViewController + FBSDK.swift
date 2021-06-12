@@ -11,7 +11,6 @@ import FirebaseDatabase
 
 
 //MARK: - Facebook SDK
-
 extension LoginViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         if error != nil {
@@ -24,7 +23,6 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     //MARK: - Public
-    
     public func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("Did log out of facebook")
     }
@@ -35,9 +33,7 @@ extension LoginViewController: LoginButtonDelegate {
     
     public func saveInfoFirebase() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        
         let userData = ["name": userProfile?.name, "email": userProfile?.email]
-        
         let values = [uid: userData]
         Database.database().reference().child("users").updateChildValues(values) { (error, _) in
             if let error = error {
@@ -50,7 +46,6 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     //MARK: - @objc methods
-    
     @objc public func handCustomFBLogin() {
         LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
             if let error = error {
@@ -66,12 +61,9 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     //MARK: - Private
-    
     private func singIntoFirebase() {
         let accessToken = AccessToken.current
-        
         guard let accessTokenString = accessToken?.tokenString else { return }
-        
         let credentials = FacebookAuthProvider.credential(withAccessToken: accessTokenString)
         Auth.auth().signIn(with: credentials) { (user, error) in
             if let error = error {

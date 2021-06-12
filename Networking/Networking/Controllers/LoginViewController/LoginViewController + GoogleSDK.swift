@@ -10,7 +10,6 @@ import FirebaseAuth
 import GoogleSignIn
 
 //MARK: - Google SDK
-
 extension LoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!,
               didSignInFor user: GIDGoogleUser!,
@@ -19,16 +18,12 @@ extension LoginViewController: GIDSignInDelegate {
             print("Failed to log into Google: ", error)
             return
         }
-        
         print("Successfully logged into Google")
-        
         if let userName = user.profile.name, let userEmail = user.profile.email {
             let userData = ["name": userName, "email": userEmail]
             userProfile = UserProfile(data: userData)
         }
-        
         guard let authentication = user.authentication else { return }
-        
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
         Auth.auth().signIn(with: credential) { (user, error) in

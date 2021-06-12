@@ -10,21 +10,22 @@ import UserNotifications
 import FBSDKLoginKit
 import FirebaseAuth
 
-//Properties
-public let loginVCIdentifier = "LoginViewController"
-private let cellIdentifier = "Cell"
-private let downloadImageSegue = "ShowImage"
-private let responseDataSegue = "ResponseData"
-private let ourCoursesAlamofireSegue = "OurCoursesAlamofire"
-private let ourCoursesSegue = "OurCourses"
-private let downloadLargeImageSegue = "LargeImage"
-private let postRequestSegue = "PostRequest"
-private let putRequestSegue = "PutRequest"
-private let url = "https://jsonplaceholder.typicode.com/posts"
-private let uploadImage = "https://api.imgur.com/3/image"
-private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
 
 final class MainViewController: UICollectionViewController {
+    
+    //Properties
+    public let loginVCIdentifier = "LoginViewController"
+    private let cellIdentifier = "Cell"
+    private let downloadImageSegue = "ShowImage"
+    private let responseDataSegue = "ResponseData"
+    private let ourCoursesAlamofireSegue = "OurCoursesAlamofire"
+    private let ourCoursesSegue = "OurCourses"
+    private let downloadLargeImageSegue = "LargeImage"
+    private let postRequestSegue = "PostRequest"
+    private let putRequestSegue = "PutRequest"
+    private let url = "https://jsonplaceholder.typicode.com/posts"
+    private let uploadImage = "https://api.imgur.com/3/image"
+    private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
     
     // Dependencies
     private let actions = Actions.allCases
@@ -34,11 +35,9 @@ final class MainViewController: UICollectionViewController {
     var alamofireNetworkRequestMain = AlamofireNetworkRequest()
     
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerForNotification()
-        
         dataProvider.fileLocation = { (location) in
             //save file for use
             print("Download finished: \(location.absoluteString)")
@@ -50,16 +49,13 @@ final class MainViewController: UICollectionViewController {
     }
     
     //MARK: - Private
-    
     private func showAlert() {
         alert = UIAlertController(title: "Downloading...",
                                   message: "0%",
                                   preferredStyle: .alert)
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
             self.dataProvider.stopDownload()
         }
-        
         let height = NSLayoutConstraint(item: alert.view as Any,
                                         attribute: .height,
                                         relatedBy: .equal,
@@ -77,25 +73,21 @@ final class MainViewController: UICollectionViewController {
                                                                           size: size))
             activityIndicator.color = .gray
             activityIndicator.startAnimating()
-
             let progressView = UIProgressView(frame: CGRect(x: 0,
                                                             y: self.alert.view.frame.height - 44,
                                                             width: self.alert.view.frame.width,
                                                             height: 2))
             progressView.tintColor = .blue
-            
             self.dataProvider.onProgress = { (progress) in
                 progressView.progress = Float(progress)
                 self.alert.message = String(Int(progress * 100)) + "%"
             }
-            
             self.alert.view.addSubview(activityIndicator)
             self.alert.view.addSubview(progressView)
         }
     }
     
     // MARK: - UICollectionViewDelegate
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return actions.count
     }
@@ -143,11 +135,9 @@ final class MainViewController: UICollectionViewController {
     }
     
     //MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let coursesVC = segue.destination as? CoursesViewController
         let imageVC = segue.destination as? ImageViewController
-        
         switch segue.identifier {
         case ourCoursesSegue:
             coursesVC?.fetchData()
