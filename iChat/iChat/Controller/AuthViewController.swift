@@ -8,10 +8,29 @@
 import UIKit
 
 class AuthViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    let authView: AuthView = {
+        let authView = AuthView()
+        return authView
+    }()
+    
+    // MARK: - Lifecycle
+    override func loadView() {
+        super.loadView()
+        view = authView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .cyan
+        setupUIElements()
+        view.backgroundColor = .white
+    }
+    
+    // MARK: - Private
+    private func setupUIElements() {
+        authView.addSubviews()
+        authView.setupConstraints()
     }
 }
 

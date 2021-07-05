@@ -18,6 +18,8 @@
 		4AE633A82693835500294C83 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633A72693835500294C83 /* UIColor.swift */; };
 		4AE633AC2693872F00294C83 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633AB2693872F00294C83 /* UILabel.swift */; };
 		4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633AE269389AE00294C83 /* UIImageView.swift */; };
+		4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633B72693AD2400294C83 /* ButtonFormView.swift */; };
+		4AE633BB2693B9EF00294C83 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633BA2693B9EF00294C83 /* StackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4AE633A72693835500294C83 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4AE633AB2693872F00294C83 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		4AE633AE269389AE00294C83 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		4AE633B72693AD2400294C83 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		4AE633BA2693B9EF00294C83 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE63390269372EF00294C83 /* SupportingFiles */,
-				4AE6339B26937D6F00294C83 /* Extension */,
+				4AE6339B26937D6F00294C83 /* Extensions */,
 				4AE633932693732200294C83 /* Controller */,
 				4AE6339E26937E1E00294C83 /* View */,
 				4AE633912693730800294C83 /* Resources */,
@@ -110,7 +114,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4AE6339B26937D6F00294C83 /* Extension */ = {
+		4AE6339B26937D6F00294C83 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				4AE6339826937D6700294C83 /* UIButton.swift */,
@@ -118,14 +122,16 @@
 				4AE633A72693835500294C83 /* UIColor.swift */,
 				4AE633AB2693872F00294C83 /* UILabel.swift */,
 				4AE633AE269389AE00294C83 /* UIImageView.swift */,
+				4AE633BA2693B9EF00294C83 /* StackView.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4AE6339E26937E1E00294C83 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4AE633A026937E8800294C83 /* AuthView.swift */,
+				4AE633B72693AD2400294C83 /* ButtonFormView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,11 +206,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE6337F26936AF100294C83 /* AuthViewController.swift in Sources */,
+				4AE633BB2693B9EF00294C83 /* StackView.swift in Sources */,
 				4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */,
 				4AE633A82693835500294C83 /* UIColor.swift in Sources */,
 				4AE633A126937E8800294C83 /* AuthView.swift in Sources */,
 				4AE633A5269381E500294C83 /* UIFont.swift in Sources */,
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
+				4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */,
 				4AE6337D26936AF100294C83 /* SceneDelegate.swift in Sources */,
 				4AE633AC2693872F00294C83 /* UILabel.swift in Sources */,
 				4AE6339926937D6700294C83 /* UIButton.swift in Sources */,

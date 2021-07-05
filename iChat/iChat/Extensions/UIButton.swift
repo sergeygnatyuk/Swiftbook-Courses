@@ -17,7 +17,7 @@ extension UIButton {
                      cornerRadius: CGFloat = 4) {
         self.init(type: .system)
         self.setTitle(title, for: .normal)
-        self.setTitleColor(tintColor, for: .normal)
+        self.setTitleColor(titleColor, for: .normal)
         self.backgroundColor = backgroundColor
         self.titleLabel?.font = font
         self.layer.cornerRadius = cornerRadius
