@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */; };
+		4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F426961EBB00A4AC83 /* SignUpView.swift */; };
+		4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F62696218600A4AC83 /* OneLineTextField .swift */; };
 		4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE6337A26936AF100294C83 /* AppDelegate.swift */; };
 		4AE6337D26936AF100294C83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE6337C26936AF100294C83 /* SceneDelegate.swift */; };
 		4AE6337F26936AF100294C83 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE6337E26936AF100294C83 /* AuthViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4ABB59F426961EBB00A4AC83 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4ABB59F62696218600A4AC83 /* OneLineTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneLineTextField .swift"; sourceTree = "<group>"; };
 		4AE6337726936AF100294C83 /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE6337A26936AF100294C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE6337C26936AF100294C83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ABB59F126961E1D00A4AC83 /* AuthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AE6339E26937E1E00294C83 /* View */,
+				4AE6337E26936AF100294C83 /* AuthViewController.swift */,
+			);
+			path = AuthViewController;
+			sourceTree = "<group>";
+		};
+		4ABB59F226961E6600A4AC83 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ABB59F326961E9400A4AC83 /* View */,
+				4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		4ABB59F326961E9400A4AC83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4ABB59F426961EBB00A4AC83 /* SignUpView.swift */,
+				4ABB59F62696218600A4AC83 /* OneLineTextField .swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4AE6336E26936AF100294C83 = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +106,6 @@
 				4AE63390269372EF00294C83 /* SupportingFiles */,
 				4AE6339B26937D6F00294C83 /* Extensions */,
 				4AE633932693732200294C83 /* Controller */,
-				4AE6339E26937E1E00294C83 /* View */,
 				4AE633912693730800294C83 /* Resources */,
 				4AE633922693731700294C83 /* Storyboard */,
 			);
@@ -109,7 +141,8 @@
 		4AE633932693732200294C83 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4AE6337E26936AF100294C83 /* AuthViewController.swift */,
+				4ABB59F126961E1D00A4AC83 /* AuthViewController */,
+				4ABB59F226961E6600A4AC83 /* SignUpViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,11 +244,14 @@
 				4AE633A82693835500294C83 /* UIColor.swift in Sources */,
 				4AE633A126937E8800294C83 /* AuthView.swift in Sources */,
 				4AE633A5269381E500294C83 /* UIFont.swift in Sources */,
+				4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */,
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
+				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
 				4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */,
 				4AE6337D26936AF100294C83 /* SceneDelegate.swift in Sources */,
 				4AE633AC2693872F00294C83 /* UILabel.swift in Sources */,
 				4AE6339926937D6700294C83 /* UIButton.swift in Sources */,
+				4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

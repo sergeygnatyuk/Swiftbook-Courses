@@ -9,7 +9,7 @@ import UIKit
 
 final class AuthView: UIView {
     
-    // MARK: - UI
+    // MARK: - Buttons
     private lazy var button: UIButton = {
         let button = UIButton()
         return button
@@ -29,18 +29,22 @@ final class AuthView: UIView {
                                backgroundColor: .white,
                                titleColor: .buttonRed())
     
+    // MARK: - Labels
     let googleLabel = UILabel(text: "Get Started With")
     
     let emailLabel = UILabel(text: "Or Sign Up With")
     
     let alreadyOnboardLabel = UILabel(text: "Already Onboard?")
     
+    // MARK: - ImageView
     let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)
     
-    func addSubviews() {
+    // MARK: - Public
+    public func addSubviews() {
         addSubview(logoImageView)
     }
     
+    // MARK: - Constraints
     func setupConstraints() {
         let googleView = ButtonFormView(label: googleLabel, button: googleButton)
         let emailView = ButtonFormView(label: emailLabel, button: emailButton)

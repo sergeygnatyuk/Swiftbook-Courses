@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ButtonFormView: UIView {
+final class ButtonFormView: UIView {
     
     init(label: UILabel, button: UIButton) {
         super.init(frame: .zero)
