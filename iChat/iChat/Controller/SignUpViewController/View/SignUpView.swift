@@ -30,7 +30,13 @@ final class SignUpView: UIView {
     // MARK: - Buttons
     let signUpButton = UIButton(title: "Sign Up", backgroundColor: .buttonBlack(), titleColor: .white, cornerRadius: 4)
     
-    let loginButton = UIButton()
+    let loginButton: UIButton = {
+        let loginButton = UIButton()
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.setTitleColor(.buttonRed(), for: .normal)
+        loginButton.titleLabel?.font = .avenir20()
+        return loginButton
+    }()
     
     // MARK: - Constraints
     public func setupUIElements() {
@@ -52,17 +58,16 @@ final class SignUpView: UIView {
                                     axis: .vertical,
                                     spacing: 40)
         
+        loginButton.contentHorizontalAlignment = .leading
         let bottomStackView = UIStackView(arrangedSubviews: [alreadyOnboardLabel, loginButton],
                                           axis: .horizontal,
-                                          spacing: -1)
+                                          spacing: 10)
+        
+        bottomStackView.alignment = .firstBaseline
         
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.setTitleColor(.buttonRed(), for: .normal)
-        loginButton.titleLabel?.font = .avenir20()
         
         addSubview(welcomeLabel)
         addSubview(stackView)

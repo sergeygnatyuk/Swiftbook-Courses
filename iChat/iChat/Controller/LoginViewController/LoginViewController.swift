@@ -1,49 +1,44 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  iChat
 //
-//  Created by Гнатюк Сергей on 05.07.2021.
+//  Created by Гнатюк Сергей on 08.07.2021.
 //
 
 import UIKit
 
-final class AuthViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: - Properties
-    let authView: AuthView = {
-        let authView = AuthView()
-        return authView
+    let loginView: LoginView = {
+        let loginView = LoginView()
+        return loginView
     }()
     
     // MARK: - Lifecycle
     override func loadView() {
         super.loadView()
-        view = authView
+        view = loginView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUIElements()
+        loginView.setupUIElements()
         view.backgroundColor = .white
-    }
-    
-    // MARK: - Private
-    private func setupUIElements() {
-        authView.addSubviews()
-        authView.setupConstraints()
     }
 }
 
+
 import SwiftUI
 
-struct AuthViewControllerProvider: PreviewProvider {
+struct LoginViewControllerProvider: PreviewProvider {
     static var previews: some View {
         ContainerView().edgesIgnoringSafeArea(.all)
     }
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let viewController = AuthViewController()
+        let viewController = LoginViewController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController
