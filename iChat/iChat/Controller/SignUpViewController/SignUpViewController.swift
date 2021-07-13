@@ -30,6 +30,7 @@ final class SignUpViewController: UIViewController {
     }
 }
 
+// MARK: - SwiftUI
 import SwiftUI
 
 struct SignUpViewControllerProvider: PreviewProvider {
@@ -38,9 +39,7 @@ struct SignUpViewControllerProvider: PreviewProvider {
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        
         let viewController = SignUpViewController()
-        
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController
         }

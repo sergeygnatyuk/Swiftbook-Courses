@@ -23,6 +23,7 @@ final class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authView.googleButton.customizeGoogleButton()
         setupUIElements()
         view.backgroundColor = .white
     }
@@ -34,6 +35,7 @@ final class AuthViewController: UIViewController {
     }
 }
 
+// MARK: - SwiftUI
 import SwiftUI
 
 struct AuthViewControllerProvider: PreviewProvider {
@@ -42,9 +44,7 @@ struct AuthViewControllerProvider: PreviewProvider {
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        
         let viewController = AuthViewController()
-        
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController
         }
