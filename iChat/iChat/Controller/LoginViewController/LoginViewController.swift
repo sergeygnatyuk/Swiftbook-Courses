@@ -23,12 +23,13 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginView.googleButton.customizeGoogleButton()
         loginView.setupUIElements()
         view.backgroundColor = .white
     }
 }
 
-
+// MARK: - SwiftUI
 import SwiftUI
 
 struct LoginViewControllerProvider: PreviewProvider {
@@ -37,9 +38,7 @@ struct LoginViewControllerProvider: PreviewProvider {
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        
         let viewController = LoginViewController()
-        
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController
         }
