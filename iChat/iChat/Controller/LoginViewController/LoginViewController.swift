@@ -1,45 +1,44 @@
 //
-//  SignUpViewController.swift
+//  LoginViewController.swift
 //  iChat
 //
-//  Created by Гнатюк Сергей on 07.07.2021.
+//  Created by Гнатюк Сергей on 08.07.2021.
 //
 
 import UIKit
 
-final class SignUpViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
-    // MARK: - UI
-    let signUpView: SignUpView = {
-        let signUpView = SignUpView()
-        return signUpView
+    // MARK: - Properties
+    let loginView: LoginView = {
+        let loginView = LoginView()
+        return loginView
     }()
     
     // MARK: - Lifecycle
     override func loadView() {
         super.loadView()
-        view = signUpView
+        view = loginView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        signUpView.loginButton.setTitle("Login", for: .normal)
-        signUpView.loginButton.setTitleColor(.buttonRed(), for: .normal)
+        loginView.googleButton.customizeGoogleButton()
+        loginView.setupUIElements()
         view.backgroundColor = .white
-        signUpView.setupUIElements()
     }
 }
 
 // MARK: - SwiftUI
 import SwiftUI
 
-struct SignUpViewControllerProvider: PreviewProvider {
+struct LoginViewControllerProvider: PreviewProvider {
     static var previews: some View {
         ContainerView().edgesIgnoringSafeArea(.all)
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        let viewController = SignUpViewController()
+        let viewController = LoginViewController()
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController
         }

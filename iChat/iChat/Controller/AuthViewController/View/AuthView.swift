@@ -10,11 +10,6 @@ import UIKit
 final class AuthView: UIView {
     
     // MARK: - Buttons
-    private lazy var button: UIButton = {
-        let button = UIButton()
-        return button
-    }()
-    
     let googleButton = UIButton(title: "Google",
                                 isShadow: true,
                                 backgroundColor: .white,
