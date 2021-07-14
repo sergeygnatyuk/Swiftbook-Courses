@@ -22,7 +22,7 @@ class AddPhotoView: UIView {
     }()
     
     // MARK: - Button
-    var plusButton: UIButton = {
+    let plusButton: UIButton = {
         let plusButton = UIButton(type: .system)
         plusButton.translatesAutoresizingMaskIntoConstraints = false
         let myImage = #imageLiteral(resourceName: "plus")
@@ -30,6 +30,25 @@ class AddPhotoView: UIView {
         plusButton.tintColor = .buttonBlack()
         return plusButton
     }()
+    
+    let goToChatsButton = UIButton(title: "Go To Chats!", backgroundColor: .buttonBlack(), titleColor: .white, cornerRadius: 4)
+    
+    // MARK: - Labels
+    let welcomeLabel = UILabel(text: "Set Up Profile!", font: .avenir26())
+    
+    let fullNameLabel = UILabel(text: "Full Name")
+    
+    var aboutMeLabel = UILabel(text: "About Me")
+    
+    let sexLabel = UILabel(text: "Sex")
+    
+    // MARK: - TextField
+    let fullNameTextField = OneLineTextField(font: .avenir20())
+    
+    let aboutMeTextField = OneLineTextField(font: .avenir20())
+    
+    // MARK: - SegmentedControl
+    let sexSegmentedControl = UISegmentedControl(first: "Male", second: "Female")
     
     // MARK: - Initialization
     override init(frame: CGRect) {

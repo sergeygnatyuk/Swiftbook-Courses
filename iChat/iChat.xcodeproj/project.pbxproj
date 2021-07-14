@@ -11,6 +11,7 @@
 		4A2FE4A1269864D900BEECDF /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */; };
 		4A6FF40B2697364E00F74D5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF40A2697364E00F74D5C /* LoginViewController.swift */; };
 		4A6FF40D2697396000F74D5C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF40C2697396000F74D5C /* LoginView.swift */; };
+		4A98CDB5269EEAAA00313AAF /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDB4269EEAAA00313AAF /* UISegmentedControl.swift */; };
 		4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */; };
 		4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F426961EBB00A4AC83 /* SignUpView.swift */; };
 		4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F62696218600A4AC83 /* OneLineTextField .swift */; };
@@ -26,7 +27,7 @@
 		4AE633AC2693872F00294C83 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633AB2693872F00294C83 /* UILabel.swift */; };
 		4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633AE269389AE00294C83 /* UIImageView.swift */; };
 		4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633B72693AD2400294C83 /* ButtonFormView.swift */; };
-		4AE633BB2693B9EF00294C83 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633BA2693B9EF00294C83 /* StackView.swift */; };
+		4AE633BB2693B9EF00294C83 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633BA2693B9EF00294C83 /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		4A6FF40A2697364E00F74D5C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A6FF40C2697396000F74D5C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4A98CDB4269EEAAA00313AAF /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4ABB59F426961EBB00A4AC83 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4ABB59F62696218600A4AC83 /* OneLineTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneLineTextField .swift"; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		4AE633AB2693872F00294C83 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		4AE633AE269389AE00294C83 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		4AE633B72693AD2400294C83 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
-		4AE633BA2693B9EF00294C83 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		4AE633BA2693B9EF00294C83 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +201,8 @@
 				4AE633A72693835500294C83 /* UIColor.swift */,
 				4AE633AB2693872F00294C83 /* UILabel.swift */,
 				4AE633AE269389AE00294C83 /* UIImageView.swift */,
-				4AE633BA2693B9EF00294C83 /* StackView.swift */,
+				4AE633BA2693B9EF00294C83 /* UIStackView.swift */,
+				4A98CDB4269EEAAA00313AAF /* UISegmentedControl.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE6337F26936AF100294C83 /* AuthViewController.swift in Sources */,
-				4AE633BB2693B9EF00294C83 /* StackView.swift in Sources */,
+				4AE633BB2693B9EF00294C83 /* UIStackView.swift in Sources */,
 				4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */,
 				4A6FF40B2697364E00F74D5C /* LoginViewController.swift in Sources */,
 				4AE633A82693835500294C83 /* UIColor.swift in Sources */,
@@ -299,6 +302,7 @@
 				4AE633AC2693872F00294C83 /* UILabel.swift in Sources */,
 				4AE6339926937D6700294C83 /* UIButton.swift in Sources */,
 				4A6FF40D2697396000F74D5C /* LoginView.swift in Sources */,
+				4A98CDB5269EEAAA00313AAF /* UISegmentedControl.swift in Sources */,
 				4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

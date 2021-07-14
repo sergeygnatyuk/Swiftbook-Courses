@@ -10,7 +10,7 @@ import UIKit
 final class SetupProfileViewController: UIViewController {
     
     // MARK: - Properties
-    let fillImageView = AddPhotoView()
+    let fullImageView = AddPhotoView()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -20,12 +20,34 @@ final class SetupProfileViewController: UIViewController {
     }
     
     private func setupConstraints() {
-        fillImageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(fillImageView)
+        let fullNameStackView = UIStackView(arrangedSubviews: [fullImageView.fullNameLabel, fullImageView.fullNameTextField], axis: .vertical, spacing: 0)
+        
+        let aboutMeStackView = UIStackView(arrangedSubviews: [fullImageView.aboutMeLabel, fullImageView.aboutMeTextField], axis: .vertical, spacing: 0)
+        
+        let sexStackView = UIStackView(arrangedSubviews: [fullImageView.sexLabel, fullImageView.sexSegmentedControl], axis: .vertical, spacing: 12)
+        
+        let stackView = UIStackView(arrangedSubviews: [fullNameStackView, aboutMeStackView, sexStackView, fullImageView.goToChatsButton], axis: .vertical, spacing: 40)
+        
+        fullImageView.goToChatsButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        
+        fullImageView.translatesAutoresizingMaskIntoConstraints = false
+        fullImageView.welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(fullImageView)
+        view.addSubview(fullImageView.welcomeLabel)
+        view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            fillImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
-            fillImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            fullImageView.welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            fullImageView.welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            fullImageView.topAnchor.constraint(equalTo: fullImageView.welcomeLabel.bottomAnchor, constant: 40),
+            fullImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            stackView.topAnchor.constraint(equalTo: fullImageView.bottomAnchor, constant: 100),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
         ])
     }
 }
