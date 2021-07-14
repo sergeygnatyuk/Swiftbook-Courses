@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddPhotoView: UIView {
+final class AddPhotoView: UIView {
     
     // MARK: - ImageView
     var circleImageView: UIImageView = {
