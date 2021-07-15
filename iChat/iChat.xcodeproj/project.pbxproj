@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4A2FE49C2698619D00BEECDF /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE49B2698619D00BEECDF /* SetupProfileViewController.swift */; };
 		4A2FE4A1269864D900BEECDF /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */; };
+		4A403BD026A0B4940076750B /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCE26A0B4940076750B /* waitingChats.json */; };
+		4A403BD126A0B4940076750B /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCF26A0B4940076750B /* activeChats.json */; };
+		4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A403BD226A0B4EB0076750B /* Bundle.swift */; };
 		4A6FF40B2697364E00F74D5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF40A2697364E00F74D5C /* LoginViewController.swift */; };
 		4A6FF40D2697396000F74D5C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF40C2697396000F74D5C /* LoginView.swift */; };
 		4A98CDB5269EEAAA00313AAF /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDB4269EEAAA00313AAF /* UISegmentedControl.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		4A2FE49B2698619D00BEECDF /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		4A403BCE26A0B4940076750B /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		4A403BCF26A0B4940076750B /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		4A403BD226A0B4EB0076750B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		4A6FF40A2697364E00F74D5C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A6FF40C2697396000F74D5C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4A98CDB4269EEAAA00313AAF /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
@@ -231,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				4AE6338326936AFB00294C83 /* Assets.xcassets */,
+				4A403BCF26A0B4940076750B /* activeChats.json */,
+				4A403BCE26A0B4940076750B /* waitingChats.json */,
 				4AE6338826936AFB00294C83 /* Info.plist */,
 				4A98CDC1269F671800313AAF /* Identifiers.swift */,
 				4A98CDCB26A03E8300313AAF /* Section.swift */,
@@ -267,6 +275,7 @@
 				4AE633AE269389AE00294C83 /* UIImageView.swift */,
 				4AE633BA2693B9EF00294C83 /* UIStackView.swift */,
 				4A98CDB4269EEAAA00313AAF /* UISegmentedControl.swift */,
+				4A403BD226A0B4EB0076750B /* Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,8 +346,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A403BD026A0B4940076750B /* waitingChats.json in Resources */,
 				4AE6338726936AFB00294C83 /* LaunchScreen.storyboard in Resources */,
 				4AE6338426936AFB00294C83 /* Assets.xcassets in Resources */,
+				4A403BD126A0B4940076750B /* activeChats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A98CDCF26A044E600313AAF /* MChat.swift in Sources */,
+				4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */,
 				4AE6337F26936AF100294C83 /* AuthViewController.swift in Sources */,
 				4AE633BB2693B9EF00294C83 /* UIStackView.swift in Sources */,
 				4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */,
