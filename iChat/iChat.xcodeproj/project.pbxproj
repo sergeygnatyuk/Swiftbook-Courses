@@ -16,9 +16,10 @@
 		4A98CDBD269F32E400313AAF /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDBC269F32E400313AAF /* PeopleViewController.swift */; };
 		4A98CDC0269F335800313AAF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDBF269F335800313AAF /* ListViewController.swift */; };
 		4A98CDC2269F671800313AAF /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDC1269F671800313AAF /* Identifiers.swift */; };
-		4A98CDC4269F685800313AAF /* ListViewController+UICollectionViewDelegate&DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDC3269F685800313AAF /* ListViewController+UICollectionViewDelegate&DataSource.swift */; };
 		4A98CDC6269F720000313AAF /* ListViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDC5269F720000313AAF /* ListViewController+UISearchBarDelegate.swift */; };
 		4A98CDC8269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDC7269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift */; };
+		4A98CDCC26A03E8300313AAF /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDCB26A03E8300313AAF /* Section.swift */; };
+		4A98CDCF26A044E600313AAF /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDCE26A044E600313AAF /* MChat.swift */; };
 		4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */; };
 		4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F426961EBB00A4AC83 /* SignUpView.swift */; };
 		4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F62696218600A4AC83 /* OneLineTextField .swift */; };
@@ -47,9 +48,10 @@
 		4A98CDBC269F32E400313AAF /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		4A98CDBF269F335800313AAF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4A98CDC1269F671800313AAF /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Identifiers.swift; path = ../../../../../Teaching/Identifiers.swift; sourceTree = "<group>"; };
-		4A98CDC3269F685800313AAF /* ListViewController+UICollectionViewDelegate&DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UICollectionViewDelegate&DataSource.swift"; sourceTree = "<group>"; };
 		4A98CDC5269F720000313AAF /* ListViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		4A98CDC7269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeopleViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
+		4A98CDCB26A03E8300313AAF /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		4A98CDCE26A044E600313AAF /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4ABB59F426961EBB00A4AC83 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4ABB59F62696218600A4AC83 /* OneLineTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneLineTextField .swift"; sourceTree = "<group>"; };
@@ -147,10 +149,17 @@
 			isa = PBXGroup;
 			children = (
 				4A98CDBF269F335800313AAF /* ListViewController.swift */,
-				4A98CDC3269F685800313AAF /* ListViewController+UICollectionViewDelegate&DataSource.swift */,
 				4A98CDC5269F720000313AAF /* ListViewController+UISearchBarDelegate.swift */,
 			);
 			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		4A98CDCD26A044D400313AAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A98CDCE26A044E600313AAF /* MChat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4ABB59F126961E1D00A4AC83 /* AuthViewController */ = {
@@ -199,6 +208,7 @@
 		4AE6337926936AF100294C83 /* iChat */ = {
 			isa = PBXGroup;
 			children = (
+				4A98CDCD26A044D400313AAF /* Models */,
 				4AE63390269372EF00294C83 /* SupportingFiles */,
 				4AE6339B26937D6F00294C83 /* Extensions */,
 				4AE633932693732200294C83 /* Controllers */,
@@ -223,6 +233,7 @@
 				4AE6338326936AFB00294C83 /* Assets.xcassets */,
 				4AE6338826936AFB00294C83 /* Info.plist */,
 				4A98CDC1269F671800313AAF /* Identifiers.swift */,
+				4A98CDCB26A03E8300313AAF /* Section.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -338,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A98CDCF26A044E600313AAF /* MChat.swift in Sources */,
 				4AE6337F26936AF100294C83 /* AuthViewController.swift in Sources */,
 				4AE633BB2693B9EF00294C83 /* UIStackView.swift in Sources */,
 				4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */,
@@ -345,6 +357,7 @@
 				4AE633A82693835500294C83 /* UIColor.swift in Sources */,
 				4A98CDBA269F30FB00313AAF /* MainTabBarViewController.swift in Sources */,
 				4AE633A126937E8800294C83 /* AuthView.swift in Sources */,
+				4A98CDCC26A03E8300313AAF /* Section.swift in Sources */,
 				4AE633A5269381E500294C83 /* UIFont.swift in Sources */,
 				4A98CDBD269F32E400313AAF /* PeopleViewController.swift in Sources */,
 				4A2FE49C2698619D00BEECDF /* SetupProfileViewController.swift in Sources */,
@@ -353,7 +366,6 @@
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
 				4A98CDC8269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift in Sources */,
-				4A98CDC4269F685800313AAF /* ListViewController+UICollectionViewDelegate&DataSource.swift in Sources */,
 				4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */,
 				4AE6337D26936AF100294C83 /* SceneDelegate.swift in Sources */,
 				4A98CDC0269F335800313AAF /* ListViewController.swift in Sources */,
