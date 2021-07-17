@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+protocol SelfConfiguringCell {
+    
+    // MARK: - Properties
+    static var reuseId: String { get }
+    
+    // MARK: - Methods
+    func configure(with value: MChat)
+}
