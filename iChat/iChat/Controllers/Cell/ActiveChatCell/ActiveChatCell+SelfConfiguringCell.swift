@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ActiveChatCell: SelfConfiguringCell {
+extension ActiveChatCell: SelfConfiguringCellProtocol {
     
     static var reuseId: String = Identifiers.activeChatCell
     

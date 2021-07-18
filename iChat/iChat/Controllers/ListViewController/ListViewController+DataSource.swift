@@ -19,14 +19,12 @@ extension ListViewController {
             case .activeChats:
                 return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
             case .waitingChats:
-                let cell = collection.dequeueReusableCell(withReuseIdentifier: Identifiers.listCellIdSecond, for: indexPath)
-                cell.backgroundColor = .cyan
-                return cell
+                return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
             }
         })
     }
     
-    func configure<T: SelfConfiguringCell>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
+    func configure<T: SelfConfiguringCellProtocol>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
         guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: cellType.reuseId, for: indexPath) as? T else { fatalError("Unable to dequeue \(cellType)") }
         cell.configure(with: value)
         return cell

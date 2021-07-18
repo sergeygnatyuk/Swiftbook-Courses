@@ -31,8 +31,8 @@ final class ListViewController: UIViewController {
         collectionView?.backgroundColor = .mainWhite()
         guard let collectionsView = collectionView else { return }
         view.addSubview(collectionsView)
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.listCellIdSecond)
         collectionView?.register(ActiveChatCell.self, forCellWithReuseIdentifier: Identifiers.activeChatCell)
+        collectionView?.register(WaitingChatCell.self, forCellWithReuseIdentifier: Identifiers.waitingChatCell)
     }
     
     private func setupSearchBar() {

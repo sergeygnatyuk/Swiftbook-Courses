@@ -13,7 +13,7 @@
 		4A403BD126A0B4940076750B /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCF26A0B4940076750B /* activeChats.json */; };
 		4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A403BD226A0B4EB0076750B /* Bundle.swift */; };
 		4A5FFF1E26A33A8200E21861 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FFF1D26A33A8200E21861 /* ActiveChatCell.swift */; };
-		4A5FFF2026A33B2000E21861 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FFF1F26A33B2000E21861 /* SelfConfiguringCell.swift */; };
+		4A5FFF2026A33B2000E21861 /* SelfConfiguringCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FFF1F26A33B2000E21861 /* SelfConfiguringCellProtocol.swift */; };
 		4A5FFF2326A33CAE00E21861 /* ActiveChatCell+SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FFF2226A33CAE00E21861 /* ActiveChatCell+SelfConfiguringCell.swift */; };
 		4A5FFF2526A3419900E21861 /* ListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FFF2426A3419900E21861 /* ListViewController+DataSource.swift */; };
 		4A5FFF2726A341F500E21861 /* ListViewController+CompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FFF2626A341F500E21861 /* ListViewController+CompositionalLayout.swift */; };
@@ -30,6 +30,8 @@
 		4A98CDCF26A044E600313AAF /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98CDCE26A044E600313AAF /* MChat.swift */; };
 		4AAA4DB226A49B5D00B9F5A9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DB126A49B5D00B9F5A9 /* GradientView.swift */; };
 		4AAA4DB526A49C9000B9F5A9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DB426A49C9000B9F5A9 /* Point.swift */; };
+		4AAA4DB726A4A75800B9F5A9 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DB626A4A75800B9F5A9 /* WaitingChatCell.swift */; };
+		4AAA4DBA26A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DB926A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift */; };
 		4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */; };
 		4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F426961EBB00A4AC83 /* SignUpView.swift */; };
 		4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F62696218600A4AC83 /* OneLineTextField .swift */; };
@@ -55,7 +57,7 @@
 		4A403BCF26A0B4940076750B /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		4A403BD226A0B4EB0076750B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		4A5FFF1D26A33A8200E21861 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
-		4A5FFF1F26A33B2000E21861 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		4A5FFF1F26A33B2000E21861 /* SelfConfiguringCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCellProtocol.swift; sourceTree = "<group>"; };
 		4A5FFF2226A33CAE00E21861 /* ActiveChatCell+SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActiveChatCell+SelfConfiguringCell.swift"; sourceTree = "<group>"; };
 		4A5FFF2426A3419900E21861 /* ListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4A5FFF2626A341F500E21861 /* ListViewController+CompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+CompositionalLayout.swift"; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		4A98CDCE26A044E600313AAF /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		4AAA4DB126A49B5D00B9F5A9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		4AAA4DB426A49C9000B9F5A9 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		4AAA4DB626A4A75800B9F5A9 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
+		4AAA4DB926A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaitingChatCell+SelfConfiguringCell.swift"; sourceTree = "<group>"; };
 		4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4ABB59F426961EBB00A4AC83 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4ABB59F62696218600A4AC83 /* OneLineTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneLineTextField .swift"; sourceTree = "<group>"; };
@@ -123,8 +127,9 @@
 		4A5FFF1C26A33A6200E21861 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4AAA4DB826A4A79900B9F5A9 /* WaitingCell */,
 				4A5FFF2126A33C8600E21861 /* ActiveChatCell */,
-				4A5FFF1F26A33B2000E21861 /* SelfConfiguringCell.swift */,
+				4A5FFF1F26A33B2000E21861 /* SelfConfiguringCellProtocol.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -209,6 +214,15 @@
 				4AAA4DB126A49B5D00B9F5A9 /* GradientView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4AAA4DB826A4A79900B9F5A9 /* WaitingCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AAA4DB626A4A75800B9F5A9 /* WaitingChatCell.swift */,
+				4AAA4DB926A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift */,
+			);
+			path = WaitingCell;
 			sourceTree = "<group>";
 		};
 		4ABB59F126961E1D00A4AC83 /* AuthViewController */ = {
@@ -412,7 +426,9 @@
 				4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */,
 				4A6FF40B2697364E00F74D5C /* LoginViewController.swift in Sources */,
 				4A5FFF1E26A33A8200E21861 /* ActiveChatCell.swift in Sources */,
+				4AAA4DB726A4A75800B9F5A9 /* WaitingChatCell.swift in Sources */,
 				4A5FFF2526A3419900E21861 /* ListViewController+DataSource.swift in Sources */,
+				4AAA4DBA26A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift in Sources */,
 				4AE633A82693835500294C83 /* UIColor.swift in Sources */,
 				4A98CDBA269F30FB00313AAF /* MainTabBarViewController.swift in Sources */,
 				4AE633A126937E8800294C83 /* AuthView.swift in Sources */,
@@ -426,7 +442,7 @@
 				4A5FFF2326A33CAE00E21861 /* ActiveChatCell+SelfConfiguringCell.swift in Sources */,
 				4A2FE4A1269864D900BEECDF /* AddPhotoView.swift in Sources */,
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
-				4A5FFF2026A33B2000E21861 /* SelfConfiguringCell.swift in Sources */,
+				4A5FFF2026A33B2000E21861 /* SelfConfiguringCellProtocol.swift in Sources */,
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
 				4A98CDC8269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift in Sources */,
 				4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */,
