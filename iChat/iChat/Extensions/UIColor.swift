@@ -9,23 +9,39 @@ import UIKit
 
 extension UIColor {
     
+    func colorFromHex(_ hex: String) -> UIColor {
+        var hexString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        if hexString.hasPrefix("#") {
+            hexString.remove(at: hexString.startIndex)
+        }
+        if hexString.count != 6 {
+            return UIColor.black
+        }
+        var rgb: UInt64 = 0
+        Scanner(string: hexString).scanHexInt64(&rgb)
+        return UIColor.init(red: CGFloat((rgb & 0xFF0000) >> 16 ) / 255.0,
+                            green: CGFloat((rgb & 0x00FF00) >> 8 ) / 255.0,
+                            blue: CGFloat(rgb & 0x0000FF) / 255.0,
+                            alpha: 1.0)
+    }
+    
     static func buttonRed() -> UIColor {
-        return #colorLiteral(red: 0.8599768877, green: 0.1257156432, blue: 0.1353015304, alpha: 0.8470588235)
+        return UIColor().colorFromHex("DB2023")
     }
     
     static func buttonWhite() -> UIColor {
-        return #colorLiteral(red: 0.8431372549, green: 0.9725490196, blue: 0.9921568627, alpha: 0.8470588235)
+        return UIColor().colorFromHex("D7F8FD")
     }
     
     static func mainWhite() -> UIColor {
-        return #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9921568627, alpha: 1)
+        return UIColor().colorFromHex("F7F8FD")
     }
     
     static func buttonBlack() -> UIColor {
-        return #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.8470588235)
+        return UIColor().colorFromHex("333333")
     }
     
     static func textFieldLight() -> UIColor {
-        return #colorLiteral(red: 0.9019607843, green: 0.9019607843, blue: 0.9019607843, alpha: 0.8470588235)
+        return UIColor().colorFromHex("E6E6E6")
     }
 }
