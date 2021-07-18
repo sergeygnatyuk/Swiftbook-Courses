@@ -13,7 +13,7 @@ final class ActiveChatCell: UICollectionViewCell{
     let friendImageView = UIImageView()
     let friendNameLabel = UILabel(text: "User Name", font: .laoSangamMN20())
     let lastMessageLabel = UILabel(text: "How Are You", font: .laoSangamMN18())
-    let gradientView = UIView()
+    let gradientView = GradientView(from: .topTrailing, to: .bottomLeading, startColor: UIColor().colorFromHex("C9A1F0"), endColor: UIColor().colorFromHex("7AB2EB"))
     
     // MARK: - Initialization
     override init(frame: CGRect) {

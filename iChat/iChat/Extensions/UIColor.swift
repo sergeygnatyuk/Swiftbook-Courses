@@ -26,7 +26,7 @@ extension UIColor {
     }
     
     static func buttonRed() -> UIColor {
-        return UIColor().colorFromHex("DB2023")
+        return UIColor().colorFromHex("DB2023") 
     }
     
     static func buttonWhite() -> UIColor {
