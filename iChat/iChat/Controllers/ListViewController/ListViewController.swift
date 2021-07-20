@@ -33,6 +33,7 @@ final class ListViewController: UIViewController {
         view.addSubview(collectionsView)
         collectionView?.register(ActiveChatCell.self, forCellWithReuseIdentifier: Identifiers.activeChatCell)
         collectionView?.register(WaitingChatCell.self, forCellWithReuseIdentifier: Identifiers.waitingChatCell)
+        collectionView?.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
     }
     
     private func setupSearchBar() {

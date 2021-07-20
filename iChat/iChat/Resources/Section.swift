@@ -10,4 +10,13 @@ import Foundation
 enum Section: Int, CaseIterable {
     case waitingChats
     case activeChats
+    
+    func description() -> String {
+        switch self {
+        case .waitingChats:
+            return "Waiting Chats"
+        case .activeChats:
+            return "Active Chats"
+        }
+    }
 }

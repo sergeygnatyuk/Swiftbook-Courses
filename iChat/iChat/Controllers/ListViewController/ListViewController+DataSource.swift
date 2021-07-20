@@ -22,6 +22,13 @@ extension ListViewController {
                 return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
             }
         })
+        dataSource?.supplementaryViewProvider = {
+            collectionView, kind, indexPath in
+            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as? SectionHeader else { fatalError("Can Not Create new section Header") }
+            guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown Section Kind") }
+            sectionHeader.configure(text: section.description(), font: .laoSangamMN20(), textColor: UIColor().colorFromHex("929292"))
+            return sectionHeader
+        }
     }
     
     func configure<T: SelfConfiguringCellProtocol>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
