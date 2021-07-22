@@ -37,6 +37,9 @@
 		4AAA4DB526A49C9000B9F5A9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DB426A49C9000B9F5A9 /* Point.swift */; };
 		4AAA4DB726A4A75800B9F5A9 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DB626A4A75800B9F5A9 /* WaitingChatCell.swift */; };
 		4AAA4DBA26A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DB926A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift */; };
+		4AB760F626A9F1B3009D24C2 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB760F526A9F1B3009D24C2 /* UserCell.swift */; };
+		4AB760F826A9F203009D24C2 /* UserCell+SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB760F726A9F203009D24C2 /* UserCell+SelfConfiguringCell.swift */; };
+		4AB760FA26A9F462009D24C2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB760F926A9F462009D24C2 /* UIViewController.swift */; };
 		4ABAB2AB26A7427D00C1336A /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAB2AA26A7427D00C1336A /* SectionHeader.swift */; };
 		4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */; };
 		4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F426961EBB00A4AC83 /* SignUpView.swift */; };
@@ -87,6 +90,9 @@
 		4AAA4DB426A49C9000B9F5A9 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		4AAA4DB626A4A75800B9F5A9 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		4AAA4DB926A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaitingChatCell+SelfConfiguringCell.swift"; sourceTree = "<group>"; };
+		4AB760F526A9F1B3009D24C2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		4AB760F726A9F203009D24C2 /* UserCell+SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCell+SelfConfiguringCell.swift"; sourceTree = "<group>"; };
+		4AB760F926A9F462009D24C2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4ABAB2AA26A7427D00C1336A /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4ABB59F426961EBB00A4AC83 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -147,9 +153,10 @@
 		4A5FFF1C26A33A6200E21861 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4A5FFF1F26A33B2000E21861 /* SelfConfiguringCellProtocol.swift */,
+				4AB760F426A9F19F009D24C2 /* UserCell */,
 				4AAA4DB826A4A79900B9F5A9 /* WaitingCell */,
 				4A5FFF2126A33C8600E21861 /* ActiveChatCell */,
-				4A5FFF1F26A33B2000E21861 /* SelfConfiguringCellProtocol.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -247,6 +254,15 @@
 				4AAA4DB926A4A7CC00B9F5A9 /* WaitingChatCell+SelfConfiguringCell.swift */,
 			);
 			path = WaitingCell;
+			sourceTree = "<group>";
+		};
+		4AB760F426A9F19F009D24C2 /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AB760F526A9F1B3009D24C2 /* UserCell.swift */,
+				4AB760F726A9F203009D24C2 /* UserCell+SelfConfiguringCell.swift */,
+			);
+			path = UserCell;
 			sourceTree = "<group>";
 		};
 		4ABB59F126961E1D00A4AC83 /* AuthViewController */ = {
@@ -361,6 +377,7 @@
 				4AE633BA2693B9EF00294C83 /* UIStackView.swift */,
 				4A98CDB4269EEAAA00313AAF /* UISegmentedControl.swift */,
 				4A403BD226A0B4EB0076750B /* Bundle.swift */,
+				4AB760F926A9F462009D24C2 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,6 +477,7 @@
 				4A98CDBA269F30FB00313AAF /* MainTabBarViewController.swift in Sources */,
 				4AE633A126937E8800294C83 /* AuthView.swift in Sources */,
 				4AAA4DB526A49C9000B9F5A9 /* Point.swift in Sources */,
+				4AB760F626A9F1B3009D24C2 /* UserCell.swift in Sources */,
 				4A98CDCC26A03E8300313AAF /* Section.swift in Sources */,
 				4AE633A5269381E500294C83 /* UIFont.swift in Sources */,
 				4A98CDBD269F32E400313AAF /* PeopleViewController.swift in Sources */,
@@ -474,6 +492,7 @@
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
 				4A5FFF2026A33B2000E21861 /* SelfConfiguringCellProtocol.swift in Sources */,
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
+				4AB760FA26A9F462009D24C2 /* UIViewController.swift in Sources */,
 				4A98CDC8269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift in Sources */,
 				4ABAB2AB26A7427D00C1336A /* SectionHeader.swift in Sources */,
 				4A5EAA8426A8997B001E87AD /* PeopleViewController+DataSource.swift in Sources */,
@@ -487,6 +506,7 @@
 				4AAA4DB226A49B5D00B9F5A9 /* GradientView.swift in Sources */,
 				4A98CDB5269EEAAA00313AAF /* UISegmentedControl.swift in Sources */,
 				4A98CDC2269F671800313AAF /* Identifiers.swift in Sources */,
+				4AB760F826A9F203009D24C2 /* UserCell+SelfConfiguringCell.swift in Sources */,
 				4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

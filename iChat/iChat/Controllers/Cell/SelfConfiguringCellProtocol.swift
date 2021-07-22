@@ -13,5 +13,5 @@ protocol SelfConfiguringCellProtocol {
     static var reuseId: String { get }
     
     // MARK: - Methods
-    func configure(with value: MChat)
+    func configure<U: Hashable>(with value: U)
 }

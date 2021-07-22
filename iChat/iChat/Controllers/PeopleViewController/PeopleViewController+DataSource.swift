@@ -17,9 +17,7 @@ extension PeopleViewController {
             }
             switch section {
             case .users:
-                let cell = collection.dequeueReusableCell(withReuseIdentifier: Identifiers.activeChatCell, for: indexPath)
-                cell.backgroundColor = .cyan
-                return cell
+                return self.configure(collectionView: collectionView, cellType: UserCell.self, with: user, for: indexPath)
             }
         })
         dataSource?.supplementaryViewProvider = {

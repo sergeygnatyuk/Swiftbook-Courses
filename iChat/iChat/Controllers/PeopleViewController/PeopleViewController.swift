@@ -21,7 +21,6 @@ final class PeopleViewController: UIViewController {
         setupCollectionView()
         createDataSource()
         reloadData()
-     //   view.backgroundColor = .white
     }
     
     // MARK: - Private
@@ -31,7 +30,7 @@ final class PeopleViewController: UIViewController {
         collectionView?.backgroundColor = .mainWhite()
         guard let collectionsView = collectionView else { return }
         view.addSubview(collectionsView)
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifiers.activeChatCell)
+        collectionView?.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseId)
         collectionView?.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
     }
     

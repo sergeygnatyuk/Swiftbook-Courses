@@ -17,9 +17,9 @@ extension ListViewController {
             }
             switch section {
             case .activeChats:
-                return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
+                return self.configure(collectionView: collectionView, cellType: ActiveChatCell.self, with: chat, for: indexPath)
             case .waitingChats:
-                return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
+                return self.configure(collectionView: collectionView, cellType: WaitingChatCell.self, with: chat, for: indexPath)
             }
         })
         dataSource?.supplementaryViewProvider = {
@@ -29,11 +29,5 @@ extension ListViewController {
             sectionHeader.configure(text: section.description(), font: .laoSangamMN20(), textColor: UIColor().colorFromHex("929292"))
             return sectionHeader
         }
-    }
-    
-    func configure<T: SelfConfiguringCellProtocol>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
-        guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: cellType.reuseId, for: indexPath) as? T else { fatalError("Unable to dequeue \(cellType)") }
-        cell.configure(with: value)
-        return cell
     }
 }
