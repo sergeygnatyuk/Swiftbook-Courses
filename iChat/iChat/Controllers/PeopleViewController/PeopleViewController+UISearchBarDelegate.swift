@@ -10,6 +10,6 @@ import UIKit
 extension PeopleViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        reloadData(with: searchText)
     }
 }

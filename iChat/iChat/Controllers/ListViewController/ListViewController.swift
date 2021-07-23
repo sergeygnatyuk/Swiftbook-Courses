@@ -51,7 +51,6 @@ final class ListViewController: UIViewController {
         snapShot.appendSections([.waitingChats, .activeChats])
         snapShot.appendItems(waitingChats, toSection: .waitingChats)
         snapShot.appendItems(activeChats, toSection: .activeChats)
-        
         dataSource?.apply(snapShot, animatingDifferences: true)
     }
 }

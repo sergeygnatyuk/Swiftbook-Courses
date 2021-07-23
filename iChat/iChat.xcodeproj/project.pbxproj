@@ -12,6 +12,8 @@
 		4A403BD026A0B4940076750B /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCE26A0B4940076750B /* waitingChats.json */; };
 		4A403BD126A0B4940076750B /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCF26A0B4940076750B /* activeChats.json */; };
 		4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A403BD226A0B4EB0076750B /* Bundle.swift */; };
+		4A5D403126AB4527002B301D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D403026AB4527002B301D /* ProfileViewController.swift */; };
+		4A5D403426AB460E002B301D /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D403326AB460E002B301D /* ContainerView.swift */; };
 		4A5EAA7B26A89193001E87AD /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EAA7A26A89193001E87AD /* users.json */; };
 		4A5EAA7E26A8934C001E87AD /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EAA7D26A8934C001E87AD /* MUser.swift */; };
 		4A5EAA8026A8957E001E87AD /* SectionPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EAA7F26A8957E001E87AD /* SectionPeopleViewController.swift */; };
@@ -65,6 +67,8 @@
 		4A403BCE26A0B4940076750B /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		4A403BCF26A0B4940076750B /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		4A403BD226A0B4EB0076750B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		4A5D403026AB4527002B301D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4A5D403326AB460E002B301D /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		4A5EAA7A26A89193001E87AD /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		4A5EAA7D26A8934C001E87AD /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		4A5EAA7F26A8957E001E87AD /* SectionPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPeopleViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,23 @@
 			isa = PBXGroup;
 			children = (
 				4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A5D402F26AB450F002B301D /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A5D403226AB45B6002B301D /* View */,
+				4A5D403026AB4527002B301D /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		4A5D403226AB45B6002B301D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A5D403326AB460E002B301D /* ContainerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				4A5FFF1C26A33A6200E21861 /* Cell */,
+				4A5D402F26AB450F002B301D /* ProfileViewController */,
 				4A98CDBE269F334400313AAF /* ListViewController */,
 				4A98CDBB269F32BD00313AAF /* PeopleViewController */,
 				4A98CDB6269F302C00313AAF /* MainTabBarController */,
@@ -490,6 +512,7 @@
 				4A2FE4A1269864D900BEECDF /* AddPhotoView.swift in Sources */,
 				4A5EAA8026A8957E001E87AD /* SectionPeopleViewController.swift in Sources */,
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
+				4A5D403426AB460E002B301D /* ContainerView.swift in Sources */,
 				4A5FFF2026A33B2000E21861 /* SelfConfiguringCellProtocol.swift in Sources */,
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
 				4AB760FA26A9F462009D24C2 /* UIViewController.swift in Sources */,
@@ -501,6 +524,7 @@
 				4A98CDC0269F335800313AAF /* ListViewController.swift in Sources */,
 				4AE633AC2693872F00294C83 /* UILabel.swift in Sources */,
 				4AE6339926937D6700294C83 /* UIButton.swift in Sources */,
+				4A5D403126AB4527002B301D /* ProfileViewController.swift in Sources */,
 				4A6FF40D2697396000F74D5C /* LoginView.swift in Sources */,
 				4A98CDC6269F720000313AAF /* ListViewController+UISearchBarDelegate.swift in Sources */,
 				4AAA4DB226A49B5D00B9F5A9 /* GradientView.swift in Sources */,

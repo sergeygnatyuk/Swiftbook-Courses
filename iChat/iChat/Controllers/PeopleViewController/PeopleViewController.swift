@@ -20,7 +20,7 @@ final class PeopleViewController: UIViewController {
         setupSearchBar()
         setupCollectionView()
         createDataSource()
-        reloadData()
+        reloadData(with: nil)
     }
     
     // MARK: - Private
@@ -44,10 +44,14 @@ final class PeopleViewController: UIViewController {
         searchController.searchBar.delegate = self
     }
     
-    private func reloadData() {
+    // MARK: - Public
+    public func reloadData(with searchText: String?) {
+        let filtered = users.filter { (user) -> Bool in
+            user.contains(filter: searchText)
+        }
         var snapShot = NSDiffableDataSourceSnapshot<SectionPeople, MUser>()
         snapShot.appendSections([.users])
-        snapShot.appendItems(users, toSection: .users)
+        snapShot.appendItems(filtered, toSection: .users)
         dataSource?.apply(snapShot, animatingDifferences: true)
     }
 }
