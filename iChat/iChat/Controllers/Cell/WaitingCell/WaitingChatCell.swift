@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WaitingChatCell: UICollectionViewCell {
+final class WaitingChatCell: UICollectionViewCell {
     
     // MARK: - Properties
     let friendImageView = UIImageView()

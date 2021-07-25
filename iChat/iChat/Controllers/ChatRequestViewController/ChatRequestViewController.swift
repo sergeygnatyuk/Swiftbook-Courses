@@ -1,19 +1,20 @@
 //
-//  ProfileViewController.swift
+//  ChatRequestViewController.swift
 //  iChat
 //
-//  Created by Гнатюк Сергей on 23.07.2021.
+//  Created by Гнатюк Сергей on 25.07.2021.
 //
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+final class ChatRequestViewController: UIViewController {
     
     // MARK: - Properties
-    let containerView: ProfileView = {
-        let containerView = ProfileView()
+    let containerView: ChatRequestView = {
+        let containerView = ChatRequestView()
         return containerView
     }()
+
     
     // MARK: - Lifecycle
     override func loadView() {
@@ -23,20 +24,26 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        containerView.backgroundColor = .mainWhite()
         containerView.setupConstraints()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        containerView.acceptButton.applyGradients(cornerRadius: 10)
     }
 }
 
 // MARK: - SwiftUI
 import SwiftUI
 
-struct ProfileViewControllerProvider: PreviewProvider {
+struct ChatRequestViewControllerProvider: PreviewProvider {
     static var previews: some View {
         ContainerView().edgesIgnoringSafeArea(.all)
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        let viewController = ProfileViewController()
+        let viewController = ChatRequestViewController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController

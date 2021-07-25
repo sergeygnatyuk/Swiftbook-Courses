@@ -1,5 +1,5 @@
 //
-//  ContainerView.swift
+//  ProfileContainerView.swift
 //  iChat
 //
 //  Created by Гнатюк Сергей on 23.07.2021.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-final class ContainerView: UIView {
+final class ProfileView: UIView {
     
     // MARK: - Propertyes
     let containerView = UIView()
     let imageView = UIImageView(image: #imageLiteral(resourceName: "human8"), contentMode: .scaleAspectFill)
     let nameLabel = UILabel(text: "Peter Denis", font: .systemFont(ofSize: 20, weight: .light))
-    let aboutMeLabel = UILabel(text: "You have opportunity to chat with the best man the world!", font: .systemFont(ofSize: 16, weight: .light))
-    let myTextField = UITextField()
+    let aboutMeLabel = UILabel(text: "You have the opportunity to chat with the best man the world!", font: .systemFont(ofSize: 16, weight: .light))
+    let myTextField = InsertableTextField()
     
     // MARK: - Private
     private func customizeElements() {
@@ -26,7 +26,14 @@ final class ContainerView: UIView {
         aboutMeLabel.numberOfLines = 0
         containerView.backgroundColor = .mainWhite()
         containerView.layer.cornerRadius = 30
-        myTextField.borderStyle = .roundedRect
+        if let button = myTextField.rightView as? UIButton {
+            button.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+        }
+    }
+    
+    // MARK: - @objc methods
+    @objc private func sendMessage() {
+        print(#function)
     }
     
     // MARK: - Public
