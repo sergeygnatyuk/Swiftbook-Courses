@@ -15,6 +15,9 @@ final class AuthViewController: UIViewController {
         return authView
     }()
     
+    private lazy var signUpViewController = SignUpViewController()
+    private lazy var loginViewController = LoginViewController()
+    
     // MARK: - Lifecycle
     override func loadView() {
         super.loadView()
@@ -26,12 +29,25 @@ final class AuthViewController: UIViewController {
         authView.googleButton.customizeGoogleButton()
         setupUIElements()
         view.backgroundColor = .white
+        authView.emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+        authView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Private
     private func setupUIElements() {
         authView.addSubviews()
         authView.setupConstraints()
+    }
+    
+    // MARK: - Actions
+    @objc private func emailButtonTapped() {
+        present(signUpViewController, animated: true, completion: nil)
+        print(#function)
+    }
+    
+    @objc private func loginButtonTapped() {
+        present(loginViewController, animated: true, completion: nil)
+        print(#function)
     }
 }
 

@@ -27,6 +27,21 @@ final class SignUpViewController: UIViewController {
         signUpView.loginButton.setTitleColor(.buttonRed(), for: .normal)
         view.backgroundColor = .white
         signUpView.setupUIElements()
+        signUpView.signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - Actions
+    @objc private func signUpButtonTapped() {
+        AuthService.shared.register(email: signUpView.emailTextField.text, password: signUpView.passwordTextField.text, confirmPassword: signUpView.confirmPasswordTextField.text ?? "") { result in
+            switch result {
+            case .success(let user):
+                self.showAlert(with: "Успешно", and: "Вы Зарегистрированы!")
+                print(user.email as Any)
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        }
+        print(#function)
     }
 }
 
