@@ -14,6 +14,8 @@
 		4A403BD026A0B4940076750B /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCE26A0B4940076750B /* waitingChats.json */; };
 		4A403BD126A0B4940076750B /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCF26A0B4940076750B /* activeChats.json */; };
 		4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A403BD226A0B4EB0076750B /* Bundle.swift */; };
+		4A4F529826B7031600B6066E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F529726B7031600B6066E /* Validators.swift */; };
+		4A4F529A26B7065900B6066E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F529926B7065900B6066E /* AuthError.swift */; };
 		4A5D403126AB4527002B301D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D403026AB4527002B301D /* ProfileViewController.swift */; };
 		4A5D403426AB460E002B301D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D403326AB460E002B301D /* ProfileView.swift */; };
 		4A5EAA7B26A89193001E87AD /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EAA7A26A89193001E87AD /* users.json */; };
@@ -78,6 +80,8 @@
 		4A403BCE26A0B4940076750B /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		4A403BCF26A0B4940076750B /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		4A403BD226A0B4EB0076750B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		4A4F529726B7031600B6066E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		4A4F529926B7065900B6066E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		4A5D403026AB4527002B301D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A5D403326AB460E002B301D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4A5EAA7A26A89193001E87AD /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		4A0127C626B327AD00878C7E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4A4F529B26B728FA00B6066E /* Helpers */,
 				4A98CDCD26A044D400313AAF /* Models */,
 				4A0127C826B327DA00878C7E /* AuthService.swift */,
 			);
@@ -178,6 +183,15 @@
 				4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4A4F529B26B728FA00B6066E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4A4F529926B7065900B6066E /* AuthError.swift */,
+				4A4F529726B7031600B6066E /* Validators.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4A5D402F26AB450F002B301D /* ProfileViewController */ = {
@@ -622,6 +636,7 @@
 				4AB760F626A9F1B3009D24C2 /* UserCell.swift in Sources */,
 				4A98CDCC26A03E8300313AAF /* Section.swift in Sources */,
 				4AE633A5269381E500294C83 /* UIFont.swift in Sources */,
+				4A4F529826B7031600B6066E /* Validators.swift in Sources */,
 				4A98CDBD269F32E400313AAF /* PeopleViewController.swift in Sources */,
 				4A0127C926B327DA00878C7E /* AuthService.swift in Sources */,
 				4A5FFF2726A341F500E21861 /* ListViewController+CompositionalLayout.swift in Sources */,
@@ -645,6 +660,7 @@
 				4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */,
 				4AE6337D26936AF100294C83 /* SceneDelegate.swift in Sources */,
 				4A98CDC0269F335800313AAF /* ListViewController.swift in Sources */,
+				4A4F529A26B7065900B6066E /* AuthError.swift in Sources */,
 				4AE633AC2693872F00294C83 /* UILabel.swift in Sources */,
 				4AE0BCCA26ADDD3B006736D0 /* ChatRequestViewController.swift in Sources */,
 				4AE6339926937D6700294C83 /* UIButton.swift in Sources */,

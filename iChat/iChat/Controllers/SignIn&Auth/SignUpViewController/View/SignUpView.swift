@@ -81,7 +81,7 @@ final class SignUpView: UIView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             
-            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
+            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
             bottomStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
         ])
