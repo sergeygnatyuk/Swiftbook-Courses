@@ -10,13 +10,10 @@ import UIKit
 final class AuthViewController: UIViewController {
     
     // MARK: - Properties
-    let authView: AuthView = {
-        let authView = AuthView()
-        return authView
-    }()
+    private let authView = AuthView()
     
-    private lazy var signUpViewController = SignUpViewController()
-    private lazy var loginViewController = LoginViewController()
+    let signUpViewController = SignUpViewController()
+    let loginViewController = LoginViewController()
     
     // MARK: - Lifecycle
     override func loadView() {
@@ -26,6 +23,8 @@ final class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signUpViewController.delegate = self
+        loginViewController.delegate = self
         authView.googleButton.customizeGoogleButton()
         setupUIElements()
         view.backgroundColor = .white

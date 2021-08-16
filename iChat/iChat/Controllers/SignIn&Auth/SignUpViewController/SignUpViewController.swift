@@ -9,11 +9,9 @@ import UIKit
 
 final class SignUpViewController: UIViewController {
     
-    // MARK: - UI
-    let signUpView: SignUpView = {
-        let signUpView = SignUpView()
-        return signUpView
-    }()
+    // MARK: - Properties
+    let signUpView = SignUpView()
+    weak var delegate: AuthNavigationDelegate?
     
     // MARK: - Lifecycle
     override func loadView() {
@@ -28,6 +26,7 @@ final class SignUpViewController: UIViewController {
         view.backgroundColor = .white
         signUpView.setupUIElements()
         signUpView.signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        signUpView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Actions
@@ -35,13 +34,20 @@ final class SignUpViewController: UIViewController {
         AuthService.shared.register(email: signUpView.emailTextField.text, password: signUpView.passwordTextField.text, confirmPassword: signUpView.confirmPasswordTextField.text ?? "") { result in
             switch result {
             case .success(let user):
-                self.showAlert(with: "Успешно", and: "Вы Зарегистрированы!")
-                print(user.email as Any)
+                self.showAlert(with: "Успешно", and: "Вы Зарегистрированы!") {
+                    self.present(SetupProfileViewController(), animated: true, completion: nil)
+                }
             case .failure(let error):
                 self.showAlert(with: "Ошибка!", and: error.localizedDescription)
             }
         }
         print(#function)
+    }
+    
+    @objc private func loginButtonTapped() {
+        self.dismiss(animated: true) {
+            self.delegate?.toLoginVC()
+        }
     }
 }
 

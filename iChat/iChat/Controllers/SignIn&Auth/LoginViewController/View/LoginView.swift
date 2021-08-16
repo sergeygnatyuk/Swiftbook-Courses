@@ -31,7 +31,7 @@ final class LoginView: UIView {
                                 backgroundColor: .buttonBlack(),
                                 titleColor: .white)
     
-    let signInButton: UIButton = {
+    let signUpButton: UIButton = {
         let signInButton = UIButton()
         signInButton.setTitle("Sign In", for: .normal)
         signInButton.setTitleColor(.buttonRed(), for: .normal)
@@ -56,9 +56,9 @@ final class LoginView: UIView {
         
         let stackView = UIStackView(arrangedSubviews: [loginWithLabel, orLabel, emailStackView, passwordStackView, loginButton], axis: .vertical, spacing: 20)
         
-        signInButton.contentHorizontalAlignment = .leading
+        signUpButton.contentHorizontalAlignment = .leading
         
-        let bottomStackView = UIStackView(arrangedSubviews: [needAnAccountLabel, signInButton], axis: .horizontal, spacing: 10)
+        let bottomStackView = UIStackView(arrangedSubviews: [needAnAccountLabel, signUpButton], axis: .horizontal, spacing: 10)
         
         bottomStackView.alignment = .firstBaseline
         

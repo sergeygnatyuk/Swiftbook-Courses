@@ -7,13 +7,16 @@
 
 import UIKit
 
+protocol AuthNavigationDelegate: AnyObject {
+    func toLoginVC()
+    func toSignUoVC()
+}
+
 final class LoginViewController: UIViewController {
     
     // MARK: - Properties
-    let loginView: LoginView = {
-        let loginView = LoginView()
-        return loginView
-    }()
+    let loginView = LoginView()
+    weak var delegate: AuthNavigationDelegate?
     
     // MARK: - Lifecycle
     override func loadView() {
@@ -27,6 +30,7 @@ final class LoginViewController: UIViewController {
         loginView.setupUIElements()
         view.backgroundColor = .white
         loginView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        loginView.signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Actions
@@ -34,12 +38,20 @@ final class LoginViewController: UIViewController {
         AuthService.shared.login(email: loginView.emailTextField.text, password: loginView.passwordTextField.text) { result in
             switch result {
             case .success(let user):
-                self.showAlert(with: "Успешно", and: "Вы Авторизованы!")
+                self.showAlert(with: "Успешно", and: "Вы Авторизованы!") {
+                    self.present(MainTabBarViewController(), animated: true, completion: nil)
+                }
             case .failure(let error):
                 self.showAlert(with: "Ошибка!", and: error.localizedDescription)
             }
         }
         print(#function)
+    }
+    
+    @objc private func signUpButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toSignUoVC()
+        }
     }
 }
 
