@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol AuthNavigationDelegate: AnyObject {
-    func toLoginVC()
-    func toSignUoVC()
-}
-
 final class LoginViewController: UIViewController {
     
     // MARK: - Properties

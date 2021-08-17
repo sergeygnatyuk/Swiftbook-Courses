@@ -10,6 +10,7 @@
 		4A0127C926B327DA00878C7E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0127C826B327DA00878C7E /* AuthService.swift */; };
 		4A1A7EBB26AF3860001C9973 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A7EBA26AF3860001C9973 /* GoogleService-Info.plist */; };
 		4A2A8A9126CAEB75000351DA /* AuthViewController+AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A8A9026CAEB75000351DA /* AuthViewController+AuthNavigationDelegate.swift */; };
+		4A2A8A9326CC4C69000351DA /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A8A9226CC4C68000351DA /* AuthNavigationDelegate.swift */; };
 		4A2FE49C2698619D00BEECDF /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE49B2698619D00BEECDF /* SetupProfileViewController.swift */; };
 		4A2FE4A1269864D900BEECDF /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */; };
 		4A403BD026A0B4940076750B /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCE26A0B4940076750B /* waitingChats.json */; };
@@ -77,6 +78,7 @@
 		4A0127C826B327DA00878C7E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4A1A7EBA26AF3860001C9973 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A2A8A9026CAEB75000351DA /* AuthViewController+AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthViewController+AuthNavigationDelegate.swift"; sourceTree = "<group>"; };
+		4A2A8A9226CC4C68000351DA /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
 		4A2FE49B2698619D00BEECDF /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		4A403BCE26A0B4940076750B /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				4A6FF40E2697397B00F74D5C /* View */,
 				4A6FF40A2697364E00F74D5C /* LoginViewController.swift */,
+				4A2A8A9226CC4C68000351DA /* AuthNavigationDelegate.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
 				4AB760FA26A9F462009D24C2 /* UIViewController.swift in Sources */,
 				4A98CDC8269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift in Sources */,
+				4A2A8A9326CC4C69000351DA /* AuthNavigationDelegate.swift in Sources */,
 				4ABAB2AB26A7427D00C1336A /* SectionHeader.swift in Sources */,
 				4A5EAA8426A8997B001E87AD /* PeopleViewController+DataSource.swift in Sources */,
 				4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */,
