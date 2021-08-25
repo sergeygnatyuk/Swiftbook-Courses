@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A011DEF26D2359B00A590AC /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A011DEE26D2359B00A590AC /* FirestoreService.swift */; };
 		4A0127C926B327DA00878C7E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0127C826B327DA00878C7E /* AuthService.swift */; };
 		4A1A7EBB26AF3860001C9973 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A7EBA26AF3860001C9973 /* GoogleService-Info.plist */; };
 		4A2A8A9126CAEB75000351DA /* AuthViewController+AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A8A9026CAEB75000351DA /* AuthViewController+AuthNavigationDelegate.swift */; };
@@ -52,6 +53,7 @@
 		4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */; };
 		4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F426961EBB00A4AC83 /* SignUpView.swift */; };
 		4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F62696218600A4AC83 /* OneLineTextField .swift */; };
+		4AD6CAAD26D23A40009A9870 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD6CAAC26D23A40009A9870 /* UserError.swift */; };
 		4AE0BCC426ADD253006736D0 /* InsertableTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BCC326ADD253006736D0 /* InsertableTextField .swift */; };
 		4AE0BCC726ADD655006736D0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BCC626ADD655006736D0 /* UIView.swift */; };
 		4AE0BCCA26ADDD3B006736D0 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BCC926ADDD3B006736D0 /* ChatRequestViewController.swift */; };
@@ -75,6 +77,7 @@
 /* Begin PBXFileReference section */
 		0AC313E2060BFA26D08194FC /* Pods-iChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.release.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.release.xcconfig"; sourceTree = "<group>"; };
 		3FD3BAFD796E197A08C35D0E /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A011DEE26D2359B00A590AC /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		4A0127C826B327DA00878C7E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4A1A7EBA26AF3860001C9973 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A2A8A9026CAEB75000351DA /* AuthViewController+AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthViewController+AuthNavigationDelegate.swift"; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		4ABB59EF26961C4700A4AC83 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4ABB59F426961EBB00A4AC83 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4ABB59F62696218600A4AC83 /* OneLineTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneLineTextField .swift"; sourceTree = "<group>"; };
+		4AD6CAAC26D23A40009A9870 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		4AE0BCC326ADD253006736D0 /* InsertableTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsertableTextField .swift"; sourceTree = "<group>"; };
 		4AE0BCC626ADD655006736D0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4AE0BCC926ADDD3B006736D0 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
@@ -162,9 +166,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A011DED26D2357600A590AC /* FirestorService  */ = {
+			isa = PBXGroup;
+			children = (
+				4A011DEE26D2359B00A590AC /* FirestoreService.swift */,
+			);
+			path = "FirestorService ";
+			sourceTree = "<group>";
+		};
 		4A0127C626B327AD00878C7E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4A011DED26D2357600A590AC /* FirestorService  */,
 				4A4F529B26B728FA00B6066E /* Helpers */,
 				4A98CDCD26A044D400313AAF /* Models */,
 				4A0127C826B327DA00878C7E /* AuthService.swift */,
@@ -193,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4F529926B7065900B6066E /* AuthError.swift */,
+				4AD6CAAC26D23A40009A9870 /* UserError.swift */,
 				4A4F529726B7031600B6066E /* Validators.swift */,
 			);
 			path = Helpers;
@@ -658,6 +672,7 @@
 				4A5EAA8026A8957E001E87AD /* SectionPeopleViewController.swift in Sources */,
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
 				4A5D403426AB460E002B301D /* ProfileView.swift in Sources */,
+				4A011DEF26D2359B00A590AC /* FirestoreService.swift in Sources */,
 				4A5FFF2026A33B2000E21861 /* SelfConfiguringCellProtocol.swift in Sources */,
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
 				4AB760FA26A9F462009D24C2 /* UIViewController.swift in Sources */,
@@ -672,6 +687,7 @@
 				4AE633AC2693872F00294C83 /* UILabel.swift in Sources */,
 				4AE0BCCA26ADDD3B006736D0 /* ChatRequestViewController.swift in Sources */,
 				4AE6339926937D6700294C83 /* UIButton.swift in Sources */,
+				4AD6CAAD26D23A40009A9870 /* UserError.swift in Sources */,
 				4A5D403126AB4527002B301D /* ProfileViewController.swift in Sources */,
 				4A6FF40D2697396000F74D5C /* LoginView.swift in Sources */,
 				4A98CDC6269F720000313AAF /* ListViewController+UISearchBarDelegate.swift in Sources */,
@@ -822,7 +838,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5DQ465SS7;
 				INFOPLIST_FILE = iChat/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -843,7 +859,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5DQ465SS7;
 				INFOPLIST_FILE = iChat/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 final class PeopleViewController: UIViewController {
     
     // MARK: - Properties
-    let users = Bundle.main.decode([MUser].self, from: "users.json")
+    let users = [MUser]()
     var collectionView: UICollectionView?
     var dataSource: UICollectionViewDiffableDataSource<SectionPeople, MUser>?
     
@@ -19,6 +20,7 @@ final class PeopleViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         setupCollectionView()
+        setupNavigationButton()
         createDataSource()
         reloadData(with: nil)
     }
@@ -44,6 +46,24 @@ final class PeopleViewController: UIViewController {
         searchController.searchBar.delegate = self
     }
     
+    private func setupNavigationButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
+    }
+    
+    private func setupAlertController() {
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { (_) in
+            do {
+                try Auth.auth().signOut()
+                UIApplication.shared.keyWindow?.rootViewController = AuthViewController()
+            } catch {
+                print("Error sign out: \(error.localizedDescription)")
+            }
+        }))
+        present(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: - Public
     public func reloadData(with searchText: String?) {
         let filtered = users.filter { (user) -> Bool in
@@ -53,6 +73,11 @@ final class PeopleViewController: UIViewController {
         snapShot.appendSections([.users])
         snapShot.appendItems(filtered, toSection: .users)
         dataSource?.apply(snapShot, animatingDifferences: true)
+    }
+    
+    // MARK: - Actions
+    @objc private func signOut() {
+        setupAlertController()
     }
 }
 
