@@ -14,6 +14,18 @@ final class ListViewController: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
     let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json")
     let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json")
+    private let currentUser: MUser
+    
+    // MARK: - Initialization
+    init(currentUser: MUser) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+        title = currentUser.username
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

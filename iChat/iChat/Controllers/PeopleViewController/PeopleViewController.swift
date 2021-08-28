@@ -14,6 +14,18 @@ final class PeopleViewController: UIViewController {
     let users = [MUser]()
     var collectionView: UICollectionView?
     var dataSource: UICollectionViewDiffableDataSource<SectionPeople, MUser>?
+    private let currentUser: MUser
+    
+    // MARK: - Initialization
+    init(currentUser: MUser) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+        title = currentUser.username
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
