@@ -71,6 +71,9 @@
 		4AE633AF269389AE00294C83 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633AE269389AE00294C83 /* UIImageView.swift */; };
 		4AE633B82693AD2400294C83 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633B72693AD2400294C83 /* ButtonFormView.swift */; };
 		4AE633BB2693B9EF00294C83 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE633BA2693B9EF00294C83 /* UIStackView.swift */; };
+		4AF4FECC26DC1B1400AED16F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF4FECB26DC1B1400AED16F /* StorageService.swift */; };
+		4AF4FECE26DC1E0900AED16F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF4FECD26DC1E0900AED16F /* UIImage.swift */; };
+		4AF4FED026DC232D00AED16F /* AddPhotoView+UIImagePickerControllerDelegate & UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF4FECF26DC232D00AED16F /* AddPhotoView+UIImagePickerControllerDelegate & UINavigationControllerDelegate.swift */; };
 		DB229102B75A606604454476 /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3BAFD796E197A08C35D0E /* Pods_iChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +146,9 @@
 		4AE633AE269389AE00294C83 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		4AE633B72693AD2400294C83 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		4AE633BA2693B9EF00294C83 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		4AF4FECB26DC1B1400AED16F /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		4AF4FECD26DC1E0900AED16F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		4AF4FECF26DC232D00AED16F /* AddPhotoView+UIImagePickerControllerDelegate & UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPhotoView+UIImagePickerControllerDelegate & UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
 		55BFE4879CACDEE32893103D /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +183,7 @@
 		4A0127C626B327AD00878C7E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4AF4FECA26DC1AFE00AED16F /* StorageServise */,
 				4A011DED26D2357600A590AC /* FirestorService  */,
 				4A4F529B26B728FA00B6066E /* Helpers */,
 				4A98CDCD26A044D400313AAF /* Models */,
@@ -198,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */,
+				4AF4FECF26DC232D00AED16F /* AddPhotoView+UIImagePickerControllerDelegate & UINavigationControllerDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -499,6 +507,7 @@
 				4A403BD226A0B4EB0076750B /* Bundle.swift */,
 				4AB760F926A9F462009D24C2 /* UIViewController.swift */,
 				4AE0BCC626ADD655006736D0 /* UIView.swift */,
+				4AF4FECD26DC1E0900AED16F /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -510,6 +519,14 @@
 				4AE633B72693AD2400294C83 /* ButtonFormView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4AF4FECA26DC1AFE00AED16F /* StorageServise */ = {
+			isa = PBXGroup;
+			children = (
+				4AF4FECB26DC1B1400AED16F /* StorageService.swift */,
+			);
+			path = StorageServise;
 			sourceTree = "<group>";
 		};
 		B973C906700C28C94AA5F69D /* Pods */ = {
@@ -659,6 +676,7 @@
 				4A4F529826B7031600B6066E /* Validators.swift in Sources */,
 				4A98CDBD269F32E400313AAF /* PeopleViewController.swift in Sources */,
 				4A2A8A9126CAEB75000351DA /* AuthViewController+AuthNavigationDelegate.swift in Sources */,
+				4AF4FECE26DC1E0900AED16F /* UIImage.swift in Sources */,
 				4A0127C926B327DA00878C7E /* AuthService.swift in Sources */,
 				4A5FFF2726A341F500E21861 /* ListViewController+CompositionalLayout.swift in Sources */,
 				4A5EAA8226A897F2001E87AD /* PeopleViewController+CompositionalLayout.swift in Sources */,
@@ -666,6 +684,7 @@
 				4A5EAA7E26A8934C001E87AD /* MUser.swift in Sources */,
 				4ABB59F026961C4700A4AC83 /* SignUpViewController.swift in Sources */,
 				4AE0BCC426ADD253006736D0 /* InsertableTextField .swift in Sources */,
+				4AF4FED026DC232D00AED16F /* AddPhotoView+UIImagePickerControllerDelegate & UINavigationControllerDelegate.swift in Sources */,
 				4A5FFF2326A33CAE00E21861 /* ActiveChatCell+SelfConfiguringCell.swift in Sources */,
 				4AE0BCCD26ADDFF6006736D0 /* ChatRequestView.swift in Sources */,
 				4A2FE4A1269864D900BEECDF /* AddPhotoView.swift in Sources */,
@@ -689,6 +708,7 @@
 				4AE6339926937D6700294C83 /* UIButton.swift in Sources */,
 				4AD6CAAD26D23A40009A9870 /* UserError.swift in Sources */,
 				4A5D403126AB4527002B301D /* ProfileViewController.swift in Sources */,
+				4AF4FECC26DC1B1400AED16F /* StorageService.swift in Sources */,
 				4A6FF40D2697396000F74D5C /* LoginView.swift in Sources */,
 				4A98CDC6269F720000313AAF /* ListViewController+UISearchBarDelegate.swift in Sources */,
 				4AAA4DB226A49B5D00B9F5A9 /* GradientView.swift in Sources */,

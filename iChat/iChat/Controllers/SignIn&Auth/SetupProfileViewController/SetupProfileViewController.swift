@@ -31,6 +31,7 @@ final class SetupProfileViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
         fullImageView.goToChatsButton.addTarget(self, action: #selector(goToChatsButtonTapped), for: .touchUpInside)
+        fullImageView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Private
@@ -71,7 +72,7 @@ final class SetupProfileViewController: UIViewController {
         FirestoreService.shared.saveProfileWidth(id: currentUser.uid,
                                                  email: currentUser.email!,
                                                  username: fullImageView.fullNameTextField.text,
-                                                 avatarImageString: "nil",
+                                                 avatarImage: fullImageView.circleImageView.image,
                                                  description: fullImageView.aboutMeTextField.text,
                                                  sex: fullImageView.sexSegmentedControl.titleForSegment(at: fullImageView.sexSegmentedControl.selectedSegmentIndex)) { (result) in
                                                 switch result {
@@ -85,6 +86,13 @@ final class SetupProfileViewController: UIViewController {
                                                     self.showAlert(with: "Ошибка", and: error.localizedDescription)
                                                 }
         }
+    }
+    
+    @objc private func plusButtonTapped() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
     }
 }
 
