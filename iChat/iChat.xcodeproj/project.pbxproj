@@ -17,6 +17,7 @@
 		4A403BD026A0B4940076750B /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCE26A0B4940076750B /* waitingChats.json */; };
 		4A403BD126A0B4940076750B /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCF26A0B4940076750B /* activeChats.json */; };
 		4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A403BD226A0B4EB0076750B /* Bundle.swift */; };
+		4A49000A26DFFFB80082D348 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A49000926DFFFB80082D348 /* ListenerService.swift */; };
 		4A4F529826B7031600B6066E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F529726B7031600B6066E /* Validators.swift */; };
 		4A4F529A26B7065900B6066E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F529926B7065900B6066E /* AuthError.swift */; };
 		4A5D403126AB4527002B301D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D403026AB4527002B301D /* ProfileViewController.swift */; };
@@ -90,6 +91,7 @@
 		4A403BCE26A0B4940076750B /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		4A403BCF26A0B4940076750B /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		4A403BD226A0B4EB0076750B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		4A49000926DFFFB80082D348 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		4A4F529726B7031600B6066E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		4A4F529926B7065900B6066E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		4A5D403026AB4527002B301D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		4A0127C626B327AD00878C7E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4A49000826DFFFA80082D348 /* ListenerService */,
 				4AF4FECA26DC1AFE00AED16F /* StorageServise */,
 				4A011DED26D2357600A590AC /* FirestorService  */,
 				4A4F529B26B728FA00B6066E /* Helpers */,
@@ -208,6 +211,14 @@
 				4AF4FECF26DC232D00AED16F /* AddPhotoView+UIImagePickerControllerDelegate & UINavigationControllerDelegate.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4A49000826DFFFA80082D348 /* ListenerService */ = {
+			isa = PBXGroup;
+			children = (
+				4A49000926DFFFB80082D348 /* ListenerService.swift */,
+			);
+			path = ListenerService;
 			sourceTree = "<group>";
 		};
 		4A4F529B26B728FA00B6066E /* Helpers */ = {
@@ -694,6 +705,7 @@
 				4A011DEF26D2359B00A590AC /* FirestoreService.swift in Sources */,
 				4A5FFF2026A33B2000E21861 /* SelfConfiguringCellProtocol.swift in Sources */,
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,
+				4A49000A26DFFFB80082D348 /* ListenerService.swift in Sources */,
 				4AB760FA26A9F462009D24C2 /* UIViewController.swift in Sources */,
 				4A98CDC8269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift in Sources */,
 				4A2A8A9326CC4C69000351DA /* AuthNavigationDelegate.swift in Sources */,

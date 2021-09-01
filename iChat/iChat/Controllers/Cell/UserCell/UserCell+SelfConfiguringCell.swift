@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension UserCell: SelfConfiguringCellProtocol {
    
@@ -13,7 +14,8 @@ extension UserCell: SelfConfiguringCellProtocol {
    
     func configure<U>(with value: U) where U : Hashable {
         guard let user: MUser = value as? MUser else { return }
-        userImageView.image = UIImage(named: user.avatarStringURL)
         userName.text = user.username
+        guard let url = URL(string: user.avatarStringURL) else { return }
+        userImageView.sd_setImage(with: url, completed: nil)
     }
 }

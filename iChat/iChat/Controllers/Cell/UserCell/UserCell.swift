@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class UserCell: UICollectionViewCell {
     
@@ -33,6 +34,11 @@ final class UserCell: UICollectionViewCell {
         super.layoutSubviews()
         self.containerView.layer.cornerRadius = 5
         self.containerView.clipsToBounds = true
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        userImageView.image = nil
     }
     
     // MARK: - Private
