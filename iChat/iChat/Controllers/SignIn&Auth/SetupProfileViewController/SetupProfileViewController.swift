@@ -102,23 +102,3 @@ final class SetupProfileViewController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
 }
-
-// MARK: - SwiftUI
-import SwiftUI
-
-struct SetupProfileViewControllerProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        let viewController = SetupProfileViewController(currentUser: Auth.auth().currentUser!)
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-}
-

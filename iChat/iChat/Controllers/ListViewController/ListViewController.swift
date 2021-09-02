@@ -66,23 +66,3 @@ final class ListViewController: UIViewController {
         dataSource?.apply(snapShot, animatingDifferences: true)
     }
 }
-
-// MARK: - SwiftUI
-import SwiftUI
-
-struct ListViewControllerProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        let viewController = MainTabBarViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-}

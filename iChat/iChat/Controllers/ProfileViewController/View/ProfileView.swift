@@ -26,14 +26,7 @@ final class ProfileView: UIView {
         aboutMeLabel.numberOfLines = 0
         containerView.backgroundColor = .mainWhite()
         containerView.layer.cornerRadius = 30
-        if let button = myTextField.rightView as? UIButton {
-            button.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
-        }
-    }
-    
-    // MARK: - @objc methods
-    @objc private func sendMessage() {
-        print(#function)
+       
     }
     
     // MARK: - Public

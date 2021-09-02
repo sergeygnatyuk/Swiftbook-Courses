@@ -14,6 +14,8 @@
 		4A2A8A9326CC4C69000351DA /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A8A9226CC4C68000351DA /* AuthNavigationDelegate.swift */; };
 		4A2FE49C2698619D00BEECDF /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE49B2698619D00BEECDF /* SetupProfileViewController.swift */; };
 		4A2FE4A1269864D900BEECDF /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */; };
+		4A33074F26E1552A00BEACA2 /* PeopleViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33074E26E1552A00BEACA2 /* PeopleViewController+UICollectionViewDelegate.swift */; };
+		4A33075126E15BD600BEACA2 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33075026E15BD600BEACA2 /* UIApplication.swift */; };
 		4A403BD026A0B4940076750B /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCE26A0B4940076750B /* waitingChats.json */; };
 		4A403BD126A0B4940076750B /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A403BCF26A0B4940076750B /* activeChats.json */; };
 		4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A403BD226A0B4EB0076750B /* Bundle.swift */; };
@@ -88,6 +90,8 @@
 		4A2A8A9226CC4C68000351DA /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
 		4A2FE49B2698619D00BEECDF /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4A2FE4A0269864D900BEECDF /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		4A33074E26E1552A00BEACA2 /* PeopleViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeopleViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		4A33075026E15BD600BEACA2 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		4A403BCE26A0B4940076750B /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		4A403BCF26A0B4940076750B /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		4A403BD226A0B4EB0076750B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				4A98CDBC269F32E400313AAF /* PeopleViewController.swift */,
+				4A33074E26E1552A00BEACA2 /* PeopleViewController+UICollectionViewDelegate.swift */,
 				4A5EAA8126A897F2001E87AD /* PeopleViewController+CompositionalLayout.swift */,
 				4A5EAA8326A8997B001E87AD /* PeopleViewController+DataSource.swift */,
 				4A98CDC7269F737900313AAF /* PeopleViewController+UISearchBarDelegate.swift */,
@@ -519,6 +524,7 @@
 				4AB760F926A9F462009D24C2 /* UIViewController.swift */,
 				4AE0BCC626ADD655006736D0 /* UIView.swift */,
 				4AF4FECD26DC1E0900AED16F /* UIImage.swift */,
+				4A33075026E15BD600BEACA2 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -666,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A33075126E15BD600BEACA2 /* UIApplication.swift in Sources */,
 				4A98CDCF26A044E600313AAF /* MChat.swift in Sources */,
 				4A403BD326A0B4EB0076750B /* Bundle.swift in Sources */,
 				4AE6337F26936AF100294C83 /* AuthViewController.swift in Sources */,
@@ -702,6 +709,7 @@
 				4A5EAA8026A8957E001E87AD /* SectionPeopleViewController.swift in Sources */,
 				4AE6337B26936AF100294C83 /* AppDelegate.swift in Sources */,
 				4A5D403426AB460E002B301D /* ProfileView.swift in Sources */,
+				4A33074F26E1552A00BEACA2 /* PeopleViewController+UICollectionViewDelegate.swift in Sources */,
 				4A011DEF26D2359B00A590AC /* FirestoreService.swift in Sources */,
 				4A5FFF2026A33B2000E21861 /* SelfConfiguringCellProtocol.swift in Sources */,
 				4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */,

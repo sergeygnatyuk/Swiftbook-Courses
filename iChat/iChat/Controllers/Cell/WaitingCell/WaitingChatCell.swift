@@ -37,23 +37,3 @@ final class WaitingChatCell: UICollectionViewCell {
         ])
     }
 }
-
-// MARK: - SwiftUI
-import SwiftUI
-
-struct WaitingChatCellProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        let viewController = MainTabBarViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-}

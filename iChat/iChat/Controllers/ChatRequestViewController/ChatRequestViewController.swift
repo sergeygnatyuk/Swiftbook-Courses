@@ -33,23 +33,3 @@ final class ChatRequestViewController: UIViewController {
         containerView.acceptButton.applyGradients(cornerRadius: 10)
     }
 }
-
-// MARK: - SwiftUI
-import SwiftUI
-
-struct ChatRequestViewControllerProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        let viewController = ChatRequestViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-}

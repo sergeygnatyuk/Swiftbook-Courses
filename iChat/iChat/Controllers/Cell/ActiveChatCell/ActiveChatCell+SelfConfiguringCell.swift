@@ -13,8 +13,8 @@ extension ActiveChatCell: SelfConfiguringCellProtocol {
     
     func configure<U>(with value: U) where U : Hashable {
         guard let chat: MChat = value as? MChat else { return }
-        friendImageView.image = UIImage(named: chat.userImageString)
-        friendNameLabel.text = chat.username
+        friendImageView.image = UIImage(named: chat.friendAvatarStringURL)
+        friendNameLabel.text = chat.friendUsername
         lastMessageLabel.text = chat.lastMessage
     }
 }

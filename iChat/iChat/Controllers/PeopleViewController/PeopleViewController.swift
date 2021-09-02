@@ -60,6 +60,7 @@ final class PeopleViewController: UIViewController {
         view.addSubview(collectionsView)
         collectionView?.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseId)
         collectionView?.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
+        collectionView?.delegate = self
     }
     
     private func setupSearchBar() {
@@ -104,25 +105,5 @@ final class PeopleViewController: UIViewController {
     // MARK: - Actions
     @objc private func signOut() {
         setupAlertController()
-    }
-}
-
-// MARK: - SwiftUI
-import SwiftUI
-
-struct PeopleViewControllerProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        let viewController = MainTabBarViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
     }
 }

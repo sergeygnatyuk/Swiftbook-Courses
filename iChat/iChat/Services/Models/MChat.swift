@@ -8,8 +8,8 @@
 import UIKit
 
 struct MChat: Hashable, Decodable {
-    var username: String
-    var userImageString: String
+    var friendUsername: String
+    var friendAvatarStringURL: String
     var lastMessage: String
     var id: Int
     
