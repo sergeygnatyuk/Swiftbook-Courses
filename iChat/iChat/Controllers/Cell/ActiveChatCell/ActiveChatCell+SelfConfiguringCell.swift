@@ -15,6 +15,6 @@ extension ActiveChatCell: SelfConfiguringCellProtocol {
         guard let chat: MChat = value as? MChat else { return }
         friendImageView.image = UIImage(named: chat.friendAvatarStringURL)
         friendNameLabel.text = chat.friendUsername
-        lastMessageLabel.text = chat.lastMessage
+        lastMessageLabel.text = chat.lastMessageContent
     }
 }

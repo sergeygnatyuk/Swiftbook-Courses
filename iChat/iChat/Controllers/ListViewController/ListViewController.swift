@@ -12,8 +12,8 @@ final class ListViewController: UIViewController {
     // MARK: - Properties
     var collectionView: UICollectionView?
     var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
-    let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json")
-    let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json")
+    let activeChats = [MChat]()
+    let waitingChats = [MChat]()
     private let currentUser: MUser
     
     // MARK: - Initialization
