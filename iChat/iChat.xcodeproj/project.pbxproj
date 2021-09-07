@@ -57,6 +57,7 @@
 		4ABB59F526961EBB00A4AC83 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F426961EBB00A4AC83 /* SignUpView.swift */; };
 		4ABB59F72696218600A4AC83 /* OneLineTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB59F62696218600A4AC83 /* OneLineTextField .swift */; };
 		4AD6CAAD26D23A40009A9870 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD6CAAC26D23A40009A9870 /* UserError.swift */; };
+		4ADD4B6726E7DBBE00F3038C /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD4B6626E7DBBE00F3038C /* MMessage.swift */; };
 		4AE0BCC426ADD253006736D0 /* InsertableTextField .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BCC326ADD253006736D0 /* InsertableTextField .swift */; };
 		4AE0BCC726ADD655006736D0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BCC626ADD655006736D0 /* UIView.swift */; };
 		4AE0BCCA26ADDD3B006736D0 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BCC926ADDD3B006736D0 /* ChatRequestViewController.swift */; };
@@ -133,6 +134,7 @@
 		4ABB59F426961EBB00A4AC83 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4ABB59F62696218600A4AC83 /* OneLineTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneLineTextField .swift"; sourceTree = "<group>"; };
 		4AD6CAAC26D23A40009A9870 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
+		4ADD4B6626E7DBBE00F3038C /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		4AE0BCC326ADD253006736D0 /* InsertableTextField .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsertableTextField .swift"; sourceTree = "<group>"; };
 		4AE0BCC626ADD655006736D0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4AE0BCC926ADDD3B006736D0 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			children = (
 				4A98CDCE26A044E600313AAF /* MChat.swift */,
 				4A5EAA7D26A8934C001E87AD /* MUser.swift */,
+				4ADD4B6626E7DBBE00F3038C /* MMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				4AE633A126937E8800294C83 /* AuthView.swift in Sources */,
 				4AAA4DB526A49C9000B9F5A9 /* Point.swift in Sources */,
 				4AB760F626A9F1B3009D24C2 /* UserCell.swift in Sources */,
+				4ADD4B6726E7DBBE00F3038C /* MMessage.swift in Sources */,
 				4A98CDCC26A03E8300313AAF /* Section.swift in Sources */,
 				4AE633A5269381E500294C83 /* UIFont.swift in Sources */,
 				4A4F529826B7031600B6066E /* Validators.swift in Sources */,
