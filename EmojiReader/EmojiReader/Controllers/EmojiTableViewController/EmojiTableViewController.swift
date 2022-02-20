@@ -7,9 +7,9 @@
 
 import UIKit
 
-class EmojiTableViewController: UITableViewController {
+final class EmojiTableViewController: UITableViewController {
     
-    // Properties
+    // MARK: - Properties
     private let identifierCell = "emojiCell"
     private var objects = [
         Emoji(emoji: "🥰", name: "Love",
@@ -24,12 +24,10 @@ class EmojiTableViewController: UITableViewController {
     ]
     
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Emoji Reader"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        
     }
     
     //MARK: - Navigation
@@ -47,8 +45,7 @@ class EmojiTableViewController: UITableViewController {
     
     
     
-    // MARK: - TableViewD
-    
+    // MARK: - TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -92,7 +89,6 @@ class EmojiTableViewController: UITableViewController {
     }
     
     //MARK: - UI
-    
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveSegue" else { return }
         let sourceVC = segue.source as! NewEmojiTableViewController

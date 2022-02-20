@@ -7,19 +7,18 @@
 
 import UIKit
 
-class NewEmojiTableViewController: UITableViewController {
+final class NewEmojiTableViewController: UITableViewController {
     
-    // Properties
+    // MARK: - Properties
     public var emoji = Emoji(emoji: "", name: "", description: "", isFavourite: false)
     
-    // UI
+    // MARK: - UI
     @IBOutlet weak var emojiTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -27,7 +26,6 @@ class NewEmojiTableViewController: UITableViewController {
     }
     
     //MARK: - UI
-    
     @IBAction func textChanged(_ sender: UITextField) {
         updateSaveBottonState()
     }
